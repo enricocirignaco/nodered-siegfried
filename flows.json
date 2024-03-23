@@ -1376,7 +1376,7 @@
         "topic": "",
         "payload": "false",
         "payloadType": "bool",
-        "x": 370,
+        "x": 330,
         "y": 1000,
         "wires": [
             [
@@ -1401,7 +1401,7 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 370,
+        "x": 330,
         "y": 960,
         "wires": [
             [
@@ -1426,7 +1426,7 @@
         "topic": "",
         "payload": "false",
         "payloadType": "bool",
-        "x": 370,
+        "x": 330,
         "y": 1080,
         "wires": [
             [
@@ -1451,7 +1451,7 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 370,
+        "x": 330,
         "y": 1040,
         "wires": [
             [
