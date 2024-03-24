@@ -24,6 +24,14 @@
         "env": []
     },
     {
+        "id": "b85a854844f0bba4",
+        "type": "tab",
+        "label": "Settings",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "b10498f78b9fb638",
         "type": "group",
         "z": "6d564b0b71763d89",
@@ -423,8 +431,8 @@
     {
         "id": "6fd6f055a36d0f78",
         "type": "ui_group",
-        "name": "Temperature",
-        "tab": "6f01fee901ee4e98",
+        "name": "Fridge",
+        "tab": "9d7781fc6afac662",
         "order": 1,
         "disp": true,
         "width": "10",
@@ -471,6 +479,14 @@
         "out": "char",
         "addchar": "",
         "responsetimeout": "10000"
+    },
+    {
+        "id": "9d7781fc6afac662",
+        "type": "ui_tab",
+        "name": "Settings",
+        "icon": "Settings",
+        "disabled": false,
+        "hidden": false
     },
     {
         "id": "1285ba85761c8a8e",
@@ -4431,6 +4447,38 @@
             [
                 "a61ae7040267586a"
             ]
+        ]
+    },
+    {
+        "id": "b63a529b627e4005",
+        "type": "ui_switch",
+        "z": "15311a68299dc024",
+        "name": "",
+        "label": "Charge starter battery when inverter on",
+        "tooltip": "",
+        "group": "6fd6f055a36d0f78",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 720,
+        "y": 320,
+        "wires": [
+            []
         ]
     }
 ]
