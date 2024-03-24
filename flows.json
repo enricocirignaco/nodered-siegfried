@@ -4450,7 +4450,8 @@
         "wires": [
             [
                 "a61ae7040267586a",
-                "a9c76782de77f2d3"
+                "a9c76782de77f2d3",
+                "dd15fedb9ff361d9"
             ]
         ]
     },
@@ -4838,6 +4839,42 @@
         "y": 220,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "4a9eca7c1e4c8690",
+        "type": "debug",
+        "z": "15311a68299dc024",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "dd15fedb9ff361d9",
+        "type": "function",
+        "z": "15311a68299dc024",
+        "name": "algorithm",
+        "func": "let setting = flow.get(\"setting\");\nlet upper_temp = flow.get(\"upper_temp\");\nlet lower_temp = flow.get(\"lower_temp\");\nlet temp = msg.payload;\nlet ignition = global.get(\"status.ignition\");\nlet compressor = global.get(\"status.fridge\");\nmsg.payload = compressor\n\nif(setting === \"auto\") setting = ignition;\n\nmsg.payload = setting;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 300,
+        "wires": [
+            [
+                "4a9eca7c1e4c8690"
+            ]
         ]
     }
 ]
