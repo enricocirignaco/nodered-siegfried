@@ -4748,13 +4748,6 @@
                 "pt": "global",
                 "to": "payload",
                 "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "status.fridge",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
             }
         ],
         "action": "",
@@ -4762,7 +4755,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 700,
+        "x": 710,
         "y": 640,
         "wires": [
             []
