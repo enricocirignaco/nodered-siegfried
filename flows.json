@@ -1151,6 +1151,7 @@
         "id": "b850689cb2dcc1db",
         "type": "inject",
         "z": "6d564b0b71763d89",
+        "d": true,
         "g": "dbe48b6a4f7bad55",
         "name": "",
         "props": [
@@ -1907,6 +1908,163 @@
         "x": 1460,
         "y": 480,
         "wires": []
+    },
+    {
+        "id": "4f74bc8d0eb70d35",
+        "type": "inject",
+        "z": "6d564b0b71763d89",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1170,
+        "y": 80,
+        "wires": [
+            [
+                "11416c64c8ee5717",
+                "b2061aef925c5e7c",
+                "31e5d5e997197d8a"
+            ]
+        ]
+    },
+    {
+        "id": "11416c64c8ee5717",
+        "type": "random",
+        "z": "6d564b0b71763d89",
+        "name": "",
+        "low": "-10",
+        "high": "15",
+        "inte": "true",
+        "property": "payload",
+        "x": 1360,
+        "y": 80,
+        "wires": [
+            [
+                "f272501184bbe878"
+            ]
+        ]
+    },
+    {
+        "id": "f272501184bbe878",
+        "type": "change",
+        "z": "6d564b0b71763d89",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "sensors.fridge_temp",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1650,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b2061aef925c5e7c",
+        "type": "random",
+        "z": "6d564b0b71763d89",
+        "name": "",
+        "low": "-10",
+        "high": "40",
+        "inte": "true",
+        "property": "payload",
+        "x": 1360,
+        "y": 120,
+        "wires": [
+            [
+                "a8b3359c8146d388"
+            ]
+        ]
+    },
+    {
+        "id": "a8b3359c8146d388",
+        "type": "change",
+        "z": "6d564b0b71763d89",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "sensors.indoor_temp",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1650,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "aa46d25bd18cdb62",
+        "type": "change",
+        "z": "6d564b0b71763d89",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "sensors.outdoor_temp",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1660,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "31e5d5e997197d8a",
+        "type": "random",
+        "z": "6d564b0b71763d89",
+        "name": "",
+        "low": "-10",
+        "high": "40",
+        "inte": "true",
+        "property": "payload",
+        "x": 1360,
+        "y": 160,
+        "wires": [
+            [
+                "aa46d25bd18cdb62"
+            ]
+        ]
     },
     {
         "id": "0094be9ee0b66230",
