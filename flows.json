@@ -4839,5 +4839,41 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "0096655edd2cd092",
+        "type": "function",
+        "z": "15311a68299dc024",
+        "name": "algorithm",
+        "func": "let setting = flow.get(\"setting\");\nlet upper_temp = flow.get(\"upper_temp\");\nlet lower_temp = flow.get(\"lower_temp\");\nlet temp = msg.payload;\nlet ignition = global.get(\"status.ignition\");\nlet compressor = global.get(\"status.fridge\");\nmsg.payload = compressor\n\nif(setting === \"auto\") msg.payload = \"salii\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 300,
+        "wires": [
+            [
+                "453e1ec72cce0ed3"
+            ]
+        ]
+    },
+    {
+        "id": "453e1ec72cce0ed3",
+        "type": "debug",
+        "z": "15311a68299dc024",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 320,
+        "wires": []
     }
 ]
