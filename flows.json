@@ -423,7 +423,7 @@
     {
         "id": "6fd6f055a36d0f78",
         "type": "ui_group",
-        "name": "Fridge",
+        "name": "General",
         "tab": "9d7781fc6afac662",
         "order": 1,
         "disp": true,
@@ -4447,7 +4447,7 @@
         "z": "15311a68299dc024",
         "name": "",
         "label": "Charge starter battery when inverter on",
-        "tooltip": "",
+        "tooltip": "inverter is powered by the starter battery so it's agood idea to charge it with solar or leisure battery when inverter is in use. NOTE: this not apply when the ignition is on",
         "group": "6fd6f055a36d0f78",
         "order": 2,
         "width": 0,
@@ -4467,7 +4467,7 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 720,
+        "x": 560,
         "y": 320,
         "wires": [
             []
