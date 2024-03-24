@@ -24,14 +24,6 @@
         "env": []
     },
     {
-        "id": "b85a854844f0bba4",
-        "type": "tab",
-        "label": "Settings",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "b10498f78b9fb638",
         "type": "group",
         "z": "6d564b0b71763d89",
@@ -453,7 +445,7 @@
     {
         "id": "57ca5f37d1ee1a2a",
         "type": "ui_group",
-        "name": "test",
+        "name": "Temperature",
         "tab": "6f01fee901ee4e98",
         "order": 5,
         "disp": true,
@@ -3417,7 +3409,7 @@
         "z": "8f469e385c0b1581",
         "g": "cd72b915c94ff1a4",
         "name": "temp_in",
-        "group": "6fd6f055a36d0f78",
+        "group": "57ca5f37d1ee1a2a",
         "order": 1,
         "width": "5",
         "height": 5,
@@ -3446,7 +3438,7 @@
         "z": "8f469e385c0b1581",
         "g": "cd72b915c94ff1a4",
         "name": "temp_out",
-        "group": "6fd6f055a36d0f78",
+        "group": "57ca5f37d1ee1a2a",
         "order": 2,
         "width": "4",
         "height": 5,
