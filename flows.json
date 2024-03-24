@@ -481,6 +481,17 @@
         "hidden": false
     },
     {
+        "id": "466866a9d24aa546",
+        "type": "ui_group",
+        "name": "Fridge",
+        "tab": "9d7781fc6afac662",
+        "order": 2,
+        "disp": true,
+        "width": "10",
+        "collapse": false,
+        "className": ""
+    },
+    {
         "id": "1285ba85761c8a8e",
         "type": "rpi-gpio in",
         "z": "6d564b0b71763d89",
@@ -4467,7 +4478,57 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 560,
+        "x": 520,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6371b576797132a9",
+        "type": "ui_slider",
+        "z": "15311a68299dc024",
+        "name": "",
+        "label": "Upper temperature threshold",
+        "tooltip": "",
+        "group": "466866a9d24aa546",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "-10",
+        "max": "15",
+        "step": 1,
+        "className": "",
+        "x": 600,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "932d0b15c2f26574",
+        "type": "ui_slider",
+        "z": "15311a68299dc024",
+        "name": "",
+        "label": "Lower temperature threshold",
+        "tooltip": "",
+        "group": "466866a9d24aa546",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "-10",
+        "max": "15",
+        "step": 1,
+        "className": "",
+        "x": 600,
         "y": 320,
         "wires": [
             []
