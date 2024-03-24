@@ -4846,7 +4846,7 @@
         "type": "function",
         "z": "15311a68299dc024",
         "name": "algorithm",
-        "func": "let setting = flow.get(\"setting\");\nlet upper_temp = flow.get(\"upper_temp\");\nlet lower_temp = flow.get(\"lower_temp\");\nlet temp = msg.payload;\nlet ignition = global.get(\"status.ignition\");\nlet compressor = global.get(\"status.fridge\");\nmsg.payload = compressor\n\nif(setting === \"auto\") msg.payload = \"salii\";\n\nreturn msg;",
+        "func": "let setting = flow.get(\"setting\");\nlet upper_temp = flow.get(\"upper_temp\");\nlet lower_temp = flow.get(\"lower_temp\");\nlet temp = msg.payload;\nlet ignition = global.get(\"status.ignition\");\nlet compressor = global.get(\"status.fridge\");\nmsg.payload = compressor\n\nif(setting === \"auto\") {\n    msg.payload = \"salii\";\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
