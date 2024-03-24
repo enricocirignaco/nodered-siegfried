@@ -1988,7 +1988,9 @@
         "x": 1650,
         "y": 80,
         "wires": [
-            []
+            [
+                "380baa39b73ad74b"
+            ]
         ]
     },
     {
@@ -2030,7 +2032,9 @@
         "x": 1650,
         "y": 120,
         "wires": [
-            []
+            [
+                "660d97c7f697109d"
+            ]
         ]
     },
     {
@@ -2055,7 +2059,9 @@
         "x": 1660,
         "y": 160,
         "wires": [
-            []
+            [
+                "f67bde4ab2656b44"
+            ]
         ]
     },
     {
@@ -2111,6 +2117,41 @@
         "links": [],
         "x": 1025,
         "y": 380,
+        "wires": []
+    },
+    {
+        "id": "380baa39b73ad74b",
+        "type": "link out",
+        "z": "6d564b0b71763d89",
+        "name": "fridge_temp",
+        "mode": "link",
+        "links": [
+            "05ade75e1ba4a9f0"
+        ],
+        "x": 1865,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "660d97c7f697109d",
+        "type": "link out",
+        "z": "6d564b0b71763d89",
+        "name": "indoor_temp",
+        "mode": "link",
+        "links": [],
+        "x": 1865,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "f67bde4ab2656b44",
+        "type": "link out",
+        "z": "6d564b0b71763d89",
+        "name": "outdoor_temp",
+        "mode": "link",
+        "links": [],
+        "x": 1865,
+        "y": 160,
         "wires": []
     },
     {
@@ -4381,7 +4422,8 @@
         "z": "15311a68299dc024",
         "name": "fridge_dashboard",
         "links": [
-            "4562a99cb7e72896"
+            "4562a99cb7e72896",
+            "380baa39b73ad74b"
         ],
         "x": 315,
         "y": 120,
