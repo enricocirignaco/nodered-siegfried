@@ -4844,5 +4844,172 @@
                 "8f6a175b5f9ee867"
             ]
         ]
+    },
+    {
+        "id": "29b2917c6d628102",
+        "type": "function",
+        "z": "c6c05e7764275064",
+        "name": "Inverter Logic",
+        "func": "/**\n * Inverter indirect needed for fridge and victron charger\n * Can also be manually used with the 230V outlet\n * This node is the only place where the inverter should be turned on or off\n */\n\nconst values = flow.get(\"values\");\n\nif(values.victronCharger || values.fridge || values.manualSwitch){\n    //turn on inverter\n    msg.payload = true;\n} else{\n    // turn off inverter\n    msg.payload = false\n}\nglobal.set(\"status.inverter\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 860,
+        "y": 120,
+        "wires": [
+            [
+                "4cc17cb982627297"
+            ]
+        ]
+    },
+    {
+        "id": "de22dce2df13f5f3",
+        "type": "link in",
+        "z": "c6c05e7764275064",
+        "name": "inverter_in",
+        "links": [],
+        "x": 215,
+        "y": 120,
+        "wires": [
+            [
+                "6f4c7c39abcdbe77"
+            ]
+        ]
+    },
+    {
+        "id": "6f4c7c39abcdbe77",
+        "type": "switch",
+        "z": "c6c05e7764275064",
+        "name": "",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "inverter_switch",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "fridge",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "charger",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 370,
+        "y": 120,
+        "wires": [
+            [
+                "d944fbf6007f48e5"
+            ],
+            [
+                "c33746b96c6e04df"
+            ],
+            [
+                "13dfd366d6413abe"
+            ]
+        ]
+    },
+    {
+        "id": "d944fbf6007f48e5",
+        "type": "change",
+        "z": "c6c05e7764275064",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "values.manualSwitch",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 80,
+        "wires": [
+            [
+                "29b2917c6d628102"
+            ]
+        ]
+    },
+    {
+        "id": "c33746b96c6e04df",
+        "type": "change",
+        "z": "c6c05e7764275064",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "values.fridge",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 120,
+        "wires": [
+            [
+                "29b2917c6d628102"
+            ]
+        ]
+    },
+    {
+        "id": "13dfd366d6413abe",
+        "type": "change",
+        "z": "c6c05e7764275064",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "values.victronCharger",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 160,
+        "wires": [
+            [
+                "29b2917c6d628102"
+            ]
+        ]
+    },
+    {
+        "id": "4cc17cb982627297",
+        "type": "link out",
+        "z": "c6c05e7764275064",
+        "name": "inverter_gpio",
+        "mode": "link",
+        "links": [],
+        "x": 1035,
+        "y": 120,
+        "wires": []
     }
 ]
