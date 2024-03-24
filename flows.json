@@ -24,6 +24,14 @@
         "env": []
     },
     {
+        "id": "c6c05e7764275064",
+        "type": "tab",
+        "label": "Inverter",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "b10498f78b9fb638",
         "type": "group",
         "z": "6d564b0b71763d89",
@@ -4329,7 +4337,7 @@
         "shape": "circle",
         "showGlow": false,
         "name": "led fridge",
-        "x": 1190,
+        "x": 1070,
         "y": 340,
         "wires": []
     },
@@ -4368,7 +4376,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 600,
+        "x": 480,
         "y": 160,
         "wires": [
             [
@@ -4401,7 +4409,7 @@
         "seg2": "6",
         "diff": false,
         "className": "",
-        "x": 610,
+        "x": 490,
         "y": 120,
         "wires": []
     },
@@ -4432,7 +4440,7 @@
         "shape": "circle",
         "showGlow": false,
         "name": "led inverter",
-        "x": 1010,
+        "x": 890,
         "y": 260,
         "wires": []
     },
@@ -4445,45 +4453,13 @@
             "4562a99cb7e72896",
             "380baa39b73ad74b"
         ],
-        "x": 295,
+        "x": 175,
         "y": 120,
         "wires": [
             [
                 "a61ae7040267586a",
                 "a9c76782de77f2d3"
             ]
-        ]
-    },
-    {
-        "id": "b63a529b627e4005",
-        "type": "ui_switch",
-        "z": "15311a68299dc024",
-        "name": "",
-        "label": "Charge starter battery when inverter on",
-        "tooltip": "inverter is powered by the starter battery so it's agood idea to charge it with solar or leisure battery when inverter is in use. NOTE: this not apply when the ignition is on",
-        "group": "6fd6f055a36d0f78",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "decouple": "false",
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "className": "",
-        "x": 660,
-        "y": 580,
-        "wires": [
-            []
         ]
     },
     {
@@ -4505,8 +4481,8 @@
         "max": "15",
         "step": 1,
         "className": "",
-        "x": 620,
-        "y": 440,
+        "x": 160,
+        "y": 500,
         "wires": [
             [
                 "a7cbc6a832925664"
@@ -4532,8 +4508,8 @@
         "max": "15",
         "step": 1,
         "className": "",
-        "x": 620,
-        "y": 480,
+        "x": 160,
+        "y": 540,
         "wires": [
             [
                 "49fbd3a192947c76"
@@ -4559,8 +4535,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 880,
-        "y": 480,
+        "x": 420,
+        "y": 540,
         "wires": [
             []
         ]
@@ -4584,8 +4560,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 880,
-        "y": 440,
+        "x": 420,
+        "y": 500,
         "wires": [
             []
         ]
@@ -4609,7 +4585,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 800,
+        "x": 680,
         "y": 160,
         "wires": [
             []
@@ -4627,7 +4603,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 600,
+        "x": 480,
         "y": 260,
         "wires": [
             [
@@ -4647,7 +4623,7 @@
         "septopics": true,
         "property": "payload",
         "topi": "topic",
-        "x": 800,
+        "x": 680,
         "y": 260,
         "wires": [
             [
@@ -4665,7 +4641,7 @@
         "name": "fridge_gpio",
         "mode": "link",
         "links": [],
-        "x": 1145,
+        "x": 1025,
         "y": 380,
         "wires": []
     },
@@ -4686,7 +4662,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1000,
+        "x": 880,
         "y": 340,
         "wires": [
             [
@@ -4703,92 +4679,9 @@
         "name": "inverter_gpio",
         "mode": "link",
         "links": [],
-        "x": 955,
+        "x": 835,
         "y": 300,
         "wires": []
-    },
-    {
-        "id": "3f41ea78272be1e4",
-        "type": "inject",
-        "z": "15311a68299dc024",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 510,
-        "y": 640,
-        "wires": [
-            [
-                "0f1f12031935e07a"
-            ]
-        ]
-    },
-    {
-        "id": "0f1f12031935e07a",
-        "type": "change",
-        "z": "15311a68299dc024",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "status.ignition",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 730,
-        "y": 640,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "90191d9fe04bd9ed",
-        "type": "inject",
-        "z": "15311a68299dc024",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "false",
-        "payloadType": "bool",
-        "x": 510,
-        "y": 680,
-        "wires": [
-            [
-                "0f1f12031935e07a"
-            ]
-        ]
     },
     {
         "id": "89a59fce0a81cb40",
@@ -4809,7 +4702,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1230,
+        "x": 1110,
         "y": 300,
         "wires": [
             []
@@ -4834,7 +4727,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1050,
+        "x": 930,
         "y": 220,
         "wires": [
             []
@@ -4857,7 +4750,7 @@
         "topic": "",
         "payload": "false",
         "payloadType": "bool",
-        "x": 470,
+        "x": 350,
         "y": 160,
         "wires": [
             [
@@ -4866,9 +4759,51 @@
         ]
     },
     {
+        "id": "c1b7fabbd039452c",
+        "type": "comment",
+        "z": "15311a68299dc024",
+        "name": "settings",
+        "info": "",
+        "x": 90,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "b63a529b627e4005",
+        "type": "ui_switch",
+        "z": "c6c05e7764275064",
+        "name": "",
+        "label": "Charge starter battery when inverter on",
+        "tooltip": "inverter is powered by the starter battery so it's agood idea to charge it with solar or leisure battery when inverter is in use. NOTE: this not apply when the ignition is on",
+        "group": "6fd6f055a36d0f78",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 440,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "8f6a175b5f9ee867",
         "type": "ui_led",
-        "z": "15311a68299dc024",
+        "z": "c6c05e7764275064",
         "order": 7,
         "group": "af392092454b5034",
         "width": "5",
@@ -4892,18 +4827,18 @@
         "shape": "circle",
         "showGlow": false,
         "name": "led ignition",
-        "x": 1010,
-        "y": 400,
+        "x": 430,
+        "y": 300,
         "wires": []
     },
     {
         "id": "0612e1bda57f6812",
         "type": "link in",
-        "z": "15311a68299dc024",
+        "z": "c6c05e7764275064",
         "name": "ignition_dashboard",
         "links": [],
-        "x": 875,
-        "y": 400,
+        "x": 295,
+        "y": 300,
         "wires": [
             [
                 "8f6a175b5f9ee867"
