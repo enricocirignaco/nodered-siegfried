@@ -1763,211 +1763,6 @@
         "wires": []
     },
     {
-        "id": "906de414a5d047ae",
-        "type": "PCA9685 out",
-        "z": "6d564b0b71763d89",
-        "name": "",
-        "pca9685": "e6b261de3d937e74",
-        "channel": "0",
-        "payload": "",
-        "unit": "percent",
-        "onStep": "0",
-        "x": 1460,
-        "y": 320,
-        "wires": []
-    },
-    {
-        "id": "1d787ce802cd9d0e",
-        "type": "ui_slider",
-        "z": "6d564b0b71763d89",
-        "name": "",
-        "label": "slider 1",
-        "tooltip": "",
-        "group": "57ca5f37d1ee1a2a",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "outs": "all",
-        "topic": "topic",
-        "topicType": "msg",
-        "min": 0,
-        "max": "100",
-        "step": "10",
-        "className": "",
-        "x": 1200,
-        "y": 320,
-        "wires": [
-            [
-                "906de414a5d047ae"
-            ]
-        ]
-    },
-    {
-        "id": "f15741b17bd997eb",
-        "type": "PCA9685 out",
-        "z": "6d564b0b71763d89",
-        "name": "",
-        "pca9685": "e6b261de3d937e74",
-        "channel": "1",
-        "payload": "",
-        "unit": "percent",
-        "onStep": "0",
-        "x": 1460,
-        "y": 360,
-        "wires": []
-    },
-    {
-        "id": "a9de587ecc4b1d75",
-        "type": "ui_slider",
-        "z": "6d564b0b71763d89",
-        "name": "",
-        "label": "slider 2",
-        "tooltip": "",
-        "group": "57ca5f37d1ee1a2a",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "outs": "all",
-        "topic": "topic",
-        "topicType": "msg",
-        "min": 0,
-        "max": "100",
-        "step": "10",
-        "className": "",
-        "x": 1200,
-        "y": 360,
-        "wires": [
-            [
-                "f15741b17bd997eb"
-            ]
-        ]
-    },
-    {
-        "id": "a75a4c86edddc56a",
-        "type": "PCA9685 out",
-        "z": "6d564b0b71763d89",
-        "name": "",
-        "pca9685": "e6b261de3d937e74",
-        "channel": "2",
-        "payload": "",
-        "unit": "percent",
-        "onStep": "0",
-        "x": 1460,
-        "y": 400,
-        "wires": []
-    },
-    {
-        "id": "7f2b0be17a8ef9e7",
-        "type": "ui_slider",
-        "z": "6d564b0b71763d89",
-        "name": "",
-        "label": "slider 3",
-        "tooltip": "",
-        "group": "57ca5f37d1ee1a2a",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "outs": "all",
-        "topic": "topic",
-        "topicType": "msg",
-        "min": 0,
-        "max": "100",
-        "step": "10",
-        "className": "",
-        "x": 1200,
-        "y": 400,
-        "wires": [
-            [
-                "a75a4c86edddc56a"
-            ]
-        ]
-    },
-    {
-        "id": "22e953c7bff14115",
-        "type": "PCA9685 out",
-        "z": "6d564b0b71763d89",
-        "name": "",
-        "pca9685": "e6b261de3d937e74",
-        "channel": "3",
-        "payload": "",
-        "unit": "percent",
-        "onStep": "0",
-        "x": 1460,
-        "y": 440,
-        "wires": []
-    },
-    {
-        "id": "5f99052b10737c61",
-        "type": "ui_slider",
-        "z": "6d564b0b71763d89",
-        "name": "",
-        "label": "slider 4",
-        "tooltip": "",
-        "group": "57ca5f37d1ee1a2a",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "outs": "all",
-        "topic": "topic",
-        "topicType": "msg",
-        "min": 0,
-        "max": "100",
-        "step": "10",
-        "className": "",
-        "x": 1200,
-        "y": 440,
-        "wires": [
-            [
-                "22e953c7bff14115"
-            ]
-        ]
-    },
-    {
-        "id": "5285818c72fda0f3",
-        "type": "PCA9685 out",
-        "z": "6d564b0b71763d89",
-        "name": "",
-        "pca9685": "e6b261de3d937e74",
-        "channel": "4",
-        "payload": "",
-        "unit": "percent",
-        "onStep": "0",
-        "x": 1460,
-        "y": 480,
-        "wires": []
-    },
-    {
-        "id": "8b2d7185ce3ae134",
-        "type": "ui_slider",
-        "z": "6d564b0b71763d89",
-        "name": "",
-        "label": "slider 5",
-        "tooltip": "",
-        "group": "57ca5f37d1ee1a2a",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "outs": "all",
-        "topic": "topic",
-        "topicType": "msg",
-        "min": 0,
-        "max": "100",
-        "step": "10",
-        "className": "",
-        "x": 1200,
-        "y": 480,
-        "wires": [
-            [
-                "5285818c72fda0f3"
-            ]
-        ]
-    },
-    {
         "id": "941ecb4ddd78054f",
         "type": "PCA9685 out",
         "z": "6d564b0b71763d89",
@@ -1980,33 +1775,6 @@
         "x": 1460,
         "y": 520,
         "wires": []
-    },
-    {
-        "id": "1244cc340bd79cbe",
-        "type": "ui_slider",
-        "z": "6d564b0b71763d89",
-        "name": "",
-        "label": "slider 6",
-        "tooltip": "",
-        "group": "57ca5f37d1ee1a2a",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "outs": "all",
-        "topic": "topic",
-        "topicType": "msg",
-        "min": 0,
-        "max": "100",
-        "step": "10",
-        "className": "",
-        "x": 1200,
-        "y": 520,
-        "wires": [
-            [
-                "941ecb4ddd78054f"
-            ]
-        ]
     },
     {
         "id": "4b840a6a82d5c1d4",
@@ -2023,33 +1791,6 @@
         "wires": []
     },
     {
-        "id": "b93ee99033232259",
-        "type": "ui_slider",
-        "z": "6d564b0b71763d89",
-        "name": "",
-        "label": "slider 7",
-        "tooltip": "",
-        "group": "57ca5f37d1ee1a2a",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "outs": "all",
-        "topic": "topic",
-        "topicType": "msg",
-        "min": 0,
-        "max": "100",
-        "step": "10",
-        "className": "",
-        "x": 1200,
-        "y": 560,
-        "wires": [
-            [
-                "4b840a6a82d5c1d4"
-            ]
-        ]
-    },
-    {
         "id": "9901123d9c76ccdc",
         "type": "PCA9685 out",
         "z": "6d564b0b71763d89",
@@ -2062,33 +1803,6 @@
         "x": 1460,
         "y": 600,
         "wires": []
-    },
-    {
-        "id": "1f916ba89413e914",
-        "type": "ui_slider",
-        "z": "6d564b0b71763d89",
-        "name": "",
-        "label": "slider 8",
-        "tooltip": "",
-        "group": "57ca5f37d1ee1a2a",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "outs": "all",
-        "topic": "topic",
-        "topicType": "msg",
-        "min": 0,
-        "max": "100",
-        "step": "10",
-        "className": "",
-        "x": 1200,
-        "y": 600,
-        "wires": [
-            [
-                "9901123d9c76ccdc"
-            ]
-        ]
     },
     {
         "id": "6fef33851e4780eb",
@@ -2105,33 +1819,6 @@
         "wires": []
     },
     {
-        "id": "b14ac3e4664eaef2",
-        "type": "ui_slider",
-        "z": "6d564b0b71763d89",
-        "name": "",
-        "label": "slider 9",
-        "tooltip": "",
-        "group": "57ca5f37d1ee1a2a",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "outs": "all",
-        "topic": "topic",
-        "topicType": "msg",
-        "min": 0,
-        "max": "100",
-        "step": "10",
-        "className": "",
-        "x": 1200,
-        "y": 640,
-        "wires": [
-            [
-                "6fef33851e4780eb"
-            ]
-        ]
-    },
-    {
         "id": "803e0f1b00b98a01",
         "type": "PCA9685 out",
         "z": "6d564b0b71763d89",
@@ -2146,31 +1833,74 @@
         "wires": []
     },
     {
-        "id": "0f4e73aa06f60ebc",
-        "type": "ui_slider",
+        "id": "906de414a5d047ae",
+        "type": "PCA9685 out",
         "z": "6d564b0b71763d89",
         "name": "",
-        "label": "slider 10",
-        "tooltip": "",
-        "group": "57ca5f37d1ee1a2a",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "outs": "all",
-        "topic": "topic",
-        "topicType": "msg",
-        "min": 0,
-        "max": "100",
-        "step": "10",
-        "className": "",
-        "x": 1200,
-        "y": 680,
-        "wires": [
-            [
-                "803e0f1b00b98a01"
-            ]
-        ]
+        "pca9685": "e6b261de3d937e74",
+        "channel": "0",
+        "payload": "",
+        "unit": "percent",
+        "onStep": "0",
+        "x": 1460,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "f15741b17bd997eb",
+        "type": "PCA9685 out",
+        "z": "6d564b0b71763d89",
+        "name": "",
+        "pca9685": "e6b261de3d937e74",
+        "channel": "1",
+        "payload": "",
+        "unit": "percent",
+        "onStep": "0",
+        "x": 1460,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "a75a4c86edddc56a",
+        "type": "PCA9685 out",
+        "z": "6d564b0b71763d89",
+        "name": "",
+        "pca9685": "e6b261de3d937e74",
+        "channel": "2",
+        "payload": "",
+        "unit": "percent",
+        "onStep": "0",
+        "x": 1460,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "22e953c7bff14115",
+        "type": "PCA9685 out",
+        "z": "6d564b0b71763d89",
+        "name": "",
+        "pca9685": "e6b261de3d937e74",
+        "channel": "3",
+        "payload": "",
+        "unit": "percent",
+        "onStep": "0",
+        "x": 1460,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "5285818c72fda0f3",
+        "type": "PCA9685 out",
+        "z": "6d564b0b71763d89",
+        "name": "",
+        "pca9685": "e6b261de3d937e74",
+        "channel": "4",
+        "payload": "",
+        "unit": "percent",
+        "onStep": "0",
+        "x": 1460,
+        "y": 480,
+        "wires": []
     },
     {
         "id": "0094be9ee0b66230",
@@ -4460,5 +4190,30 @@
         "x": 660,
         "y": 280,
         "wires": []
+    },
+    {
+        "id": "92b3cc025d4102a5",
+        "type": "ui_slider",
+        "z": "8f469e385c0b1581",
+        "name": "",
+        "label": "light door",
+        "tooltip": "",
+        "group": "23c60b13edc12513",
+        "order": 4,
+        "width": "10",
+        "height": "1",
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "100",
+        "step": "5",
+        "className": "",
+        "x": 620,
+        "y": 2780,
+        "wires": [
+            []
+        ]
     }
 ]
