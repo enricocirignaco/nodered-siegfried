@@ -63,11 +63,14 @@
             "3b8cc007df89f286",
             "b850689cb2dcc1db",
             "c0742511f4277387",
-            "098183b4045c6339"
+            "098183b4045c6339",
+            "4562a99cb7e72896",
+            "e4055112bf86b97c",
+            "e6ea961978efc0f1"
         ],
         "x": 34,
         "y": 219,
-        "w": 972,
+        "w": 1032,
         "h": 229.5
     },
     {
@@ -1034,7 +1037,9 @@
         "x": 830,
         "y": 260,
         "wires": [
-            []
+            [
+                "4562a99cb7e72896"
+            ]
         ]
     },
     {
@@ -1194,7 +1199,9 @@
         "x": 830,
         "y": 320,
         "wires": [
-            []
+            [
+                "e4055112bf86b97c"
+            ]
         ]
     },
     {
@@ -1213,7 +1220,9 @@
         "x": 830,
         "y": 380,
         "wires": [
-            []
+            [
+                "e6ea961978efc0f1"
+            ]
         ]
     },
     {
@@ -2065,6 +2074,44 @@
                 "aa46d25bd18cdb62"
             ]
         ]
+    },
+    {
+        "id": "4562a99cb7e72896",
+        "type": "link out",
+        "z": "6d564b0b71763d89",
+        "g": "dbe48b6a4f7bad55",
+        "name": "fridge_temp",
+        "mode": "link",
+        "links": [
+            "05ade75e1ba4a9f0"
+        ],
+        "x": 1025,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "e4055112bf86b97c",
+        "type": "link out",
+        "z": "6d564b0b71763d89",
+        "g": "dbe48b6a4f7bad55",
+        "name": "indoor_temp",
+        "mode": "link",
+        "links": [],
+        "x": 1025,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "e6ea961978efc0f1",
+        "type": "link out",
+        "z": "6d564b0b71763d89",
+        "g": "dbe48b6a4f7bad55",
+        "name": "outdoor_temp",
+        "mode": "link",
+        "links": [],
+        "x": 1025,
+        "y": 380,
+        "wires": []
     },
     {
         "id": "0094be9ee0b66230",
@@ -4298,52 +4345,6 @@
         "wires": []
     },
     {
-        "id": "119f891a05f652b7",
-        "type": "inject",
-        "z": "15311a68299dc024",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "10",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 150,
-        "y": 480,
-        "wires": [
-            [
-                "f806f707df5dc5cc"
-            ]
-        ]
-    },
-    {
-        "id": "f806f707df5dc5cc",
-        "type": "random",
-        "z": "15311a68299dc024",
-        "name": "",
-        "low": "-10",
-        "high": "15",
-        "inte": "true",
-        "property": "payload",
-        "x": 340,
-        "y": 480,
-        "wires": [
-            [
-                "48a9078ae2bf8b77"
-            ]
-        ]
-    },
-    {
         "id": "82b169af60c9764e",
         "type": "ui_led",
         "z": "15311a68299dc024",
@@ -4375,28 +4376,19 @@
         "wires": []
     },
     {
-        "id": "48a9078ae2bf8b77",
-        "type": "change",
+        "id": "05ade75e1ba4a9f0",
+        "type": "link in",
         "z": "15311a68299dc024",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "sensors.fridge_temp",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            }
+        "name": "fridge_dashboard",
+        "links": [
+            "4562a99cb7e72896"
         ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 630,
-        "y": 480,
+        "x": 315,
+        "y": 120,
         "wires": [
-            []
+            [
+                "a61ae7040267586a"
+            ]
         ]
     }
 ]
