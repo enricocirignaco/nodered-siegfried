@@ -4329,8 +4329,8 @@
         "shape": "circle",
         "showGlow": false,
         "name": "led fridge",
-        "x": 1000,
-        "y": 260,
+        "x": 1190,
+        "y": 340,
         "wires": []
     },
     {
@@ -4431,8 +4431,8 @@
         "shape": "circle",
         "showGlow": false,
         "name": "led inverter",
-        "x": 1190,
-        "y": 340,
+        "x": 1010,
+        "y": 260,
         "wires": []
     },
     {
@@ -4650,10 +4650,10 @@
         "y": 260,
         "wires": [
             [
-                "da904e29cb9967fe",
-                "4fa88bf43db9eb41",
                 "67e022582b8527d2",
-                "89a59fce0a81cb40"
+                "3184fc21642792b4",
+                "82b169af60c9764e",
+                "1fcc8a65e5fd2ca3"
             ]
         ]
     },
@@ -4664,8 +4664,8 @@
         "name": "fridge_gpio",
         "mode": "link",
         "links": [],
-        "x": 955,
-        "y": 300,
+        "x": 1145,
+        "y": 380,
         "wires": []
     },
     {
@@ -4689,9 +4689,9 @@
         "y": 340,
         "wires": [
             [
-                "82b169af60c9764e",
-                "3184fc21642792b4",
-                "1fcc8a65e5fd2ca3"
+                "89a59fce0a81cb40",
+                "da904e29cb9967fe",
+                "4fa88bf43db9eb41"
             ]
         ]
     },
@@ -4702,8 +4702,8 @@
         "name": "inverter_gpio",
         "mode": "link",
         "links": [],
-        "x": 1135,
-        "y": 380,
+        "x": 955,
+        "y": 300,
         "wires": []
     },
     {
@@ -4815,8 +4815,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1040,
-        "y": 220,
+        "x": 1230,
+        "y": 300,
         "wires": [
             []
         ]
@@ -4840,8 +4840,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1230,
-        "y": 300,
+        "x": 1050,
+        "y": 220,
         "wires": [
             []
         ]
