@@ -1717,6 +1717,7 @@
         "name": "broadcast parser",
         "func": "// 1. output --> data object only if data is not corrupted\n// 2. output --> error msg if data is corrupted\n// 3. output --> formatted msg object for database injection\n\nconst db_injection_msg = \"insert into mppt (v_batt, i_batt, v_panel, p_panel, op_state, mppt_mode, off_reason, error_msg, load_state, i_load, yield_total, yield_today, maximum_power_today, yield_yesterday, maximum_power_yesterday, day_sequence_number) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);\"\nvar bit_stream = msg.payload;\nvar data = {};\n\n// reorder and standardize checksum string\nconst pid_index = bit_stream.indexOf(\"PID\");\nbit_stream = bit_stream.slice(pid_index-2, bit_stream.indexOf(\"Checksum\", pid_index+1)+10);\n\n//calculate checksum for data integrity\nvar checksum = 0;\nfor(const element of bit_stream) {\n   checksum = (checksum + element) & 255; /* Take modulo 256 in account */\n}\n\n// if data is not corrupted\nif(checksum == 0){\n\n    // convert bitstream to string\n    var string = bit_stream.toString();\n    // remove checksum, lf and cr\n    string = string.substring(2, string.indexOf(\"Checksum\")-1);\n    // convert string to array\n    var array = string.split('\\n');\n    // convert array of string into data object\n    for(const element of array){\n        var property_name = element.substring(0, element.indexOf('\\t'));\n        var property_value = element.substring(element.indexOf('\\t')+1, element.length-1);\n        data[property_name] = property_value;\n    }\n    \n    // check data object for integrity before saving it\n    if(Object.keys(data).length == 19){\n        // update flow object with new data\n        global.set(\"mppt_broadcast\", data);\n        \n        // format data to be injected into database\n        var db_data = Object.values(data);\n        // remove static data\n        db_data = db_data.splice(3);\n        msg.payload = db_data;\n        msg.topic = db_injection_msg;\n        return [{payload: data}, null, msg];\n    }\n}\n\n// if data is corrupted\nelse {\n    // data corrucped flag\n    return [null, {payload: \"mppt broadcast corrupted\"}, null];\n}\n",
         "outputs": 3,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -4328,8 +4329,8 @@
         "shape": "circle",
         "showGlow": false,
         "name": "led fridge",
-        "x": 620,
-        "y": 160,
+        "x": 780,
+        "y": 120,
         "wires": []
     },
     {
@@ -4337,7 +4338,7 @@
         "type": "ui_dropdown",
         "z": "15311a68299dc024",
         "name": "",
-        "label": "Settings",
+        "label": "Setting",
         "tooltip": "",
         "place": "Off",
         "group": "af392092454b5034",
@@ -4367,12 +4368,11 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 320,
+        "x": 600,
         "y": 160,
         "wires": [
             [
-                "da904e29cb9967fe",
-                "82b169af60c9764e"
+                "e697ed0b4940fdd2"
             ]
         ]
     },
@@ -4431,8 +4431,8 @@
         "shape": "circle",
         "showGlow": false,
         "name": "led inverter",
-        "x": 610,
-        "y": 200,
+        "x": 970,
+        "y": 120,
         "wires": []
     },
     {
@@ -4479,7 +4479,7 @@
         "animate": false,
         "className": "",
         "x": 500,
-        "y": 500,
+        "y": 260,
         "wires": [
             []
         ]
@@ -4584,6 +4584,31 @@
         "reg": false,
         "x": 860,
         "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e697ed0b4940fdd2",
+        "type": "change",
+        "z": "15311a68299dc024",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "setting",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 800,
+        "y": 160,
         "wires": [
             []
         ]
