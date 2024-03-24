@@ -189,27 +189,6 @@
         "h": 122
     },
     {
-        "id": "f8f77ae7498d9f75",
-        "type": "group",
-        "z": "15311a68299dc024",
-        "name": "Fridge",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "da904e29cb9967fe",
-            "b2229e5dc5944aef",
-            "a61ae7040267586a",
-            "119f891a05f652b7",
-            "f806f707df5dc5cc",
-            "82b169af60c9764e"
-        ],
-        "x": 34,
-        "y": 79,
-        "w": 672,
-        "h": 202
-    },
-    {
         "id": "f1b90aff42e3f29a",
         "type": "serial-port",
         "name": "",
@@ -4061,7 +4040,6 @@
         "id": "da904e29cb9967fe",
         "type": "ui_led",
         "z": "15311a68299dc024",
-        "g": "f8f77ae7498d9f75",
         "order": 6,
         "group": "af392092454b5034",
         "width": "5",
@@ -4086,14 +4064,13 @@
         "showGlow": false,
         "name": "led fridge",
         "x": 620,
-        "y": 200,
+        "y": 160,
         "wires": []
     },
     {
         "id": "b2229e5dc5944aef",
         "type": "ui_dropdown",
         "z": "15311a68299dc024",
-        "g": "f8f77ae7498d9f75",
         "name": "",
         "label": "Settings",
         "tooltip": "",
@@ -4126,7 +4103,7 @@
         "topicType": "msg",
         "className": "",
         "x": 320,
-        "y": 200,
+        "y": 160,
         "wires": [
             [
                 "da904e29cb9967fe",
@@ -4138,7 +4115,6 @@
         "id": "a61ae7040267586a",
         "type": "ui_gauge",
         "z": "15311a68299dc024",
-        "g": "f8f77ae7498d9f75",
         "name": "fridge temp",
         "group": "af392092454b5034",
         "order": 1,
@@ -4167,7 +4143,6 @@
         "id": "119f891a05f652b7",
         "type": "inject",
         "z": "15311a68299dc024",
-        "g": "f8f77ae7498d9f75",
         "name": "",
         "props": [
             {
@@ -4186,7 +4161,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 150,
-        "y": 120,
+        "y": 480,
         "wires": [
             [
                 "f806f707df5dc5cc"
@@ -4197,17 +4172,16 @@
         "id": "f806f707df5dc5cc",
         "type": "random",
         "z": "15311a68299dc024",
-        "g": "f8f77ae7498d9f75",
         "name": "",
         "low": "-10",
         "high": "15",
         "inte": "true",
         "property": "payload",
-        "x": 320,
-        "y": 120,
+        "x": 340,
+        "y": 480,
         "wires": [
             [
-                "a61ae7040267586a"
+                "48a9078ae2bf8b77"
             ]
         ]
     },
@@ -4215,7 +4189,6 @@
         "id": "82b169af60c9764e",
         "type": "ui_led",
         "z": "15311a68299dc024",
-        "g": "f8f77ae7498d9f75",
         "order": 7,
         "group": "af392092454b5034",
         "width": "5",
@@ -4240,7 +4213,32 @@
         "showGlow": false,
         "name": "led inverter",
         "x": 610,
-        "y": 240,
+        "y": 200,
         "wires": []
+    },
+    {
+        "id": "48a9078ae2bf8b77",
+        "type": "change",
+        "z": "15311a68299dc024",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "sensors.fridge_temp",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 630,
+        "y": 480,
+        "wires": [
+            []
+        ]
     }
 ]
