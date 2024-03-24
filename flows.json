@@ -476,7 +476,7 @@
         "id": "9d7781fc6afac662",
         "type": "ui_tab",
         "name": "Settings",
-        "icon": "Settings",
+        "icon": "settings",
         "disabled": false,
         "hidden": false
     },
