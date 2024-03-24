@@ -4445,13 +4445,12 @@
             "4562a99cb7e72896",
             "380baa39b73ad74b"
         ],
-        "x": 315,
+        "x": 295,
         "y": 120,
         "wires": [
             [
                 "a61ae7040267586a",
-                "a9c76782de77f2d3",
-                "dd15fedb9ff361d9"
+                "a9c76782de77f2d3"
             ]
         ]
     },
@@ -4842,38 +4841,72 @@
         ]
     },
     {
-        "id": "4a9eca7c1e4c8690",
-        "type": "debug",
+        "id": "d50f0dfed5ccee9d",
+        "type": "inject",
         "z": "15311a68299dc024",
-        "name": "debug 4",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 780,
-        "y": 340,
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 470,
+        "y": 160,
+        "wires": [
+            [
+                "b2229e5dc5944aef"
+            ]
+        ]
+    },
+    {
+        "id": "8f6a175b5f9ee867",
+        "type": "ui_led",
+        "z": "15311a68299dc024",
+        "order": 7,
+        "group": "af392092454b5034",
+        "width": "5",
+        "height": "1",
+        "label": "Ignition",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#919191",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#dea900",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": false,
+        "name": "led ignition",
+        "x": 1010,
+        "y": 400,
         "wires": []
     },
     {
-        "id": "dd15fedb9ff361d9",
-        "type": "function",
+        "id": "0612e1bda57f6812",
+        "type": "link in",
         "z": "15311a68299dc024",
-        "name": "algorithm",
-        "func": "let setting = flow.get(\"setting\");\nlet upper_temp = flow.get(\"upper_temp\");\nlet lower_temp = flow.get(\"lower_temp\");\nlet temp = msg.payload;\nlet ignition = global.get(\"status.ignition\");\nlet compressor = global.get(\"status.fridge\");\nmsg.payload = compressor\n\nif(setting === \"auto\") setting = ignition;\n\nmsg.payload = setting;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 600,
-        "y": 300,
+        "name": "ignition_dashboard",
+        "links": [],
+        "x": 875,
+        "y": 400,
         "wires": [
             [
-                "4a9eca7c1e4c8690"
+                "8f6a175b5f9ee867"
             ]
         ]
     }
