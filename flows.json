@@ -4873,8 +4873,7 @@
         "y": 260,
         "wires": [
             [
-                "6f4c7c39abcdbe77",
-                "67a83fadb57cf2f6"
+                "6f4c7c39abcdbe77"
             ]
         ]
     },
@@ -4931,6 +4930,13 @@
                 "pt": "flow",
                 "to": "payload",
                 "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "delay",
+                "pt": "msg",
+                "to": "delay",
+                "tot": "flow"
             }
         ],
         "action": "",
@@ -4938,7 +4944,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 440,
+        "x": 420,
         "y": 260,
         "wires": [
             [
@@ -4958,6 +4964,13 @@
                 "pt": "flow",
                 "to": "payload",
                 "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "delay",
+                "pt": "msg",
+                "to": "delay",
+                "tot": "flow"
             }
         ],
         "action": "",
@@ -4965,7 +4978,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 440,
+        "x": 420,
         "y": 140,
         "wires": [
             [
@@ -4986,6 +4999,13 @@
                 "pt": "flow",
                 "to": "payload",
                 "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "delay",
+                "pt": "msg",
+                "to": "delay",
+                "tot": "flow"
             }
         ],
         "action": "",
@@ -4993,7 +5013,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 470,
+        "x": 420,
         "y": 380,
         "wires": [
             [
@@ -5308,23 +5328,6 @@
         ]
     },
     {
-        "id": "67a83fadb57cf2f6",
-        "type": "debug",
-        "z": "c6c05e7764275064",
-        "name": "debug 4",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 200,
-        "y": 460,
-        "wires": []
-    },
-    {
         "id": "82b169af60c9764e",
         "type": "ui_led",
         "z": "c6c05e7764275064",
@@ -5401,6 +5404,83 @@
         "x": 1840,
         "y": 220,
         "wires": []
+    },
+    {
+        "id": "c17e3b9391531959",
+        "type": "ui_slider",
+        "z": "c6c05e7764275064",
+        "name": "",
+        "label": "Inverter delay in seconds",
+        "tooltip": "inverter between changing inverter state and high voltage applicances",
+        "group": "6fd6f055a36d0f78",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "className": "",
+        "x": 370,
+        "y": 560,
+        "wires": [
+            [
+                "174ae2e518327343"
+            ]
+        ]
+    },
+    {
+        "id": "18c76b5fd46a5af4",
+        "type": "inject",
+        "z": "c6c05e7764275064",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "2",
+        "payloadType": "num",
+        "x": 170,
+        "y": 560,
+        "wires": [
+            [
+                "c17e3b9391531959"
+            ]
+        ]
+    },
+    {
+        "id": "174ae2e518327343",
+        "type": "change",
+        "z": "c6c05e7764275064",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "delay",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 560,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "4ab78910fec37e29",
