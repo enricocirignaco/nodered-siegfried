@@ -4434,8 +4434,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 480,
-        "y": 160,
+        "x": 380,
+        "y": 80,
         "wires": [
             [
                 "e697ed0b4940fdd2",
@@ -4467,8 +4467,8 @@
         "seg2": "6",
         "diff": false,
         "className": "",
-        "x": 490,
-        "y": 120,
+        "x": 390,
+        "y": 220,
         "wires": []
     },
     {
@@ -4480,8 +4480,8 @@
             "380baa39b73ad74b",
             "4562a99cb7e72896"
         ],
-        "x": 175,
-        "y": 120,
+        "x": 185,
+        "y": 200,
         "wires": [
             [
                 "a61ae7040267586a",
@@ -4508,8 +4508,8 @@
         "max": "15",
         "step": 1,
         "className": "",
-        "x": 300,
-        "y": 500,
+        "x": 380,
+        "y": 380,
         "wires": [
             [
                 "a7cbc6a832925664"
@@ -4535,8 +4535,8 @@
         "max": "15",
         "step": 1,
         "className": "",
-        "x": 300,
-        "y": 540,
+        "x": 380,
+        "y": 420,
         "wires": [
             [
                 "49fbd3a192947c76"
@@ -4562,8 +4562,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 560,
-        "y": 540,
+        "x": 640,
+        "y": 420,
         "wires": [
             []
         ]
@@ -4587,8 +4587,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 560,
-        "y": 500,
+        "x": 640,
+        "y": 380,
         "wires": [
             []
         ]
@@ -4612,8 +4612,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 680,
-        "y": 160,
+        "x": 580,
+        "y": 80,
         "wires": [
             []
         ]
@@ -4630,8 +4630,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 480,
-        "y": 260,
+        "x": 380,
+        "y": 180,
         "wires": [
             [
                 "13fb75ced343ae86"
@@ -4650,8 +4650,8 @@
         "septopics": true,
         "property": "payload",
         "topi": "topic",
-        "x": 680,
-        "y": 260,
+        "x": 580,
+        "y": 180,
         "wires": [
             [
                 "3184fc21642792b4"
@@ -4667,8 +4667,8 @@
         "links": [
             "de22dce2df13f5f3"
         ],
-        "x": 845,
-        "y": 260,
+        "x": 745,
+        "y": 180,
         "wires": []
     },
     {
@@ -4688,8 +4688,8 @@
         "topic": "",
         "payload": "false",
         "payloadType": "bool",
-        "x": 350,
-        "y": 160,
+        "x": 250,
+        "y": 80,
         "wires": [
             [
                 "b2229e5dc5944aef"
@@ -4702,24 +4702,8 @@
         "z": "15311a68299dc024",
         "name": "settings",
         "info": "",
-        "x": 230,
-        "y": 460,
-        "wires": []
-    },
-    {
-        "id": "50eaa71e80058fe1",
-        "type": "debug",
-        "z": "15311a68299dc024",
-        "name": "debug 5",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 720,
-        "y": 320,
+        "x": 150,
+        "y": 340,
         "wires": []
     },
     {
@@ -4743,8 +4727,8 @@
         "topic": "",
         "payload": "6",
         "payloadType": "num",
-        "x": 70,
-        "y": 500,
+        "x": 150,
+        "y": 380,
         "wires": [
             [
                 "6371b576797132a9"
@@ -4772,8 +4756,8 @@
         "topic": "",
         "payload": "1",
         "payloadType": "num",
-        "x": 70,
-        "y": 540,
+        "x": 150,
+        "y": 420,
         "wires": [
             [
                 "932d0b15c2f26574"
