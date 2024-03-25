@@ -5428,7 +5428,7 @@
         "y": 560,
         "wires": [
             [
-                "174ae2e518327343"
+                "dde0df7a45b74b3f"
             ]
         ]
     },
@@ -5458,25 +5458,18 @@
         ]
     },
     {
-        "id": "174ae2e518327343",
-        "type": "change",
+        "id": "dde0df7a45b74b3f",
+        "type": "function",
         "z": "c6c05e7764275064",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "delay",
-                "pt": "flow",
-                "to": "payload*1000",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 600,
+        "name": "save value",
+        "func": "flow.set(\"delay\", msg.payload*1000);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
         "y": 560,
         "wires": [
             []
