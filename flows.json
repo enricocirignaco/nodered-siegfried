@@ -1968,7 +1968,7 @@
                 "vt": "str"
             }
         ],
-        "repeat": "4",
+        "repeat": "60",
         "crontab": "",
         "once": true,
         "onceDelay": 0.1,
