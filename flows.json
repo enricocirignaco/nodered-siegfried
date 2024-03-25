@@ -4539,7 +4539,7 @@
         "max": "15",
         "step": 1,
         "className": "",
-        "x": 160,
+        "x": 300,
         "y": 500,
         "wires": [
             [
@@ -4566,7 +4566,7 @@
         "max": "15",
         "step": 1,
         "className": "",
-        "x": 160,
+        "x": 300,
         "y": 540,
         "wires": [
             [
@@ -4593,7 +4593,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 420,
+        "x": 560,
         "y": 540,
         "wires": [
             []
@@ -4618,7 +4618,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 420,
+        "x": 560,
         "y": 500,
         "wires": [
             []
@@ -4734,7 +4734,7 @@
         "z": "15311a68299dc024",
         "name": "settings",
         "info": "",
-        "x": 90,
+        "x": 230,
         "y": 460,
         "wires": []
     },
@@ -4853,6 +4853,64 @@
         "x": 860,
         "y": 300,
         "wires": []
+    },
+    {
+        "id": "aa2cce0e424133e8",
+        "type": "inject",
+        "z": "15311a68299dc024",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "6",
+        "payloadType": "num",
+        "x": 70,
+        "y": 500,
+        "wires": [
+            [
+                "6371b576797132a9"
+            ]
+        ]
+    },
+    {
+        "id": "8eeb7cbb78217109",
+        "type": "inject",
+        "z": "15311a68299dc024",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 70,
+        "y": 540,
+        "wires": [
+            [
+                "932d0b15c2f26574"
+            ]
+        ]
     },
     {
         "id": "b63a529b627e4005",
