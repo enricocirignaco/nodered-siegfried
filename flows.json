@@ -5319,7 +5319,8 @@
         "wires": [
             [
                 "b7f3b176e4b124f4",
-                "da904e29cb9967fe"
+                "da904e29cb9967fe",
+                "3a970ed9ab43a8e4"
             ]
         ]
     },
@@ -5400,6 +5401,22 @@
         "name": "led fridge",
         "x": 1760,
         "y": 180,
+        "wires": []
+    },
+    {
+        "id": "3a970ed9ab43a8e4",
+        "type": "debug",
+        "z": "c6c05e7764275064",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1840,
+        "y": 220,
         "wires": []
     },
     {
