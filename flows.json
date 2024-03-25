@@ -4654,7 +4654,7 @@
         "type": "function",
         "z": "15311a68299dc024",
         "name": "algorithm",
-        "func": "let setting = flow.get(\"setting\");\nlet upper_temp = flow.get(\"upper_temp\");\nlet lower_temp = flow.get(\"lower_temp\");\nlet temp = msg.payload;\nlet ignition = global.get(\"status.ignition\");\nlet compressor = global.get(\"status.fridge\");\nmsg.payload = compressor\n\nif(setting === \"auto\") setting = ignition;\n\nif(setting === true){\n    if (temp >= upper_temp) msg.payload = true\n    else if (temp < lower_temp) msg.payload = false\n} else msg.payload = false\n\nmsg.topic = \"fridge\";\nreturn msg;",
+        "func": "let setting = flow.get(\"setting\");\nlet upper_temp = flow.get(\"upper_temp\");\nlet lower_temp = flow.get(\"lower_temp\");\nlet temp = msg.payload;\nlet ignition = global.get(\"status.ignition\");\nlet compressor = global.get(\"status.fridge\");\nmsg.payload = true;\n\nif(setting === \"auto\") setting = ignition;\n\nif(setting === true){\n    if (temp >= upper_temp) msg.payload = true\n    else if (temp < lower_temp) msg.payload = false\n} else msg.payload = false\n\nmsg.topic = \"fridge\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
