@@ -4427,8 +4427,8 @@
         "z": "15311a68299dc024",
         "name": "fridge_dashboard",
         "links": [
-            "4562a99cb7e72896",
-            "380baa39b73ad74b"
+            "380baa39b73ad74b",
+            "4562a99cb7e72896"
         ],
         "x": 175,
         "y": 120,
@@ -4604,7 +4604,8 @@
         "y": 260,
         "wires": [
             [
-                "3184fc21642792b4"
+                "3184fc21642792b4",
+                "50eaa71e80058fe1"
             ]
         ]
     },
@@ -4617,8 +4618,8 @@
         "links": [
             "de22dce2df13f5f3"
         ],
-        "x": 1045,
-        "y": 300,
+        "x": 845,
+        "y": 260,
         "wires": []
     },
     {
@@ -4755,6 +4756,22 @@
                 "da904e29cb9967fe"
             ]
         ]
+    },
+    {
+        "id": "50eaa71e80058fe1",
+        "type": "debug",
+        "z": "15311a68299dc024",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 300,
+        "wires": []
     },
     {
         "id": "b63a529b627e4005",
