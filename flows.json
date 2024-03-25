@@ -4472,37 +4472,6 @@
         "wires": []
     },
     {
-        "id": "82b169af60c9764e",
-        "type": "ui_led",
-        "z": "15311a68299dc024",
-        "order": 7,
-        "group": "af392092454b5034",
-        "width": "5",
-        "height": "1",
-        "label": "Inverter",
-        "labelPlacement": "left",
-        "labelAlignment": "left",
-        "colorForValue": [
-            {
-                "color": "#919191",
-                "value": "false",
-                "valueType": "bool"
-            },
-            {
-                "color": "#dea900",
-                "value": "true",
-                "valueType": "bool"
-            }
-        ],
-        "allowColorForValueInMessage": false,
-        "shape": "circle",
-        "showGlow": false,
-        "name": "led inverter",
-        "x": 1050,
-        "y": 400,
-        "wires": []
-    },
-    {
         "id": "05ade75e1ba4a9f0",
         "type": "link in",
         "z": "15311a68299dc024",
@@ -4737,106 +4706,6 @@
         "x": 230,
         "y": 460,
         "wires": []
-    },
-    {
-        "id": "97ad49d9250e67fd",
-        "type": "link in",
-        "z": "15311a68299dc024",
-        "name": "link in 4",
-        "links": [],
-        "x": 635,
-        "y": 380,
-        "wires": [
-            [
-                "cc6eaeb8fa80d91b",
-                "c16ab1e0bbf5d142"
-            ]
-        ]
-    },
-    {
-        "id": "da904e29cb9967fe",
-        "type": "ui_led",
-        "z": "15311a68299dc024",
-        "order": 6,
-        "group": "af392092454b5034",
-        "width": "5",
-        "height": "1",
-        "label": "Compressor",
-        "labelPlacement": "left",
-        "labelAlignment": "left",
-        "colorForValue": [
-            {
-                "color": "#919191",
-                "value": "false",
-                "valueType": "bool"
-            },
-            {
-                "color": "#dea900",
-                "value": "true",
-                "valueType": "bool"
-            }
-        ],
-        "allowColorForValueInMessage": false,
-        "shape": "circle",
-        "showGlow": false,
-        "name": "led fridge",
-        "x": 1040,
-        "y": 440,
-        "wires": []
-    },
-    {
-        "id": "cc6eaeb8fa80d91b",
-        "type": "change",
-        "z": "15311a68299dc024",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "status.inverter",
-                "tot": "global"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 840,
-        "y": 380,
-        "wires": [
-            [
-                "82b169af60c9764e"
-            ]
-        ]
-    },
-    {
-        "id": "c16ab1e0bbf5d142",
-        "type": "change",
-        "z": "15311a68299dc024",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "status.fridge",
-                "tot": "global"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 840,
-        "y": 420,
-        "wires": [
-            [
-                "da904e29cb9967fe"
-            ]
-        ]
     },
     {
         "id": "50eaa71e80058fe1",
@@ -5421,7 +5290,8 @@
         "y": 260,
         "wires": [
             [
-                "4cc17cb982627297"
+                "4cc17cb982627297",
+                "82b169af60c9764e"
             ]
         ]
     },
@@ -5448,7 +5318,8 @@
         "y": 140,
         "wires": [
             [
-                "b7f3b176e4b124f4"
+                "b7f3b176e4b124f4",
+                "da904e29cb9967fe"
             ]
         ]
     },
@@ -5467,6 +5338,68 @@
         "statusType": "auto",
         "x": 200,
         "y": 460,
+        "wires": []
+    },
+    {
+        "id": "82b169af60c9764e",
+        "type": "ui_led",
+        "z": "c6c05e7764275064",
+        "order": 7,
+        "group": "af392092454b5034",
+        "width": "5",
+        "height": "1",
+        "label": "Inverter",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#919191",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#dea900",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": false,
+        "name": "led inverter",
+        "x": 1770,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "da904e29cb9967fe",
+        "type": "ui_led",
+        "z": "c6c05e7764275064",
+        "order": 6,
+        "group": "af392092454b5034",
+        "width": "5",
+        "height": "1",
+        "label": "Compressor",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#919191",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#dea900",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": false,
+        "name": "led fridge",
+        "x": 1760,
+        "y": 180,
         "wires": []
     },
     {
