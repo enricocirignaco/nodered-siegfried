@@ -2191,6 +2191,89 @@
         "wires": []
     },
     {
+        "id": "a9023e5cfa3afa49",
+        "type": "inject",
+        "z": "6d564b0b71763d89",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "4",
+        "payloadType": "num",
+        "x": 1150,
+        "y": 160,
+        "wires": [
+            [
+                "f272501184bbe878"
+            ]
+        ]
+    },
+    {
+        "id": "4a108b554617aee7",
+        "type": "inject",
+        "z": "6d564b0b71763d89",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "10",
+        "payloadType": "num",
+        "x": 1150,
+        "y": 200,
+        "wires": [
+            [
+                "f272501184bbe878"
+            ]
+        ]
+    },
+    {
+        "id": "8014f5fa946648a5",
+        "type": "inject",
+        "z": "6d564b0b71763d89",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "-2",
+        "payloadType": "num",
+        "x": 1150,
+        "y": 240,
+        "wires": [
+            [
+                "f272501184bbe878"
+            ]
+        ]
+    },
+    {
         "id": "0094be9ee0b66230",
         "type": "ui_gauge",
         "z": "8f469e385c0b1581",
