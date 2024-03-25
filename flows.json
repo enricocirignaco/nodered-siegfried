@@ -4468,20 +4468,20 @@
         "diff": false,
         "className": "",
         "x": 390,
-        "y": 220,
+        "y": 260,
         "wires": []
     },
     {
         "id": "05ade75e1ba4a9f0",
         "type": "link in",
         "z": "15311a68299dc024",
-        "name": "fridge_dashboard",
+        "name": "fridge_temp",
         "links": [
             "380baa39b73ad74b",
             "4562a99cb7e72896"
         ],
         "x": 185,
-        "y": 200,
+        "y": 260,
         "wires": [
             [
                 "a61ae7040267586a",
@@ -4763,6 +4763,54 @@
                 "932d0b15c2f26574"
             ]
         ]
+    },
+    {
+        "id": "a175a803f3969b0a",
+        "type": "link in",
+        "z": "15311a68299dc024",
+        "name": "fridge_ignition",
+        "links": [
+            "ba947f4deae7306a"
+        ],
+        "x": 185,
+        "y": 160,
+        "wires": [
+            [
+                "a9c76782de77f2d3",
+                "8f6a175b5f9ee867"
+            ]
+        ]
+    },
+    {
+        "id": "8f6a175b5f9ee867",
+        "type": "ui_led",
+        "z": "15311a68299dc024",
+        "order": 7,
+        "group": "af392092454b5034",
+        "width": "5",
+        "height": "1",
+        "label": "Ignition",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#919191",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#dea900",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": false,
+        "name": "led ignition",
+        "x": 390,
+        "y": 220,
+        "wires": []
     },
     {
         "id": "b63a529b627e4005",
@@ -5800,37 +5848,6 @@
         "wires": []
     },
     {
-        "id": "8f6a175b5f9ee867",
-        "type": "ui_led",
-        "z": "4f5b0833ab0a95bb",
-        "order": 7,
-        "group": "af392092454b5034",
-        "width": "5",
-        "height": "1",
-        "label": "Ignition",
-        "labelPlacement": "left",
-        "labelAlignment": "left",
-        "colorForValue": [
-            {
-                "color": "#919191",
-                "value": "false",
-                "valueType": "bool"
-            },
-            {
-                "color": "#dea900",
-                "value": "true",
-                "valueType": "bool"
-            }
-        ],
-        "allowColorForValueInMessage": false,
-        "shape": "circle",
-        "showGlow": false,
-        "name": "led ignition",
-        "x": 1050,
-        "y": 560,
-        "wires": []
-    },
-    {
         "id": "349c357319390e35",
         "type": "change",
         "z": "4f5b0833ab0a95bb",
@@ -5853,7 +5870,7 @@
         "y": 560,
         "wires": [
             [
-                "8f6a175b5f9ee867"
+                "ba947f4deae7306a"
             ]
         ]
     },
@@ -5914,5 +5931,18 @@
                 "349c357319390e35"
             ]
         ]
+    },
+    {
+        "id": "ba947f4deae7306a",
+        "type": "link out",
+        "z": "4f5b0833ab0a95bb",
+        "name": "ignition",
+        "mode": "link",
+        "links": [
+            "a175a803f3969b0a"
+        ],
+        "x": 995,
+        "y": 560,
+        "wires": []
     }
 ]
