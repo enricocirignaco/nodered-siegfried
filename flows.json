@@ -5856,5 +5856,63 @@
                 "8f6a175b5f9ee867"
             ]
         ]
+    },
+    {
+        "id": "e3faea9891ecd0c3",
+        "type": "inject",
+        "z": "4f5b0833ab0a95bb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 650,
+        "y": 640,
+        "wires": [
+            [
+                "349c357319390e35"
+            ]
+        ]
+    },
+    {
+        "id": "1423aebd92dc7f2f",
+        "type": "inject",
+        "z": "4f5b0833ab0a95bb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 650,
+        "y": 680,
+        "wires": [
+            [
+                "349c357319390e35"
+            ]
+        ]
     }
 ]
