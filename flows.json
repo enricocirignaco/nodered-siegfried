@@ -4794,8 +4794,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 440,
-        "y": 260,
+        "x": 280,
+        "y": 600,
         "wires": [
             []
         ]
@@ -4827,8 +4827,8 @@
         "shape": "circle",
         "showGlow": false,
         "name": "led ignition",
-        "x": 430,
-        "y": 300,
+        "x": 270,
+        "y": 640,
         "wires": []
     },
     {
@@ -4837,8 +4837,8 @@
         "z": "c6c05e7764275064",
         "name": "ignition_dashboard",
         "links": [],
-        "x": 295,
-        "y": 300,
+        "x": 135,
+        "y": 640,
         "wires": [
             [
                 "8f6a175b5f9ee867"
@@ -4850,18 +4850,18 @@
         "type": "function",
         "z": "c6c05e7764275064",
         "name": "Inverter Logic",
-        "func": "/**\n * Inverter indirect needed for fridge and victron charger\n * Can also be manually used with the 230V outlet\n * This node is the only place where the inverter should be turned on or off\n */\n\nconst values = flow.get(\"values\");\n\nif(values.victronCharger || values.fridge || values.manualSwitch){\n    //turn on inverter\n    msg.payload = true;\n} else{\n    // turn off inverter\n    msg.payload = false\n}\nglobal.set(\"status.inverter\", msg.payload);\nreturn msg;",
+        "func": "/**\n * Inverter indirect needed for fridge and victron charger\n * Can also be manually used with the 230V outlet\n * This node is the only place where the inverter should be turned on or off\n */\n\nconst values = flow.get(\"values\");\n\nif(values.victronCharger || values.fridge || values.manualSwitch){\n    //turn on inverter\n    msg.payload = true;\n} else{\n    // turn off inverter\n    msg.payload = false\n}\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 860,
-        "y": 120,
+        "x": 780,
+        "y": 260,
         "wires": [
             [
-                "4cc17cb982627297"
+                "dabafd105a9b99a2"
             ]
         ]
     },
@@ -4871,8 +4871,8 @@
         "z": "c6c05e7764275064",
         "name": "inverter_in",
         "links": [],
-        "x": 215,
-        "y": 120,
+        "x": 75,
+        "y": 260,
         "wires": [
             [
                 "6f4c7c39abcdbe77"
@@ -4883,18 +4883,18 @@
         "id": "6f4c7c39abcdbe77",
         "type": "switch",
         "z": "c6c05e7764275064",
-        "name": "",
+        "name": "sort topic",
         "property": "topic",
         "propertyType": "msg",
         "rules": [
             {
                 "t": "eq",
-                "v": "inverter_switch",
+                "v": "fridge",
                 "vt": "str"
             },
             {
                 "t": "eq",
-                "v": "fridge",
+                "v": "inverter_switch",
                 "vt": "str"
             },
             {
@@ -4906,14 +4906,14 @@
         "checkall": "true",
         "repair": false,
         "outputs": 3,
-        "x": 370,
-        "y": 120,
+        "x": 200,
+        "y": 260,
         "wires": [
             [
-                "d944fbf6007f48e5"
+                "c33746b96c6e04df"
             ],
             [
-                "c33746b96c6e04df"
+                "d944fbf6007f48e5"
             ],
             [
                 "13dfd366d6413abe"
@@ -4939,8 +4939,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 610,
-        "y": 80,
+        "x": 470,
+        "y": 260,
         "wires": [
             [
                 "29b2917c6d628102"
@@ -4966,11 +4966,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 580,
-        "y": 120,
+        "x": 440,
+        "y": 140,
         "wires": [
             [
-                "29b2917c6d628102"
+                "29b2917c6d628102",
+                "0ea2365d185441a4"
             ]
         ]
     },
@@ -4993,11 +4994,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 610,
-        "y": 160,
+        "x": 470,
+        "y": 380,
         "wires": [
             [
-                "29b2917c6d628102"
+                "29b2917c6d628102",
+                "51b801b4c2d1aa62"
             ]
         ]
     },
@@ -5008,8 +5010,293 @@
         "name": "inverter_gpio",
         "mode": "link",
         "links": [],
-        "x": 1035,
-        "y": 120,
+        "x": 1725,
+        "y": 260,
         "wires": []
+    },
+    {
+        "id": "b7cf9b03e44d3585",
+        "type": "switch",
+        "z": "c6c05e7764275064",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1110,
+        "y": 260,
+        "wires": [
+            [
+                "4a479cf35d4a8c62"
+            ],
+            [
+                "256bf3bc80ce2e9a"
+            ]
+        ]
+    },
+    {
+        "id": "256bf3bc80ce2e9a",
+        "type": "delay",
+        "z": "c6c05e7764275064",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1280,
+        "y": 300,
+        "wires": [
+            [
+                "4a479cf35d4a8c62"
+            ]
+        ]
+    },
+    {
+        "id": "b7f3b176e4b124f4",
+        "type": "link out",
+        "z": "c6c05e7764275064",
+        "name": "inverter_gpio",
+        "mode": "link",
+        "links": [],
+        "x": 1725,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "0ea2365d185441a4",
+        "type": "switch",
+        "z": "c6c05e7764275064",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1110,
+        "y": 140,
+        "wires": [
+            [
+                "0464139bce875fe9"
+            ],
+            [
+                "5edbaec9e33e71c5"
+            ]
+        ]
+    },
+    {
+        "id": "0464139bce875fe9",
+        "type": "delay",
+        "z": "c6c05e7764275064",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1280,
+        "y": 120,
+        "wires": [
+            [
+                "5edbaec9e33e71c5"
+            ]
+        ]
+    },
+    {
+        "id": "5f7d5aaa077569f7",
+        "type": "link out",
+        "z": "c6c05e7764275064",
+        "name": "inverter_gpio",
+        "mode": "link",
+        "links": [],
+        "x": 1725,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "51b801b4c2d1aa62",
+        "type": "switch",
+        "z": "c6c05e7764275064",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1110,
+        "y": 380,
+        "wires": [
+            [
+                "ce8265e8540cf78c"
+            ],
+            [
+                "b4f1144021fdb636"
+            ]
+        ]
+    },
+    {
+        "id": "ce8265e8540cf78c",
+        "type": "delay",
+        "z": "c6c05e7764275064",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1280,
+        "y": 360,
+        "wires": [
+            [
+                "b4f1144021fdb636"
+            ]
+        ]
+    },
+    {
+        "id": "dabafd105a9b99a2",
+        "type": "rbe",
+        "z": "c6c05e7764275064",
+        "name": "change",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 960,
+        "y": 260,
+        "wires": [
+            [
+                "b7cf9b03e44d3585"
+            ]
+        ]
+    },
+    {
+        "id": "b4f1144021fdb636",
+        "type": "change",
+        "z": "c6c05e7764275064",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "status.starterCharger",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1530,
+        "y": 380,
+        "wires": [
+            [
+                "5f7d5aaa077569f7"
+            ]
+        ]
+    },
+    {
+        "id": "4a479cf35d4a8c62",
+        "type": "change",
+        "z": "c6c05e7764275064",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "status.inverter",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1510,
+        "y": 260,
+        "wires": [
+            [
+                "4cc17cb982627297"
+            ]
+        ]
+    },
+    {
+        "id": "5edbaec9e33e71c5",
+        "type": "change",
+        "z": "c6c05e7764275064",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "status.fridge",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1500,
+        "y": 140,
+        "wires": [
+            [
+                "b7f3b176e4b124f4"
+            ]
+        ]
     }
 ]
