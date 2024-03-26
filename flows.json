@@ -5958,7 +5958,7 @@
         "shape": "circle",
         "showGlow": false,
         "name": "led leisure charger",
-        "x": 690,
+        "x": 850,
         "y": 260,
         "wires": []
     },
@@ -5989,7 +5989,7 @@
         "shape": "circle",
         "showGlow": false,
         "name": "led starter charger",
-        "x": 690,
+        "x": 850,
         "y": 300,
         "wires": []
     },
@@ -6060,10 +6060,12 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 320,
+        "x": 180,
         "y": 260,
         "wires": [
-            []
+            [
+                "dbf6b2b61f5fb9ad"
+            ]
         ]
     },
     {
@@ -6092,7 +6094,7 @@
                 "type": "bool"
             },
             {
-                "label": "Auto(when ignition is on)",
+                "label": "Auto(when fridge is on)",
                 "value": "auto",
                 "type": "str"
             }
@@ -6101,10 +6103,50 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 320,
+        "x": 180,
         "y": 300,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "dbf6b2b61f5fb9ad",
+        "type": "function",
+        "z": "7d2ee9cb73f16e0a",
+        "name": "function 2",
+        "func": "let ignition = global.get(\"status.ignition\");\nlet mode = msg.payload;\n\nif(mode === \"auto\") mode = ignition;\n\nmsg.payload = mode;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 260,
+        "wires": [
+            [
+                "eb0a646bbf6c6a87"
+            ]
+        ]
+    },
+    {
+        "id": "eb0a646bbf6c6a87",
+        "type": "rbe",
+        "z": "7d2ee9cb73f16e0a",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 550,
+        "y": 260,
+        "wires": [
+            [
+                "0daefb168cc93c70"
+            ]
         ]
     }
 ]
