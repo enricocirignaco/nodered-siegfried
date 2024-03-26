@@ -5019,7 +5019,8 @@
         "name": "inverter_gpio",
         "mode": "link",
         "links": [
-            "4ab78910fec37e29"
+            "4ab78910fec37e29",
+            "17bee388142753a4"
         ],
         "x": 1725,
         "y": 260,
@@ -5926,7 +5927,8 @@
         "mode": "link",
         "links": [
             "a175a803f3969b0a",
-            "d3e2da3d93171ad1"
+            "d3e2da3d93171ad1",
+            "6ea5a70a5cde8d0e"
         ],
         "x": 995,
         "y": 560,
@@ -5959,7 +5961,7 @@
         "shape": "circle",
         "showGlow": false,
         "name": "led leisure charger",
-        "x": 990,
+        "x": 1070,
         "y": 260,
         "wires": []
     },
@@ -5990,41 +5992,9 @@
         "shape": "circle",
         "showGlow": false,
         "name": "led starter charger",
-        "x": 990,
+        "x": 1070,
         "y": 300,
         "wires": []
-    },
-    {
-        "id": "b63a529b627e4005",
-        "type": "ui_switch",
-        "z": "7d2ee9cb73f16e0a",
-        "name": "",
-        "label": "Charge starter battery when inverter on",
-        "tooltip": "inverter is powered by the starter battery so it's agood idea to charge it with solar or leisure battery when inverter is in use. NOTE: this not apply when the ignition is on",
-        "group": "6fd6f055a36d0f78",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "decouple": "false",
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "className": "",
-        "x": 420,
-        "y": 440,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "f1d8acc740a01bcf",
@@ -6061,7 +6031,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 320,
+        "x": 400,
         "y": 260,
         "wires": [
             [
@@ -6095,7 +6065,7 @@
                 "type": "bool"
             },
             {
-                "label": "Auto(when fridge is on)",
+                "label": "Auto(when inverter is on)",
                 "value": "auto",
                 "type": "str"
             }
@@ -6104,10 +6074,12 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 320,
+        "x": 400,
         "y": 300,
         "wires": [
-            []
+            [
+                "dc4d808394a12441"
+            ]
         ]
     },
     {
@@ -6122,7 +6094,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 520,
+        "x": 600,
         "y": 260,
         "wires": [
             [
@@ -6142,7 +6114,7 @@
         "septopics": true,
         "property": "payload",
         "topi": "topic",
-        "x": 690,
+        "x": 770,
         "y": 260,
         "wires": [
             [
@@ -6171,7 +6143,7 @@
         "topic": "",
         "payload": "false",
         "payloadType": "bool",
-        "x": 110,
+        "x": 190,
         "y": 260,
         "wires": [
             [
@@ -6200,7 +6172,7 @@
         "topic": "",
         "payload": "false",
         "payloadType": "bool",
-        "x": 110,
+        "x": 190,
         "y": 300,
         "wires": [
             [
@@ -6216,11 +6188,251 @@
         "links": [
             "ba947f4deae7306a"
         ],
-        "x": 385,
+        "x": 75,
+        "y": 220,
+        "wires": [
+            [
+                "1fbdea3f07502179"
+            ]
+        ]
+    },
+    {
+        "id": "dc4d808394a12441",
+        "type": "function",
+        "z": "7d2ee9cb73f16e0a",
+        "name": "function 3",
+        "func": "let fridge = global.get(\"status.fridge\");\nlet mode = msg.payload;\n\nif(mode === \"auto\") mode = fridge;\n\nmsg.payload = mode;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 300,
+        "wires": [
+            [
+                "2e165710f06585f3"
+            ]
+        ]
+    },
+    {
+        "id": "2e165710f06585f3",
+        "type": "rbe",
+        "z": "7d2ee9cb73f16e0a",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 770,
+        "y": 300,
+        "wires": [
+            [
+                "bc2b0f423be5d0f7"
+            ]
+        ]
+    },
+    {
+        "id": "17bee388142753a4",
+        "type": "link in",
+        "z": "7d2ee9cb73f16e0a",
+        "name": "link in 5",
+        "links": [
+            "4cc17cb982627297"
+        ],
+        "x": 75,
+        "y": 340,
+        "wires": [
+            [
+                "22fdd30ae7af2b4a"
+            ]
+        ]
+    },
+    {
+        "id": "e17b37cda17b2758",
+        "type": "delay",
+        "z": "7d2ee9cb73f16e0a",
+        "name": "",
+        "pauseType": "delayv",
+        "timeout": "1",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 420,
+        "y": 340,
+        "wires": [
+            [
+                "dc4d808394a12441"
+            ]
+        ]
+    },
+    {
+        "id": "fa63dc886e9ac9e2",
+        "type": "delay",
+        "z": "7d2ee9cb73f16e0a",
+        "name": "",
+        "pauseType": "delayv",
+        "timeout": "1",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 420,
         "y": 220,
         "wires": [
             [
                 "dbf6b2b61f5fb9ad"
+            ]
+        ]
+    },
+    {
+        "id": "113767bcd8f07e1c",
+        "type": "ui_slider",
+        "z": "7d2ee9cb73f16e0a",
+        "name": "",
+        "label": "Chargers delay in minutes",
+        "tooltip": "inverter between changing inverter state and high voltage applicances",
+        "group": "1f51103af332e4a2",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "5",
+        "step": 1,
+        "className": "",
+        "x": 350,
+        "y": 560,
+        "wires": [
+            [
+                "66e4d9ec7a91cd23"
+            ]
+        ]
+    },
+    {
+        "id": "fe0f148165ff4361",
+        "type": "inject",
+        "z": "7d2ee9cb73f16e0a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 150,
+        "y": 560,
+        "wires": [
+            [
+                "113767bcd8f07e1c"
+            ]
+        ]
+    },
+    {
+        "id": "66e4d9ec7a91cd23",
+        "type": "function",
+        "z": "7d2ee9cb73f16e0a",
+        "name": "save value",
+        "func": "flow.set(\"delay\", msg.payload*3600);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a9811caf9d240d10",
+        "type": "comment",
+        "z": "7d2ee9cb73f16e0a",
+        "name": "settings",
+        "info": "",
+        "x": 150,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "22fdd30ae7af2b4a",
+        "type": "change",
+        "z": "7d2ee9cb73f16e0a",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "delay",
+                "pt": "msg",
+                "to": "delay",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 220,
+        "y": 340,
+        "wires": [
+            [
+                "e17b37cda17b2758"
+            ]
+        ]
+    },
+    {
+        "id": "1fbdea3f07502179",
+        "type": "change",
+        "z": "7d2ee9cb73f16e0a",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "delay",
+                "pt": "msg",
+                "to": "delay",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 220,
+        "y": 220,
+        "wires": [
+            [
+                "fa63dc886e9ac9e2"
             ]
         ]
     }
