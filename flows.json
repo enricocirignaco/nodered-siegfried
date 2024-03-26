@@ -10,15 +10,7 @@
     {
         "id": "8f469e385c0b1581",
         "type": "tab",
-        "label": "Flow 2",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
-        "id": "c6c05e7764275064",
-        "type": "tab",
-        "label": "Inverter",
+        "label": "settings",
         "disabled": false,
         "info": "",
         "env": []
@@ -27,6 +19,14 @@
         "id": "4f5b0833ab0a95bb",
         "type": "tab",
         "label": "hardware",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "c6c05e7764275064",
+        "type": "tab",
+        "label": "Inverter",
         "disabled": false,
         "info": "",
         "env": []
@@ -363,11 +363,11 @@
     {
         "id": "7dbe224d7e5b35ba",
         "type": "ui_group",
-        "name": "SOC",
-        "tab": "8d207109f202f502",
+        "name": "Status",
+        "tab": "9d7781fc6afac662",
         "order": 3,
         "disp": true,
-        "width": "6",
+        "width": "10",
         "collapse": false,
         "className": ""
     },
@@ -459,7 +459,7 @@
         "id": "2fe1f9c9616fe19a",
         "type": "ui_group",
         "name": "Water",
-        "tab": "8d207109f202f502",
+        "tab": "9d7781fc6afac662",
         "order": 1,
         "disp": true,
         "width": "6",
@@ -2493,154 +2493,6 @@
         ]
     },
     {
-        "id": "1498de633b11617a",
-        "type": "ui_dropdown",
-        "z": "8f469e385c0b1581",
-        "name": "",
-        "label": "Leisure bat. charger",
-        "tooltip": "",
-        "place": "Off",
-        "group": "810db7c28f8ce7ea",
-        "order": 1,
-        "width": "6",
-        "height": "1",
-        "passthru": true,
-        "multiple": false,
-        "options": [
-            {
-                "label": "Off",
-                "value": false,
-                "type": "bool"
-            },
-            {
-                "label": "On",
-                "value": true,
-                "type": "bool"
-            },
-            {
-                "label": "Auto(when ignition is on)",
-                "value": "auto",
-                "type": "str"
-            }
-        ],
-        "payload": "",
-        "topic": "topic",
-        "topicType": "msg",
-        "className": "",
-        "x": 180,
-        "y": 580,
-        "wires": [
-            [
-                "86a54ca49872eaca"
-            ]
-        ]
-    },
-    {
-        "id": "52b8a37dd09aa05f",
-        "type": "ui_dropdown",
-        "z": "8f469e385c0b1581",
-        "name": "",
-        "label": "Starter bat. Charger",
-        "tooltip": "",
-        "place": "Off",
-        "group": "810db7c28f8ce7ea",
-        "order": 3,
-        "width": "6",
-        "height": "1",
-        "passthru": true,
-        "multiple": false,
-        "options": [
-            {
-                "label": "Off",
-                "value": false,
-                "type": "bool"
-            },
-            {
-                "label": "On",
-                "value": true,
-                "type": "bool"
-            },
-            {
-                "label": "Auto(when inverter on)",
-                "value": "auto",
-                "type": "str"
-            }
-        ],
-        "payload": "",
-        "topic": "topic",
-        "topicType": "msg",
-        "className": "",
-        "x": 180,
-        "y": 620,
-        "wires": [
-            [
-                "0f91f856d0437acb"
-            ]
-        ]
-    },
-    {
-        "id": "0f91f856d0437acb",
-        "type": "ui_led",
-        "z": "8f469e385c0b1581",
-        "order": 4,
-        "group": "810db7c28f8ce7ea",
-        "width": "1",
-        "height": "1",
-        "label": "",
-        "labelPlacement": "left",
-        "labelAlignment": "left",
-        "colorForValue": [
-            {
-                "color": "#919191",
-                "value": "false",
-                "valueType": "bool"
-            },
-            {
-                "color": "#dea900",
-                "value": "true",
-                "valueType": "bool"
-            }
-        ],
-        "allowColorForValueInMessage": false,
-        "shape": "circle",
-        "showGlow": false,
-        "name": "led starter charger",
-        "x": 470,
-        "y": 620,
-        "wires": []
-    },
-    {
-        "id": "86a54ca49872eaca",
-        "type": "ui_led",
-        "z": "8f469e385c0b1581",
-        "order": 2,
-        "group": "810db7c28f8ce7ea",
-        "width": "1",
-        "height": "1",
-        "label": "",
-        "labelPlacement": "left",
-        "labelAlignment": "left",
-        "colorForValue": [
-            {
-                "color": "#919191",
-                "value": "false",
-                "valueType": "bool"
-            },
-            {
-                "color": "#dea900",
-                "value": "true",
-                "valueType": "bool"
-            }
-        ],
-        "allowColorForValueInMessage": false,
-        "shape": "circle",
-        "showGlow": false,
-        "name": "led leisure charger",
-        "x": 470,
-        "y": 580,
-        "wires": []
-    },
-    {
         "id": "bf37a5fe2bb8ce58",
         "type": "ui_led",
         "z": "8f469e385c0b1581",
@@ -2667,8 +2519,8 @@
         "shape": "circle",
         "showGlow": false,
         "name": "led ignition",
-        "x": 450,
-        "y": 500,
+        "x": 650,
+        "y": 260,
         "wires": []
     },
     {
@@ -2698,8 +2550,8 @@
         "shape": "circle",
         "showGlow": false,
         "name": "led inverter",
-        "x": 450,
-        "y": 460,
+        "x": 650,
+        "y": 220,
         "wires": []
     },
     {
@@ -4166,8 +4018,8 @@
         "shape": "circle",
         "showGlow": true,
         "name": "heartbeat led",
-        "x": 630,
-        "y": 380,
+        "x": 670,
+        "y": 620,
         "wires": []
     },
     {
@@ -4189,8 +4041,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 420,
-        "y": 380,
+        "x": 460,
+        "y": 620,
         "wires": [
             [
                 "de58fdee4a97426e"
@@ -4214,8 +4066,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 230,
-        "y": 380,
+        "x": 270,
+        "y": 620,
         "wires": [
             [
                 "ea0b04e0ab834965"
@@ -4243,8 +4095,8 @@
         "topic": "",
         "payload": "false",
         "payloadType": "bool",
-        "x": 70,
-        "y": 420,
+        "x": 90,
+        "y": 640,
         "wires": [
             [
                 "de58fdee4a97426e",
@@ -4339,8 +4191,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 420,
-        "y": 260,
+        "x": 1220,
+        "y": 140,
         "wires": [
             [],
             [
@@ -4354,7 +4206,7 @@
         "type": "ui_button",
         "z": "8f469e385c0b1581",
         "name": "",
-        "group": "810db7c28f8ce7ea",
+        "group": "6fd6f055a36d0f78",
         "order": 7,
         "width": "7",
         "height": "1",
@@ -4369,8 +4221,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 150,
-        "y": 260,
+        "x": 950,
+        "y": 140,
         "wires": [
             [
                 "848ecc1735fcf157"
@@ -4389,8 +4241,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 660,
-        "y": 280,
+        "x": 1460,
+        "y": 140,
         "wires": []
     },
     {
@@ -4416,6 +4268,517 @@
         "y": 2780,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "c04f6d51505bc927",
+        "type": "comment",
+        "z": "8f469e385c0b1581",
+        "name": "status",
+        "info": "",
+        "x": 90,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "7b9269056f7d9c81",
+        "type": "comment",
+        "z": "8f469e385c0b1581",
+        "name": "general settings",
+        "info": "",
+        "x": 940,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "4ab78910fec37e29",
+        "type": "link in",
+        "z": "4f5b0833ab0a95bb",
+        "name": "link in 1",
+        "links": [
+            "4cc17cb982627297"
+        ],
+        "x": 405,
+        "y": 320,
+        "wires": [
+            [
+                "238d777e8f91f75d"
+            ]
+        ]
+    },
+    {
+        "id": "c7ddfcd77752d339",
+        "type": "link in",
+        "z": "4f5b0833ab0a95bb",
+        "name": "link in 2",
+        "links": [
+            "5f7d5aaa077569f7"
+        ],
+        "x": 405,
+        "y": 400,
+        "wires": [
+            [
+                "c5f4335c5d949044"
+            ]
+        ]
+    },
+    {
+        "id": "e8ee6714fa622f88",
+        "type": "link in",
+        "z": "4f5b0833ab0a95bb",
+        "name": "link in 3",
+        "links": [
+            "b7f3b176e4b124f4"
+        ],
+        "x": 405,
+        "y": 360,
+        "wires": [
+            [
+                "99eb2f8b28890f61"
+            ]
+        ]
+    },
+    {
+        "id": "215139cf840026cc",
+        "type": "rpi-gpio in",
+        "z": "4f5b0833ab0a95bb",
+        "name": "high_input_10",
+        "pin": "18",
+        "intype": "tri",
+        "debounce": "25",
+        "read": true,
+        "bcm": true,
+        "x": 710,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "73c96bac36bcca7f",
+        "type": "rpi-gpio in",
+        "z": "4f5b0833ab0a95bb",
+        "name": "Input_6",
+        "pin": "20",
+        "intype": "tri",
+        "debounce": "25",
+        "read": true,
+        "bcm": true,
+        "x": 690,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c480f2ec7062654f",
+        "type": "rpi-gpio in",
+        "z": "4f5b0833ab0a95bb",
+        "name": "high_input_9",
+        "pin": "23",
+        "intype": "tri",
+        "debounce": "25",
+        "read": true,
+        "bcm": true,
+        "x": 710,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ae3697325ade8e49",
+        "type": "rpi-gpio in",
+        "z": "4f5b0833ab0a95bb",
+        "name": "Input_4",
+        "pin": "24",
+        "intype": "tri",
+        "debounce": "25",
+        "read": true,
+        "bcm": true,
+        "x": 690,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e0f0588c385249dd",
+        "type": "rpi-gpio in",
+        "z": "4f5b0833ab0a95bb",
+        "name": "Input_3",
+        "pin": "25",
+        "intype": "tri",
+        "debounce": "25",
+        "read": true,
+        "bcm": true,
+        "x": 690,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "31a11e2b6c89d0bc",
+        "type": "rpi-gpio in",
+        "z": "4f5b0833ab0a95bb",
+        "name": "Input_2",
+        "pin": "8",
+        "intype": "tri",
+        "debounce": "25",
+        "read": true,
+        "bcm": true,
+        "x": 690,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b60fcbc486446eb6",
+        "type": "rpi-gpio in",
+        "z": "4f5b0833ab0a95bb",
+        "name": "Input_1",
+        "pin": "7",
+        "intype": "tri",
+        "debounce": "25",
+        "read": true,
+        "bcm": true,
+        "x": 690,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5f2fdda6aaa02688",
+        "type": "rpi-gpio in",
+        "z": "4f5b0833ab0a95bb",
+        "name": "Input_8",
+        "pin": "12",
+        "intype": "tri",
+        "debounce": "25",
+        "read": true,
+        "bcm": true,
+        "x": 690,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "aff16c8e747d441e",
+        "type": "rpi-gpio in",
+        "z": "4f5b0833ab0a95bb",
+        "name": "Input_7",
+        "pin": "16",
+        "intype": "tri",
+        "debounce": "25",
+        "read": true,
+        "bcm": true,
+        "x": 690,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "97dda5e7d1a88dbd",
+        "type": "rpi-gpio in",
+        "z": "4f5b0833ab0a95bb",
+        "name": "Input_5",
+        "pin": "21",
+        "intype": "tri",
+        "debounce": "25",
+        "read": true,
+        "bcm": true,
+        "x": 690,
+        "y": 560,
+        "wires": [
+            [
+                "349c357319390e35"
+            ]
+        ]
+    },
+    {
+        "id": "9f9a802760b24a04",
+        "type": "rpi-gpio out",
+        "z": "4f5b0833ab0a95bb",
+        "name": "pwm_en",
+        "pin": "17",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 540,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "0a432f883018e195",
+        "type": "rpi-gpio out",
+        "z": "4f5b0833ab0a95bb",
+        "name": "output_4",
+        "pin": "27",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 540,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "ec58200f216d9a89",
+        "type": "rpi-gpio out",
+        "z": "4f5b0833ab0a95bb",
+        "name": "output_3",
+        "pin": "22",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 540,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "b277ff3b6120e37b",
+        "type": "rpi-gpio out",
+        "z": "4f5b0833ab0a95bb",
+        "name": "output_6",
+        "pin": "10",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 540,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "238d777e8f91f75d",
+        "type": "rpi-gpio out",
+        "z": "4f5b0833ab0a95bb",
+        "name": "output_5",
+        "pin": "9",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 540,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "99eb2f8b28890f61",
+        "type": "rpi-gpio out",
+        "z": "4f5b0833ab0a95bb",
+        "name": "output_10",
+        "pin": "11",
+        "set": true,
+        "level": "1",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 540,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "c5f4335c5d949044",
+        "type": "rpi-gpio out",
+        "z": "4f5b0833ab0a95bb",
+        "name": "output_9",
+        "pin": "5",
+        "set": true,
+        "level": "1",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 540,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "929776411fb44892",
+        "type": "rpi-gpio out",
+        "z": "4f5b0833ab0a95bb",
+        "name": "output_2",
+        "pin": "6",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 540,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "2e7a22334ba4ea5d",
+        "type": "rpi-gpio out",
+        "z": "4f5b0833ab0a95bb",
+        "name": "output_1",
+        "pin": "13",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 540,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "e730899400c089da",
+        "type": "rpi-gpio out",
+        "z": "4f5b0833ab0a95bb",
+        "name": "output_8",
+        "pin": "19",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 540,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "2ffa2e3c9c3157b5",
+        "type": "rpi-gpio out",
+        "z": "4f5b0833ab0a95bb",
+        "name": "output_7",
+        "pin": "26",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 540,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "349c357319390e35",
+        "type": "change",
+        "z": "4f5b0833ab0a95bb",
+        "name": "ignition",
+        "rules": [
+            {
+                "t": "set",
+                "p": "status.ignition",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 860,
+        "y": 560,
+        "wires": [
+            [
+                "ba947f4deae7306a"
+            ]
+        ]
+    },
+    {
+        "id": "e3faea9891ecd0c3",
+        "type": "inject",
+        "z": "4f5b0833ab0a95bb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 650,
+        "y": 640,
+        "wires": [
+            [
+                "349c357319390e35"
+            ]
+        ]
+    },
+    {
+        "id": "1423aebd92dc7f2f",
+        "type": "inject",
+        "z": "4f5b0833ab0a95bb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 650,
+        "y": 680,
+        "wires": [
+            [
+                "349c357319390e35"
+            ]
+        ]
+    },
+    {
+        "id": "ba947f4deae7306a",
+        "type": "link out",
+        "z": "4f5b0833ab0a95bb",
+        "name": "ignition",
+        "mode": "link",
+        "links": [
+            "a175a803f3969b0a",
+            "d3e2da3d93171ad1",
+            "6ea5a70a5cde8d0e"
+        ],
+        "x": 995,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "cc4732aab186fe6e",
+        "type": "link in",
+        "z": "4f5b0833ab0a95bb",
+        "name": "starter_charger_gpio",
+        "links": [
+            "b571123d946be4c9"
+        ],
+        "x": 405,
+        "y": 440,
+        "wires": [
+            [
+                "929776411fb44892"
+            ]
         ]
     },
     {
@@ -5046,497 +5409,6 @@
         "x": 190,
         "y": 520,
         "wires": []
-    },
-    {
-        "id": "4ab78910fec37e29",
-        "type": "link in",
-        "z": "4f5b0833ab0a95bb",
-        "name": "link in 1",
-        "links": [
-            "4cc17cb982627297"
-        ],
-        "x": 405,
-        "y": 320,
-        "wires": [
-            [
-                "238d777e8f91f75d"
-            ]
-        ]
-    },
-    {
-        "id": "c7ddfcd77752d339",
-        "type": "link in",
-        "z": "4f5b0833ab0a95bb",
-        "name": "link in 2",
-        "links": [
-            "5f7d5aaa077569f7"
-        ],
-        "x": 405,
-        "y": 400,
-        "wires": [
-            [
-                "c5f4335c5d949044"
-            ]
-        ]
-    },
-    {
-        "id": "e8ee6714fa622f88",
-        "type": "link in",
-        "z": "4f5b0833ab0a95bb",
-        "name": "link in 3",
-        "links": [
-            "b7f3b176e4b124f4"
-        ],
-        "x": 405,
-        "y": 360,
-        "wires": [
-            [
-                "99eb2f8b28890f61"
-            ]
-        ]
-    },
-    {
-        "id": "215139cf840026cc",
-        "type": "rpi-gpio in",
-        "z": "4f5b0833ab0a95bb",
-        "name": "high_input_10",
-        "pin": "18",
-        "intype": "tri",
-        "debounce": "25",
-        "read": true,
-        "bcm": true,
-        "x": 710,
-        "y": 200,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "73c96bac36bcca7f",
-        "type": "rpi-gpio in",
-        "z": "4f5b0833ab0a95bb",
-        "name": "Input_6",
-        "pin": "20",
-        "intype": "tri",
-        "debounce": "25",
-        "read": true,
-        "bcm": true,
-        "x": 690,
-        "y": 520,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "c480f2ec7062654f",
-        "type": "rpi-gpio in",
-        "z": "4f5b0833ab0a95bb",
-        "name": "high_input_9",
-        "pin": "23",
-        "intype": "tri",
-        "debounce": "25",
-        "read": true,
-        "bcm": true,
-        "x": 710,
-        "y": 240,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "ae3697325ade8e49",
-        "type": "rpi-gpio in",
-        "z": "4f5b0833ab0a95bb",
-        "name": "Input_4",
-        "pin": "24",
-        "intype": "tri",
-        "debounce": "25",
-        "read": true,
-        "bcm": true,
-        "x": 690,
-        "y": 280,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e0f0588c385249dd",
-        "type": "rpi-gpio in",
-        "z": "4f5b0833ab0a95bb",
-        "name": "Input_3",
-        "pin": "25",
-        "intype": "tri",
-        "debounce": "25",
-        "read": true,
-        "bcm": true,
-        "x": 690,
-        "y": 320,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "31a11e2b6c89d0bc",
-        "type": "rpi-gpio in",
-        "z": "4f5b0833ab0a95bb",
-        "name": "Input_2",
-        "pin": "8",
-        "intype": "tri",
-        "debounce": "25",
-        "read": true,
-        "bcm": true,
-        "x": 690,
-        "y": 360,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "b60fcbc486446eb6",
-        "type": "rpi-gpio in",
-        "z": "4f5b0833ab0a95bb",
-        "name": "Input_1",
-        "pin": "7",
-        "intype": "tri",
-        "debounce": "25",
-        "read": true,
-        "bcm": true,
-        "x": 690,
-        "y": 400,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "5f2fdda6aaa02688",
-        "type": "rpi-gpio in",
-        "z": "4f5b0833ab0a95bb",
-        "name": "Input_8",
-        "pin": "12",
-        "intype": "tri",
-        "debounce": "25",
-        "read": true,
-        "bcm": true,
-        "x": 690,
-        "y": 440,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "aff16c8e747d441e",
-        "type": "rpi-gpio in",
-        "z": "4f5b0833ab0a95bb",
-        "name": "Input_7",
-        "pin": "16",
-        "intype": "tri",
-        "debounce": "25",
-        "read": true,
-        "bcm": true,
-        "x": 690,
-        "y": 480,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "97dda5e7d1a88dbd",
-        "type": "rpi-gpio in",
-        "z": "4f5b0833ab0a95bb",
-        "name": "Input_5",
-        "pin": "21",
-        "intype": "tri",
-        "debounce": "25",
-        "read": true,
-        "bcm": true,
-        "x": 690,
-        "y": 560,
-        "wires": [
-            [
-                "349c357319390e35"
-            ]
-        ]
-    },
-    {
-        "id": "9f9a802760b24a04",
-        "type": "rpi-gpio out",
-        "z": "4f5b0833ab0a95bb",
-        "name": "pwm_en",
-        "pin": "17",
-        "set": true,
-        "level": "0",
-        "freq": "",
-        "out": "out",
-        "bcm": true,
-        "x": 540,
-        "y": 160,
-        "wires": []
-    },
-    {
-        "id": "0a432f883018e195",
-        "type": "rpi-gpio out",
-        "z": "4f5b0833ab0a95bb",
-        "name": "output_4",
-        "pin": "27",
-        "set": true,
-        "level": "0",
-        "freq": "",
-        "out": "out",
-        "bcm": true,
-        "x": 540,
-        "y": 200,
-        "wires": []
-    },
-    {
-        "id": "ec58200f216d9a89",
-        "type": "rpi-gpio out",
-        "z": "4f5b0833ab0a95bb",
-        "name": "output_3",
-        "pin": "22",
-        "set": true,
-        "level": "0",
-        "freq": "",
-        "out": "out",
-        "bcm": true,
-        "x": 540,
-        "y": 240,
-        "wires": []
-    },
-    {
-        "id": "b277ff3b6120e37b",
-        "type": "rpi-gpio out",
-        "z": "4f5b0833ab0a95bb",
-        "name": "output_6",
-        "pin": "10",
-        "set": true,
-        "level": "0",
-        "freq": "",
-        "out": "out",
-        "bcm": true,
-        "x": 540,
-        "y": 280,
-        "wires": []
-    },
-    {
-        "id": "238d777e8f91f75d",
-        "type": "rpi-gpio out",
-        "z": "4f5b0833ab0a95bb",
-        "name": "output_5",
-        "pin": "9",
-        "set": true,
-        "level": "0",
-        "freq": "",
-        "out": "out",
-        "bcm": true,
-        "x": 540,
-        "y": 320,
-        "wires": []
-    },
-    {
-        "id": "99eb2f8b28890f61",
-        "type": "rpi-gpio out",
-        "z": "4f5b0833ab0a95bb",
-        "name": "output_10",
-        "pin": "11",
-        "set": true,
-        "level": "1",
-        "freq": "",
-        "out": "out",
-        "bcm": true,
-        "x": 540,
-        "y": 360,
-        "wires": []
-    },
-    {
-        "id": "c5f4335c5d949044",
-        "type": "rpi-gpio out",
-        "z": "4f5b0833ab0a95bb",
-        "name": "output_9",
-        "pin": "5",
-        "set": true,
-        "level": "1",
-        "freq": "",
-        "out": "out",
-        "bcm": true,
-        "x": 540,
-        "y": 400,
-        "wires": []
-    },
-    {
-        "id": "929776411fb44892",
-        "type": "rpi-gpio out",
-        "z": "4f5b0833ab0a95bb",
-        "name": "output_2",
-        "pin": "6",
-        "set": true,
-        "level": "0",
-        "freq": "",
-        "out": "out",
-        "bcm": true,
-        "x": 540,
-        "y": 440,
-        "wires": []
-    },
-    {
-        "id": "2e7a22334ba4ea5d",
-        "type": "rpi-gpio out",
-        "z": "4f5b0833ab0a95bb",
-        "name": "output_1",
-        "pin": "13",
-        "set": true,
-        "level": "0",
-        "freq": "",
-        "out": "out",
-        "bcm": true,
-        "x": 540,
-        "y": 480,
-        "wires": []
-    },
-    {
-        "id": "e730899400c089da",
-        "type": "rpi-gpio out",
-        "z": "4f5b0833ab0a95bb",
-        "name": "output_8",
-        "pin": "19",
-        "set": true,
-        "level": "0",
-        "freq": "",
-        "out": "out",
-        "bcm": true,
-        "x": 540,
-        "y": 520,
-        "wires": []
-    },
-    {
-        "id": "2ffa2e3c9c3157b5",
-        "type": "rpi-gpio out",
-        "z": "4f5b0833ab0a95bb",
-        "name": "output_7",
-        "pin": "26",
-        "set": true,
-        "level": "0",
-        "freq": "",
-        "out": "out",
-        "bcm": true,
-        "x": 540,
-        "y": 560,
-        "wires": []
-    },
-    {
-        "id": "349c357319390e35",
-        "type": "change",
-        "z": "4f5b0833ab0a95bb",
-        "name": "ignition",
-        "rules": [
-            {
-                "t": "set",
-                "p": "status.ignition",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 860,
-        "y": 560,
-        "wires": [
-            [
-                "ba947f4deae7306a"
-            ]
-        ]
-    },
-    {
-        "id": "e3faea9891ecd0c3",
-        "type": "inject",
-        "z": "4f5b0833ab0a95bb",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 650,
-        "y": 640,
-        "wires": [
-            [
-                "349c357319390e35"
-            ]
-        ]
-    },
-    {
-        "id": "1423aebd92dc7f2f",
-        "type": "inject",
-        "z": "4f5b0833ab0a95bb",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "false",
-        "payloadType": "bool",
-        "x": 650,
-        "y": 680,
-        "wires": [
-            [
-                "349c357319390e35"
-            ]
-        ]
-    },
-    {
-        "id": "ba947f4deae7306a",
-        "type": "link out",
-        "z": "4f5b0833ab0a95bb",
-        "name": "ignition",
-        "mode": "link",
-        "links": [
-            "a175a803f3969b0a",
-            "d3e2da3d93171ad1",
-            "6ea5a70a5cde8d0e"
-        ],
-        "x": 995,
-        "y": 560,
-        "wires": []
-    },
-    {
-        "id": "cc4732aab186fe6e",
-        "type": "link in",
-        "z": "4f5b0833ab0a95bb",
-        "name": "starter_charger_gpio",
-        "links": [
-            "b571123d946be4c9"
-        ],
-        "x": 405,
-        "y": 440,
-        "wires": [
-            [
-                "929776411fb44892"
-            ]
-        ]
     },
     {
         "id": "b2229e5dc5944aef",
