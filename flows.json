@@ -16,14 +16,6 @@
         "env": []
     },
     {
-        "id": "15311a68299dc024",
-        "type": "tab",
-        "label": "Fridge",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "c6c05e7764275064",
         "type": "tab",
         "label": "Inverter",
@@ -35,6 +27,14 @@
         "id": "4f5b0833ab0a95bb",
         "type": "tab",
         "label": "hardware",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "15311a68299dc024",
+        "type": "tab",
+        "label": "Fridge",
         "disabled": false,
         "info": "",
         "env": []
@@ -4419,419 +4419,6 @@
         ]
     },
     {
-        "id": "b2229e5dc5944aef",
-        "type": "ui_dropdown",
-        "z": "15311a68299dc024",
-        "name": "",
-        "label": "Setting",
-        "tooltip": "",
-        "place": "Off",
-        "group": "af392092454b5034",
-        "order": 5,
-        "width": "5",
-        "height": "1",
-        "passthru": true,
-        "multiple": false,
-        "options": [
-            {
-                "label": "Off",
-                "value": false,
-                "type": "bool"
-            },
-            {
-                "label": "On",
-                "value": true,
-                "type": "bool"
-            },
-            {
-                "label": "Auto(when ignition is on)",
-                "value": "auto",
-                "type": "str"
-            }
-        ],
-        "payload": "",
-        "topic": "topic",
-        "topicType": "msg",
-        "className": "",
-        "x": 380,
-        "y": 80,
-        "wires": [
-            [
-                "e697ed0b4940fdd2",
-                "a9c76782de77f2d3"
-            ]
-        ]
-    },
-    {
-        "id": "a61ae7040267586a",
-        "type": "ui_gauge",
-        "z": "15311a68299dc024",
-        "name": "fridge temp",
-        "group": "af392092454b5034",
-        "order": 1,
-        "width": "5",
-        "height": "5",
-        "gtype": "donut",
-        "title": "",
-        "label": "C°",
-        "format": "{{value}}",
-        "min": "-20",
-        "max": "20",
-        "colors": [
-            "#00fdff",
-            "#00f900",
-            "#ca3838"
-        ],
-        "seg1": "0",
-        "seg2": "6",
-        "diff": false,
-        "className": "",
-        "x": 390,
-        "y": 260,
-        "wires": []
-    },
-    {
-        "id": "05ade75e1ba4a9f0",
-        "type": "link in",
-        "z": "15311a68299dc024",
-        "name": "fridge_temp",
-        "links": [
-            "380baa39b73ad74b",
-            "4562a99cb7e72896"
-        ],
-        "x": 185,
-        "y": 260,
-        "wires": [
-            [
-                "a61ae7040267586a",
-                "a9c76782de77f2d3"
-            ]
-        ]
-    },
-    {
-        "id": "6371b576797132a9",
-        "type": "ui_slider",
-        "z": "15311a68299dc024",
-        "name": "",
-        "label": "Upper temperature threshold",
-        "tooltip": "",
-        "group": "466866a9d24aa546",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "outs": "end",
-        "topic": "topic",
-        "topicType": "msg",
-        "min": "-10",
-        "max": "15",
-        "step": 1,
-        "className": "",
-        "x": 380,
-        "y": 380,
-        "wires": [
-            [
-                "a7cbc6a832925664"
-            ]
-        ]
-    },
-    {
-        "id": "932d0b15c2f26574",
-        "type": "ui_slider",
-        "z": "15311a68299dc024",
-        "name": "",
-        "label": "Lower temperature threshold",
-        "tooltip": "",
-        "group": "466866a9d24aa546",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "outs": "end",
-        "topic": "topic",
-        "topicType": "msg",
-        "min": "-10",
-        "max": "15",
-        "step": 1,
-        "className": "",
-        "x": 380,
-        "y": 420,
-        "wires": [
-            [
-                "49fbd3a192947c76"
-            ]
-        ]
-    },
-    {
-        "id": "49fbd3a192947c76",
-        "type": "change",
-        "z": "15311a68299dc024",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "lower_temp",
-                "pt": "flow",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 640,
-        "y": 420,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "a7cbc6a832925664",
-        "type": "change",
-        "z": "15311a68299dc024",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "upper_temp",
-                "pt": "flow",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 640,
-        "y": 380,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e697ed0b4940fdd2",
-        "type": "change",
-        "z": "15311a68299dc024",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "setting",
-                "pt": "flow",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 580,
-        "y": 80,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "a9c76782de77f2d3",
-        "type": "function",
-        "z": "15311a68299dc024",
-        "name": "algorithm",
-        "func": "let setting = flow.get(\"setting\");\nlet upper_temp = flow.get(\"upper_temp\");\nlet lower_temp = flow.get(\"lower_temp\");\nlet temp = global.get(\"sensors.fridge_temp\");\nlet ignition = global.get(\"status.ignition\");\nlet compressor = global.get(\"status.fridge\");\nmsg.payload = compressor;\n\nif(setting === \"auto\") setting = ignition;\n\nif(setting === true){\n    if (temp >= upper_temp) msg.payload = true\n    else if (temp < lower_temp) msg.payload = false\n} else msg.payload = false\n\nmsg.topic = \"fridge\";\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 380,
-        "y": 180,
-        "wires": [
-            [
-                "13fb75ced343ae86"
-            ]
-        ]
-    },
-    {
-        "id": "13fb75ced343ae86",
-        "type": "rbe",
-        "z": "15311a68299dc024",
-        "name": "on change filter",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": true,
-        "property": "payload",
-        "topi": "topic",
-        "x": 580,
-        "y": 180,
-        "wires": [
-            [
-                "3184fc21642792b4"
-            ]
-        ]
-    },
-    {
-        "id": "3184fc21642792b4",
-        "type": "link out",
-        "z": "15311a68299dc024",
-        "name": "fridge_out",
-        "mode": "link",
-        "links": [
-            "de22dce2df13f5f3"
-        ],
-        "x": 745,
-        "y": 180,
-        "wires": []
-    },
-    {
-        "id": "d50f0dfed5ccee9d",
-        "type": "inject",
-        "z": "15311a68299dc024",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "false",
-        "payloadType": "bool",
-        "x": 250,
-        "y": 80,
-        "wires": [
-            [
-                "b2229e5dc5944aef"
-            ]
-        ]
-    },
-    {
-        "id": "c1b7fabbd039452c",
-        "type": "comment",
-        "z": "15311a68299dc024",
-        "name": "settings",
-        "info": "",
-        "x": 150,
-        "y": 340,
-        "wires": []
-    },
-    {
-        "id": "aa2cce0e424133e8",
-        "type": "inject",
-        "z": "15311a68299dc024",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "6",
-        "payloadType": "num",
-        "x": 150,
-        "y": 380,
-        "wires": [
-            [
-                "6371b576797132a9"
-            ]
-        ]
-    },
-    {
-        "id": "8eeb7cbb78217109",
-        "type": "inject",
-        "z": "15311a68299dc024",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "1",
-        "payloadType": "num",
-        "x": 150,
-        "y": 420,
-        "wires": [
-            [
-                "932d0b15c2f26574"
-            ]
-        ]
-    },
-    {
-        "id": "a175a803f3969b0a",
-        "type": "link in",
-        "z": "15311a68299dc024",
-        "name": "fridge_ignition",
-        "links": [
-            "ba947f4deae7306a"
-        ],
-        "x": 185,
-        "y": 180,
-        "wires": [
-            [
-                "a9c76782de77f2d3",
-                "8f6a175b5f9ee867"
-            ]
-        ]
-    },
-    {
-        "id": "8f6a175b5f9ee867",
-        "type": "ui_led",
-        "z": "15311a68299dc024",
-        "order": 7,
-        "group": "af392092454b5034",
-        "width": "5",
-        "height": "1",
-        "label": "Ignition",
-        "labelPlacement": "left",
-        "labelAlignment": "left",
-        "colorForValue": [
-            {
-                "color": "#919191",
-                "value": "false",
-                "valueType": "bool"
-            },
-            {
-                "color": "#dea900",
-                "value": "true",
-                "valueType": "bool"
-            }
-        ],
-        "allowColorForValueInMessage": false,
-        "shape": "circle",
-        "showGlow": false,
-        "name": "led ignition",
-        "x": 390,
-        "y": 220,
-        "wires": []
-    },
-    {
         "id": "29b2917c6d628102",
         "type": "function",
         "z": "c6c05e7764275064",
@@ -4857,7 +4444,8 @@
         "z": "c6c05e7764275064",
         "name": "high_voltage_control",
         "links": [
-            "3184fc21642792b4"
+            "3184fc21642792b4",
+            "819f986947063229"
         ],
         "x": 75,
         "y": 260,
@@ -5935,6 +5523,435 @@
         "wires": []
     },
     {
+        "id": "cc4732aab186fe6e",
+        "type": "link in",
+        "z": "4f5b0833ab0a95bb",
+        "name": "starter_charger_gpio",
+        "links": [
+            "b571123d946be4c9"
+        ],
+        "x": 405,
+        "y": 440,
+        "wires": [
+            [
+                "929776411fb44892"
+            ]
+        ]
+    },
+    {
+        "id": "b2229e5dc5944aef",
+        "type": "ui_dropdown",
+        "z": "15311a68299dc024",
+        "name": "",
+        "label": "Setting",
+        "tooltip": "",
+        "place": "Off",
+        "group": "af392092454b5034",
+        "order": 5,
+        "width": "5",
+        "height": "1",
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Off",
+                "value": false,
+                "type": "bool"
+            },
+            {
+                "label": "On",
+                "value": true,
+                "type": "bool"
+            },
+            {
+                "label": "Auto(when ignition is on)",
+                "value": "auto",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 380,
+        "y": 80,
+        "wires": [
+            [
+                "e697ed0b4940fdd2",
+                "a9c76782de77f2d3"
+            ]
+        ]
+    },
+    {
+        "id": "a61ae7040267586a",
+        "type": "ui_gauge",
+        "z": "15311a68299dc024",
+        "name": "fridge temp",
+        "group": "af392092454b5034",
+        "order": 1,
+        "width": "5",
+        "height": "5",
+        "gtype": "donut",
+        "title": "",
+        "label": "C°",
+        "format": "{{value}}",
+        "min": "-20",
+        "max": "20",
+        "colors": [
+            "#00fdff",
+            "#00f900",
+            "#ca3838"
+        ],
+        "seg1": "0",
+        "seg2": "6",
+        "diff": false,
+        "className": "",
+        "x": 390,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "05ade75e1ba4a9f0",
+        "type": "link in",
+        "z": "15311a68299dc024",
+        "name": "fridge_temp",
+        "links": [
+            "380baa39b73ad74b",
+            "4562a99cb7e72896"
+        ],
+        "x": 185,
+        "y": 260,
+        "wires": [
+            [
+                "a61ae7040267586a",
+                "a9c76782de77f2d3"
+            ]
+        ]
+    },
+    {
+        "id": "6371b576797132a9",
+        "type": "ui_slider",
+        "z": "15311a68299dc024",
+        "name": "",
+        "label": "Upper temperature threshold",
+        "tooltip": "",
+        "group": "466866a9d24aa546",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "-10",
+        "max": "15",
+        "step": 1,
+        "className": "",
+        "x": 380,
+        "y": 380,
+        "wires": [
+            [
+                "a7cbc6a832925664"
+            ]
+        ]
+    },
+    {
+        "id": "932d0b15c2f26574",
+        "type": "ui_slider",
+        "z": "15311a68299dc024",
+        "name": "",
+        "label": "Lower temperature threshold",
+        "tooltip": "",
+        "group": "466866a9d24aa546",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "-10",
+        "max": "15",
+        "step": 1,
+        "className": "",
+        "x": 380,
+        "y": 420,
+        "wires": [
+            [
+                "49fbd3a192947c76"
+            ]
+        ]
+    },
+    {
+        "id": "49fbd3a192947c76",
+        "type": "change",
+        "z": "15311a68299dc024",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "lower_temp",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a7cbc6a832925664",
+        "type": "change",
+        "z": "15311a68299dc024",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "upper_temp",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e697ed0b4940fdd2",
+        "type": "change",
+        "z": "15311a68299dc024",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "setting",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a9c76782de77f2d3",
+        "type": "function",
+        "z": "15311a68299dc024",
+        "name": "algorithm",
+        "func": "let setting = flow.get(\"setting\");\nlet upper_temp = flow.get(\"upper_temp\");\nlet lower_temp = flow.get(\"lower_temp\");\nlet temp = global.get(\"sensors.fridge_temp\");\nlet ignition = global.get(\"status.ignition\");\nlet compressor = global.get(\"status.fridge\");\nmsg.payload = compressor;\n\nif(setting === \"auto\") setting = ignition;\n\nif(setting === true){\n    if (temp >= upper_temp) msg.payload = true\n    else if (temp < lower_temp) msg.payload = false\n} else msg.payload = false\n\nmsg.topic = \"fridge\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 180,
+        "wires": [
+            [
+                "13fb75ced343ae86"
+            ]
+        ]
+    },
+    {
+        "id": "13fb75ced343ae86",
+        "type": "rbe",
+        "z": "15311a68299dc024",
+        "name": "on change filter",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 580,
+        "y": 180,
+        "wires": [
+            [
+                "3184fc21642792b4"
+            ]
+        ]
+    },
+    {
+        "id": "3184fc21642792b4",
+        "type": "link out",
+        "z": "15311a68299dc024",
+        "name": "fridge_out",
+        "mode": "link",
+        "links": [
+            "de22dce2df13f5f3"
+        ],
+        "x": 745,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "d50f0dfed5ccee9d",
+        "type": "inject",
+        "z": "15311a68299dc024",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 250,
+        "y": 80,
+        "wires": [
+            [
+                "b2229e5dc5944aef"
+            ]
+        ]
+    },
+    {
+        "id": "c1b7fabbd039452c",
+        "type": "comment",
+        "z": "15311a68299dc024",
+        "name": "settings",
+        "info": "",
+        "x": 150,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "aa2cce0e424133e8",
+        "type": "inject",
+        "z": "15311a68299dc024",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "6",
+        "payloadType": "num",
+        "x": 150,
+        "y": 380,
+        "wires": [
+            [
+                "6371b576797132a9"
+            ]
+        ]
+    },
+    {
+        "id": "8eeb7cbb78217109",
+        "type": "inject",
+        "z": "15311a68299dc024",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 150,
+        "y": 420,
+        "wires": [
+            [
+                "932d0b15c2f26574"
+            ]
+        ]
+    },
+    {
+        "id": "a175a803f3969b0a",
+        "type": "link in",
+        "z": "15311a68299dc024",
+        "name": "fridge_ignition",
+        "links": [
+            "ba947f4deae7306a"
+        ],
+        "x": 185,
+        "y": 180,
+        "wires": [
+            [
+                "a9c76782de77f2d3",
+                "8f6a175b5f9ee867"
+            ]
+        ]
+    },
+    {
+        "id": "8f6a175b5f9ee867",
+        "type": "ui_led",
+        "z": "15311a68299dc024",
+        "order": 7,
+        "group": "af392092454b5034",
+        "width": "5",
+        "height": "1",
+        "label": "Ignition",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#919191",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#dea900",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": false,
+        "name": "led ignition",
+        "x": 390,
+        "y": 220,
+        "wires": []
+    },
+    {
         "id": "0daefb168cc93c70",
         "type": "ui_led",
         "z": "7d2ee9cb73f16e0a",
@@ -6087,7 +6104,7 @@
         "type": "function",
         "z": "7d2ee9cb73f16e0a",
         "name": "leisure algorithm",
-        "func": "if(msg.topic === \"setting\") flow.set(\"leisureSetting\", msg.payload);\n\nlet ignition = global.get(\"status.ignition\");\nlet setting = flow.get(\"leisureSetting\");\n\nif(setting === \"auto\") setting = ignition;\n\nmsg.payload = setting;\n\nreturn msg;",
+        "func": "if(msg.topic === \"setting\") flow.set(\"leisureSetting\", msg.payload);\n\nlet ignition = global.get(\"status.ignition\");\nlet setting = flow.get(\"leisureSetting\");\n\nif(setting === \"auto\") setting = ignition;\n\nmsg.payload = setting;\nmsg.topic = \"charger\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -6106,7 +6123,7 @@
         "id": "eb0a646bbf6c6a87",
         "type": "rbe",
         "z": "7d2ee9cb73f16e0a",
-        "name": "",
+        "name": "on change filter",
         "func": "rbe",
         "gap": "",
         "start": "",
@@ -6114,11 +6131,12 @@
         "septopics": true,
         "property": "payload",
         "topi": "topic",
-        "x": 770,
+        "x": 820,
         "y": 260,
         "wires": [
             [
-                "0daefb168cc93c70"
+                "0daefb168cc93c70",
+                "819f986947063229"
             ]
         ]
     },
@@ -6220,7 +6238,7 @@
         "id": "2e165710f06585f3",
         "type": "rbe",
         "z": "7d2ee9cb73f16e0a",
-        "name": "",
+        "name": "on change filter",
         "func": "rbe",
         "gap": "",
         "start": "",
@@ -6228,11 +6246,12 @@
         "septopics": true,
         "property": "payload",
         "topi": "topic",
-        "x": 770,
+        "x": 820,
         "y": 300,
         "wires": [
             [
-                "bc2b0f423be5d0f7"
+                "bc2b0f423be5d0f7",
+                "b571123d946be4c9"
             ]
         ]
     },
@@ -6435,5 +6454,31 @@
                 "fa63dc886e9ac9e2"
             ]
         ]
+    },
+    {
+        "id": "819f986947063229",
+        "type": "link out",
+        "z": "7d2ee9cb73f16e0a",
+        "name": "link out 1",
+        "mode": "link",
+        "links": [
+            "de22dce2df13f5f3"
+        ],
+        "x": 995,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "b571123d946be4c9",
+        "type": "link out",
+        "z": "7d2ee9cb73f16e0a",
+        "name": "link out 2",
+        "mode": "link",
+        "links": [
+            "cc4732aab186fe6e"
+        ],
+        "x": 995,
+        "y": 340,
+        "wires": []
     }
 ]
