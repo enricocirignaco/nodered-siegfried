@@ -6028,7 +6028,7 @@
             }
         ],
         "payload": "",
-        "topic": "topic",
+        "topic": "test",
         "topicType": "msg",
         "className": "",
         "x": 400,
