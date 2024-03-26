@@ -40,6 +40,14 @@
         "env": []
     },
     {
+        "id": "7d2ee9cb73f16e0a",
+        "type": "tab",
+        "label": "chargers",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "b10498f78b9fb638",
         "type": "group",
         "z": "6d564b0b71763d89",
@@ -502,6 +510,17 @@
         "name": "Fridge",
         "tab": "9d7781fc6afac662",
         "order": 2,
+        "disp": true,
+        "width": "10",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1f51103af332e4a2",
+        "type": "ui_group",
+        "name": "Chargers",
+        "tab": "8d207109f202f502",
+        "order": 4,
         "disp": true,
         "width": "10",
         "collapse": false,
@@ -4813,38 +4832,6 @@
         "wires": []
     },
     {
-        "id": "b63a529b627e4005",
-        "type": "ui_switch",
-        "z": "c6c05e7764275064",
-        "name": "",
-        "label": "Charge starter battery when inverter on",
-        "tooltip": "inverter is powered by the starter battery so it's agood idea to charge it with solar or leisure battery when inverter is in use. NOTE: this not apply when the ignition is on",
-        "group": "6fd6f055a36d0f78",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "decouple": "false",
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "className": "",
-        "x": 280,
-        "y": 620,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "29b2917c6d628102",
         "type": "function",
         "z": "c6c05e7764275064",
@@ -5462,6 +5449,16 @@
         ]
     },
     {
+        "id": "143af96df2bb2cd9",
+        "type": "comment",
+        "z": "c6c05e7764275064",
+        "name": "settings",
+        "info": "",
+        "x": 190,
+        "y": 520,
+        "wires": []
+    },
+    {
         "id": "4ab78910fec37e29",
         "type": "link in",
         "z": "4f5b0833ab0a95bb",
@@ -5933,5 +5930,181 @@
         "x": 995,
         "y": 560,
         "wires": []
+    },
+    {
+        "id": "0daefb168cc93c70",
+        "type": "ui_led",
+        "z": "7d2ee9cb73f16e0a",
+        "order": 7,
+        "group": "1f51103af332e4a2",
+        "width": "5",
+        "height": "1",
+        "label": "Leisure charger",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#919191",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#dea900",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": false,
+        "name": "led leisure charger",
+        "x": 690,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "bc2b0f423be5d0f7",
+        "type": "ui_led",
+        "z": "7d2ee9cb73f16e0a",
+        "order": 7,
+        "group": "1f51103af332e4a2",
+        "width": "5",
+        "height": "1",
+        "label": "Starter charger",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#919191",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#dea900",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": false,
+        "name": "led starter charger",
+        "x": 690,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "b63a529b627e4005",
+        "type": "ui_switch",
+        "z": "7d2ee9cb73f16e0a",
+        "name": "",
+        "label": "Charge starter battery when inverter on",
+        "tooltip": "inverter is powered by the starter battery so it's agood idea to charge it with solar or leisure battery when inverter is in use. NOTE: this not apply when the ignition is on",
+        "group": "6fd6f055a36d0f78",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 280,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f1d8acc740a01bcf",
+        "type": "ui_dropdown",
+        "z": "7d2ee9cb73f16e0a",
+        "name": "",
+        "label": "Leisure charger",
+        "tooltip": "",
+        "place": "Off",
+        "group": "1f51103af332e4a2",
+        "order": 5,
+        "width": "5",
+        "height": "1",
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Off",
+                "value": false,
+                "type": "bool"
+            },
+            {
+                "label": "On",
+                "value": true,
+                "type": "bool"
+            },
+            {
+                "label": "Auto(when ignition is on)",
+                "value": "auto",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 320,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "93b36a4c1af7244a",
+        "type": "ui_dropdown",
+        "z": "7d2ee9cb73f16e0a",
+        "name": "",
+        "label": "Starter charger",
+        "tooltip": "",
+        "place": "Off",
+        "group": "1f51103af332e4a2",
+        "order": 5,
+        "width": "5",
+        "height": "1",
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Off",
+                "value": false,
+                "type": "bool"
+            },
+            {
+                "label": "On",
+                "value": true,
+                "type": "bool"
+            },
+            {
+                "label": "Auto(when ignition is on)",
+                "value": "auto",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 320,
+        "y": 300,
+        "wires": [
+            []
+        ]
     }
 ]
