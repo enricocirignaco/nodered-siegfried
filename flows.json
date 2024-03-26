@@ -6344,7 +6344,7 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "1",
+        "payload": "60",
         "payloadType": "num",
         "x": 150,
         "y": 560,
