@@ -6028,8 +6028,8 @@
             }
         ],
         "payload": "",
-        "topic": "topic.test",
-        "topicType": "msg",
+        "topic": "setting",
+        "topicType": "str",
         "className": "",
         "x": 400,
         "y": 260,
@@ -6072,8 +6072,8 @@
             }
         ],
         "payload": "",
-        "topic": "topic",
-        "topicType": "msg",
+        "topic": "setting",
+        "topicType": "str",
         "className": "",
         "x": 400,
         "y": 300,
