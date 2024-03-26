@@ -6310,7 +6310,7 @@
         "label": "Chargers delay in minutes",
         "tooltip": "inverter between changing inverter state and high voltage applicances",
         "group": "1f51103af332e4a2",
-        "order": 1,
+        "order": 5,
         "width": 0,
         "height": 0,
         "passthru": true,
