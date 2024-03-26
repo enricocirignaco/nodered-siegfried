@@ -6035,8 +6035,7 @@
         "y": 260,
         "wires": [
             [
-                "dbf6b2b61f5fb9ad",
-                "d7d4c42a2592d6dd"
+                "dbf6b2b61f5fb9ad"
             ]
         ]
     },
@@ -6087,15 +6086,15 @@
         "id": "dbf6b2b61f5fb9ad",
         "type": "function",
         "z": "7d2ee9cb73f16e0a",
-        "name": "function 2",
-        "func": "let ignition = global.get(\"status.ignition\");\nlet mode = msg.payload;\n\nif(mode === \"auto\") mode = ignition;\n\nmsg.payload = mode;\n\nreturn msg;",
+        "name": "leisure algorithm",
+        "func": "if(msg.topic === \"setting\") flow.set(\"leisureSetting\", msg.payload);\n\nlet ignition = global.get(\"status.ignition\");\nlet setting = flow.get(\"leisureSetting\");\n\nif(setting === \"auto\") setting = ignition;\n\nmsg.payload = setting;\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 600,
+        "x": 620,
         "y": 260,
         "wires": [
             [
@@ -6201,15 +6200,15 @@
         "id": "dc4d808394a12441",
         "type": "function",
         "z": "7d2ee9cb73f16e0a",
-        "name": "function 3",
-        "func": "let fridge = global.get(\"status.fridge\");\nlet mode = msg.payload;\n\nif(mode === \"auto\") mode = fridge;\n\nmsg.payload = mode;\n\nreturn msg;",
+        "name": "starter algorithm",
+        "func": "if (msg.topic === \"setting\") flow.set(\"starterSetting\", msg.payload);\n\nlet inverter = global.get(\"status.inverter\");\nlet setting = flow.get(\"starterSetting\");\n\nif (setting === \"auto\") setting = inverter;\n\nmsg.payload = setting;\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 600,
+        "x": 620,
         "y": 300,
         "wires": [
             [
@@ -6436,22 +6435,5 @@
                 "fa63dc886e9ac9e2"
             ]
         ]
-    },
-    {
-        "id": "d7d4c42a2592d6dd",
-        "type": "debug",
-        "z": "7d2ee9cb73f16e0a",
-        "name": "debug 4",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 560,
-        "y": 120,
-        "wires": []
     }
 ]
