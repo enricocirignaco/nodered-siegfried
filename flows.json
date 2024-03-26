@@ -5925,7 +5925,8 @@
         "name": "ignition",
         "mode": "link",
         "links": [
-            "a175a803f3969b0a"
+            "a175a803f3969b0a",
+            "d3e2da3d93171ad1"
         ],
         "x": 995,
         "y": 560,
@@ -6204,6 +6205,22 @@
         "wires": [
             [
                 "93b36a4c1af7244a"
+            ]
+        ]
+    },
+    {
+        "id": "d3e2da3d93171ad1",
+        "type": "link in",
+        "z": "7d2ee9cb73f16e0a",
+        "name": "link in 4",
+        "links": [
+            "ba947f4deae7306a"
+        ],
+        "x": 385,
+        "y": 220,
+        "wires": [
+            [
+                "dbf6b2b61f5fb9ad"
             ]
         ]
     }
