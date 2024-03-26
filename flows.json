@@ -6247,7 +6247,7 @@
         "z": "13952ff3682a9fc4",
         "g": "146c3c4c3cb1cb7c",
         "name": "",
-        "label": "Fill lower tank",
+        "label": "Internal tank",
         "tooltip": "",
         "group": "689ec1180c141d67",
         "order": 3,
@@ -6268,7 +6268,7 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 320,
+        "x": 310,
         "y": 380,
         "wires": [
             []
@@ -6280,7 +6280,7 @@
         "z": "13952ff3682a9fc4",
         "g": "146c3c4c3cb1cb7c",
         "name": "",
-        "label": "Upper Tank",
+        "label": "External Tank",
         "tooltip": "",
         "group": "689ec1180c141d67",
         "order": 4,
@@ -6301,7 +6301,7 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 310,
+        "x": 320,
         "y": 480,
         "wires": [
             [
