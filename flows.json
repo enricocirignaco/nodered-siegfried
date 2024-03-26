@@ -134,29 +134,6 @@
         "h": 129.5
     },
     {
-        "id": "cd72b915c94ff1a4",
-        "type": "group",
-        "z": "8f469e385c0b1581",
-        "name": "Temperature Dashboard",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "90ac10f75058bd6c",
-            "0ddebecdce249942",
-            "70d8484d067914b5",
-            "85a8f1a036b01587",
-            "25cb50231328a18c",
-            "d8357db7db07799b",
-            "1d6edc267b855506",
-            "6ffbd83f0720507a"
-        ],
-        "x": 74,
-        "y": 699,
-        "w": 612,
-        "h": 122
-    },
-    {
         "id": "eaf8bdbc0b32a5bb",
         "type": "group",
         "z": "68eb8e61689f5b6b",
@@ -199,37 +176,27 @@
         "h": 602
     },
     {
-        "id": "146c3c4c3cb1cb7c",
+        "id": "cd72b915c94ff1a4",
         "type": "group",
-        "z": "13952ff3682a9fc4",
-        "name": "Water Dashboard",
+        "z": "6d564b0b71763d89",
+        "name": "Temperature Dashboard",
         "style": {
             "label": true
         },
         "nodes": [
-            "43fdb291779d32e0",
-            "ab78acace75f32af",
-            "79691da6eaeb445a",
-            "b4c35b2e757c1d11",
-            "3e6256105a30f21d",
-            "59c2165e232ba6cd",
-            "6ddbd0a15b866b88",
-            "674d94efa911a975",
-            "fc2dde5f98b3403e",
-            "bc64d185a368e816",
-            "4f1524a1e922f485",
-            "4bd594781653cbd1",
-            "c137f6a704608c74",
-            "5a39df5cc1fe2616",
-            "68c5af39b6d9781e",
-            "12996cef4976cab0",
-            "10799c20c2d92595",
-            "13086820c5018925"
+            "90ac10f75058bd6c",
+            "0ddebecdce249942",
+            "70d8484d067914b5",
+            "85a8f1a036b01587",
+            "25cb50231328a18c",
+            "d8357db7db07799b",
+            "1d6edc267b855506",
+            "6ffbd83f0720507a"
         ],
-        "x": 54,
-        "y": 59,
-        "w": 692,
-        "h": 502
+        "x": 1094,
+        "y": 759,
+        "w": 612,
+        "h": 122
     },
     {
         "id": "f1b90aff42e3f29a",
@@ -2298,6 +2265,194 @@
         ]
     },
     {
+        "id": "90ac10f75058bd6c",
+        "type": "ui_gauge",
+        "z": "6d564b0b71763d89",
+        "g": "cd72b915c94ff1a4",
+        "name": "temp_in",
+        "group": "57ca5f37d1ee1a2a",
+        "order": 1,
+        "width": "5",
+        "height": 5,
+        "gtype": "donut",
+        "title": "",
+        "label": "In C°",
+        "format": "{{value}}",
+        "min": "-15",
+        "max": "45",
+        "colors": [
+            "#dea900",
+            "#dea900",
+            "#dea900"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1620,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "0ddebecdce249942",
+        "type": "ui_gauge",
+        "z": "6d564b0b71763d89",
+        "g": "cd72b915c94ff1a4",
+        "name": "temp_out",
+        "group": "57ca5f37d1ee1a2a",
+        "order": 2,
+        "width": "4",
+        "height": 5,
+        "gtype": "donut",
+        "title": "",
+        "label": "Out C°",
+        "format": "{{value}}",
+        "min": "-15",
+        "max": "45",
+        "colors": [
+            "#dea900",
+            "#dea900",
+            "#dea900"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1620,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "70d8484d067914b5",
+        "type": "link in",
+        "z": "6d564b0b71763d89",
+        "g": "cd72b915c94ff1a4",
+        "name": "temp_in",
+        "links": [
+            "e53ab43e069dd8a3"
+        ],
+        "x": 1495,
+        "y": 800,
+        "wires": [
+            [
+                "0ddebecdce249942"
+            ]
+        ]
+    },
+    {
+        "id": "85a8f1a036b01587",
+        "type": "link in",
+        "z": "6d564b0b71763d89",
+        "g": "cd72b915c94ff1a4",
+        "name": "temp_in",
+        "links": [
+            "00a386aa3c73ecfd"
+        ],
+        "x": 1495,
+        "y": 840,
+        "wires": [
+            [
+                "90ac10f75058bd6c"
+            ]
+        ]
+    },
+    {
+        "id": "25cb50231328a18c",
+        "type": "random",
+        "z": "6d564b0b71763d89",
+        "g": "cd72b915c94ff1a4",
+        "name": "",
+        "low": "-10",
+        "high": "40",
+        "inte": "true",
+        "property": "payload",
+        "x": 1380,
+        "y": 840,
+        "wires": [
+            [
+                "90ac10f75058bd6c"
+            ]
+        ]
+    },
+    {
+        "id": "d8357db7db07799b",
+        "type": "random",
+        "z": "6d564b0b71763d89",
+        "g": "cd72b915c94ff1a4",
+        "name": "",
+        "low": "-10",
+        "high": "40",
+        "inte": "true",
+        "property": "payload",
+        "x": 1380,
+        "y": 800,
+        "wires": [
+            [
+                "0ddebecdce249942"
+            ]
+        ]
+    },
+    {
+        "id": "1d6edc267b855506",
+        "type": "inject",
+        "z": "6d564b0b71763d89",
+        "g": "cd72b915c94ff1a4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1210,
+        "y": 800,
+        "wires": [
+            [
+                "d8357db7db07799b"
+            ]
+        ]
+    },
+    {
+        "id": "6ffbd83f0720507a",
+        "type": "inject",
+        "z": "6d564b0b71763d89",
+        "g": "cd72b915c94ff1a4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1210,
+        "y": 840,
+        "wires": [
+            [
+                "25cb50231328a18c"
+            ]
+        ]
+    },
+    {
         "id": "0094be9ee0b66230",
         "type": "ui_gauge",
         "z": "8f469e385c0b1581",
@@ -2560,194 +2715,6 @@
         "x": 650,
         "y": 220,
         "wires": []
-    },
-    {
-        "id": "90ac10f75058bd6c",
-        "type": "ui_gauge",
-        "z": "8f469e385c0b1581",
-        "g": "cd72b915c94ff1a4",
-        "name": "temp_in",
-        "group": "57ca5f37d1ee1a2a",
-        "order": 1,
-        "width": "5",
-        "height": 5,
-        "gtype": "donut",
-        "title": "",
-        "label": "In C°",
-        "format": "{{value}}",
-        "min": "-15",
-        "max": "45",
-        "colors": [
-            "#dea900",
-            "#dea900",
-            "#dea900"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "diff": false,
-        "className": "",
-        "x": 600,
-        "y": 780,
-        "wires": []
-    },
-    {
-        "id": "0ddebecdce249942",
-        "type": "ui_gauge",
-        "z": "8f469e385c0b1581",
-        "g": "cd72b915c94ff1a4",
-        "name": "temp_out",
-        "group": "57ca5f37d1ee1a2a",
-        "order": 2,
-        "width": "4",
-        "height": 5,
-        "gtype": "donut",
-        "title": "",
-        "label": "Out C°",
-        "format": "{{value}}",
-        "min": "-15",
-        "max": "45",
-        "colors": [
-            "#dea900",
-            "#dea900",
-            "#dea900"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "diff": false,
-        "className": "",
-        "x": 600,
-        "y": 740,
-        "wires": []
-    },
-    {
-        "id": "70d8484d067914b5",
-        "type": "link in",
-        "z": "8f469e385c0b1581",
-        "g": "cd72b915c94ff1a4",
-        "name": "temp_in",
-        "links": [
-            "e53ab43e069dd8a3"
-        ],
-        "x": 475,
-        "y": 740,
-        "wires": [
-            [
-                "0ddebecdce249942"
-            ]
-        ]
-    },
-    {
-        "id": "85a8f1a036b01587",
-        "type": "link in",
-        "z": "8f469e385c0b1581",
-        "g": "cd72b915c94ff1a4",
-        "name": "temp_in",
-        "links": [
-            "00a386aa3c73ecfd"
-        ],
-        "x": 475,
-        "y": 780,
-        "wires": [
-            [
-                "90ac10f75058bd6c"
-            ]
-        ]
-    },
-    {
-        "id": "d8357db7db07799b",
-        "type": "random",
-        "z": "8f469e385c0b1581",
-        "g": "cd72b915c94ff1a4",
-        "name": "",
-        "low": "-10",
-        "high": "40",
-        "inte": "true",
-        "property": "payload",
-        "x": 360,
-        "y": 740,
-        "wires": [
-            [
-                "0ddebecdce249942"
-            ]
-        ]
-    },
-    {
-        "id": "25cb50231328a18c",
-        "type": "random",
-        "z": "8f469e385c0b1581",
-        "g": "cd72b915c94ff1a4",
-        "name": "",
-        "low": "-10",
-        "high": "40",
-        "inte": "true",
-        "property": "payload",
-        "x": 360,
-        "y": 780,
-        "wires": [
-            [
-                "90ac10f75058bd6c"
-            ]
-        ]
-    },
-    {
-        "id": "1d6edc267b855506",
-        "type": "inject",
-        "z": "8f469e385c0b1581",
-        "g": "cd72b915c94ff1a4",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "10",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 190,
-        "y": 740,
-        "wires": [
-            [
-                "d8357db7db07799b"
-            ]
-        ]
-    },
-    {
-        "id": "6ffbd83f0720507a",
-        "type": "inject",
-        "z": "8f469e385c0b1581",
-        "g": "cd72b915c94ff1a4",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "10",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 190,
-        "y": 780,
-        "wires": [
-            [
-                "25cb50231328a18c"
-            ]
-        ]
     },
     {
         "id": "60e52cda8562b45d",
@@ -3556,6 +3523,53 @@
         "wires": [
             [
                 "929776411fb44892"
+            ]
+        ]
+    },
+    {
+        "id": "1101cf3640e2ece0",
+        "type": "link in",
+        "z": "4f5b0833ab0a95bb",
+        "name": "valve_0_gpio",
+        "links": [
+            "fc2dde5f98b3403e",
+            "d850506da8fb975c"
+        ],
+        "x": 405,
+        "y": 480,
+        "wires": [
+            [
+                "2e7a22334ba4ea5d"
+            ]
+        ]
+    },
+    {
+        "id": "ee7d7e06e788195f",
+        "type": "link in",
+        "z": "4f5b0833ab0a95bb",
+        "name": "valve_1_gpio",
+        "links": [],
+        "x": 405,
+        "y": 520,
+        "wires": [
+            [
+                "e730899400c089da"
+            ]
+        ]
+    },
+    {
+        "id": "57aee4dc74f81aab",
+        "type": "link in",
+        "z": "4f5b0833ab0a95bb",
+        "name": "pump_gpio",
+        "links": [
+            "c26791e7295a5c67"
+        ],
+        "x": 405,
+        "y": 560,
+        "wires": [
+            [
+                "2ffa2e3c9c3157b5"
             ]
         ]
     },
@@ -5885,83 +5899,9 @@
         "wires": []
     },
     {
-        "id": "43fdb291779d32e0",
-        "type": "ui_led",
-        "z": "13952ff3682a9fc4",
-        "d": true,
-        "g": "146c3c4c3cb1cb7c",
-        "order": 5,
-        "group": "689ec1180c141d67",
-        "width": "10",
-        "height": 1,
-        "label": "Pump",
-        "labelPlacement": "left",
-        "labelAlignment": "left",
-        "colorForValue": [
-            {
-                "color": "#dea900",
-                "value": "true",
-                "valueType": "bool"
-            }
-        ],
-        "allowColorForValueInMessage": false,
-        "shape": "circle",
-        "showGlow": true,
-        "name": "pump",
-        "x": 630,
-        "y": 320,
-        "wires": []
-    },
-    {
-        "id": "ab78acace75f32af",
-        "type": "link in",
-        "z": "13952ff3682a9fc4",
-        "g": "146c3c4c3cb1cb7c",
-        "name": "",
-        "links": [
-            "48f32c625a731684"
-        ],
-        "x": 305,
-        "y": 320,
-        "wires": [
-            [
-                "79691da6eaeb445a"
-            ]
-        ]
-    },
-    {
-        "id": "79691da6eaeb445a",
-        "type": "change",
-        "z": "13952ff3682a9fc4",
-        "g": "146c3c4c3cb1cb7c",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "output_state.pump",
-                "tot": "global"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 440,
-        "y": 320,
-        "wires": [
-            [
-                "43fdb291779d32e0"
-            ]
-        ]
-    },
-    {
         "id": "b4c35b2e757c1d11",
         "type": "ui_gauge",
         "z": "13952ff3682a9fc4",
-        "g": "146c3c4c3cb1cb7c",
         "name": "water level",
         "group": "689ec1180c141d67",
         "order": 1,
@@ -5982,156 +5922,36 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 650,
-        "y": 140,
+        "x": 1270,
+        "y": 220,
         "wires": []
-    },
-    {
-        "id": "3e6256105a30f21d",
-        "type": "ui_led",
-        "z": "13952ff3682a9fc4",
-        "d": true,
-        "g": "146c3c4c3cb1cb7c",
-        "order": 3,
-        "group": "23c60b13edc12513",
-        "width": 3,
-        "height": 1,
-        "label": " ",
-        "labelPlacement": "left",
-        "labelAlignment": "left",
-        "colorForValue": [
-            {
-                "color": "#ff0000",
-                "value": "false",
-                "valueType": "bool"
-            },
-            {
-                "color": "#008000",
-                "value": "true",
-                "valueType": "bool"
-            }
-        ],
-        "allowColorForValueInMessage": false,
-        "shape": "circle",
-        "showGlow": true,
-        "name": "aux_output_led",
-        "x": 520,
-        "y": 420,
-        "wires": []
-    },
-    {
-        "id": "59c2165e232ba6cd",
-        "type": "change",
-        "z": "13952ff3682a9fc4",
-        "g": "146c3c4c3cb1cb7c",
-        "name": "store global var",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "output_state.aux_output",
-                "tot": "global"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 320,
-        "y": 420,
-        "wires": [
-            [
-                "3e6256105a30f21d"
-            ]
-        ]
-    },
-    {
-        "id": "6ddbd0a15b866b88",
-        "type": "ui_led",
-        "z": "13952ff3682a9fc4",
-        "d": true,
-        "g": "146c3c4c3cb1cb7c",
-        "order": 2,
-        "group": "23c60b13edc12513",
-        "width": 3,
-        "height": 1,
-        "label": " ",
-        "labelPlacement": "left",
-        "labelAlignment": "left",
-        "colorForValue": [
-            {
-                "color": "#008000",
-                "value": "true",
-                "valueType": "bool"
-            }
-        ],
-        "allowColorForValueInMessage": false,
-        "shape": "circle",
-        "showGlow": true,
-        "name": "upper_led",
-        "x": 500,
-        "y": 520,
-        "wires": []
-    },
-    {
-        "id": "674d94efa911a975",
-        "type": "change",
-        "z": "13952ff3682a9fc4",
-        "g": "146c3c4c3cb1cb7c",
-        "name": "store global var",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "output_state.aux_output",
-                "tot": "global"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 320,
-        "y": 520,
-        "wires": [
-            [
-                "6ddbd0a15b866b88"
-            ]
-        ]
     },
     {
         "id": "fc2dde5f98b3403e",
         "type": "link out",
         "z": "13952ff3682a9fc4",
-        "g": "146c3c4c3cb1cb7c",
-        "name": "hw_out",
+        "name": "valve_0_gpio",
         "mode": "link",
         "links": [
-            "24647f2ef9cb98b1"
+            "1101cf3640e2ece0"
         ],
-        "x": 595,
-        "y": 480,
+        "x": 1095,
+        "y": 420,
         "wires": []
     },
     {
         "id": "bc64d185a368e816",
         "type": "link in",
         "z": "13952ff3682a9fc4",
-        "g": "146c3c4c3cb1cb7c",
         "name": "hardware_state_trigger",
         "links": [
             "48f32c625a731684",
             "e9f912577a5edc23"
         ],
-        "x": 145,
-        "y": 520,
+        "x": 695,
+        "y": 420,
         "wires": [
             [
-                "674d94efa911a975",
                 "4f1524a1e922f485"
             ]
         ]
@@ -6140,7 +5960,6 @@
         "id": "4f1524a1e922f485",
         "type": "change",
         "z": "13952ff3682a9fc4",
-        "g": "146c3c4c3cb1cb7c",
         "name": "get water counter",
         "rules": [
             {
@@ -6156,8 +5975,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 290,
-        "y": 140,
+        "x": 910,
+        "y": 220,
         "wires": [
             [
                 "c137f6a704608c74"
@@ -6168,13 +5987,12 @@
         "id": "4bd594781653cbd1",
         "type": "change",
         "z": "13952ff3682a9fc4",
-        "g": "146c3c4c3cb1cb7c",
-        "name": "get water counter",
+        "name": "reset water counter",
         "rules": [
             {
                 "t": "set",
                 "p": "water_meter_cnt",
-                "pt": "global",
+                "pt": "flow",
                 "to": "0",
                 "tot": "num"
             }
@@ -6184,8 +6002,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 430,
-        "y": 260,
+        "x": 670,
+        "y": 220,
         "wires": [
             [
                 "4f1524a1e922f485"
@@ -6196,16 +6014,16 @@
         "id": "c137f6a704608c74",
         "type": "function",
         "z": "13952ff3682a9fc4",
-        "g": "146c3c4c3cb1cb7c",
         "name": "conversion",
         "func": "\nconst capacity = 15.0;\nvar consumed_in_l = msg.payload/500.0;\nmsg.payload = capacity - consumed_in_l;\nreturn msg;",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 490,
-        "y": 140,
+        "x": 1110,
+        "y": 220,
         "wires": [
             [
                 "b4c35b2e757c1d11"
@@ -6216,7 +6034,6 @@
         "id": "5a39df5cc1fe2616",
         "type": "ui_button",
         "z": "13952ff3682a9fc4",
-        "g": "146c3c4c3cb1cb7c",
         "name": "",
         "group": "689ec1180c141d67",
         "order": 3,
@@ -6233,8 +6050,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 250,
-        "y": 260,
+        "x": 290,
+        "y": 220,
         "wires": [
             [
                 "4bd594781653cbd1"
@@ -6245,7 +6062,6 @@
         "id": "68c5af39b6d9781e",
         "type": "ui_switch",
         "z": "13952ff3682a9fc4",
-        "g": "146c3c4c3cb1cb7c",
         "name": "",
         "label": "Internal tank",
         "tooltip": "",
@@ -6268,17 +6084,18 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 310,
-        "y": 380,
+        "x": 930,
+        "y": 460,
         "wires": [
-            []
+            [
+                "d850506da8fb975c"
+            ]
         ]
     },
     {
         "id": "12996cef4976cab0",
         "type": "ui_switch",
         "z": "13952ff3682a9fc4",
-        "g": "146c3c4c3cb1cb7c",
         "name": "",
         "label": "External Tank",
         "tooltip": "",
@@ -6301,8 +6118,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 320,
-        "y": 480,
+        "x": 940,
+        "y": 420,
         "wires": [
             [
                 "fc2dde5f98b3403e"
@@ -6313,14 +6130,13 @@
         "id": "10799c20c2d92595",
         "type": "random",
         "z": "13952ff3682a9fc4",
-        "g": "146c3c4c3cb1cb7c",
         "name": "",
         "low": "0",
         "high": "60",
         "inte": "true",
         "property": "payload",
-        "x": 340,
-        "y": 100,
+        "x": 940,
+        "y": 120,
         "wires": [
             [
                 "b4c35b2e757c1d11"
@@ -6331,7 +6147,6 @@
         "id": "13086820c5018925",
         "type": "inject",
         "z": "13952ff3682a9fc4",
-        "g": "146c3c4c3cb1cb7c",
         "name": "",
         "props": [
             {
@@ -6349,12 +6164,117 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 170,
-        "y": 100,
+        "x": 770,
+        "y": 120,
         "wires": [
             [
                 "10799c20c2d92595"
             ]
         ]
+    },
+    {
+        "id": "1535d33324d63d8f",
+        "type": "ui_slider",
+        "z": "13952ff3682a9fc4",
+        "name": "",
+        "label": "Fresh water tank capacity in liters",
+        "tooltip": "",
+        "group": "466866a9d24aa546",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "x": 380,
+        "y": 260,
+        "wires": [
+            [
+                "4d34a17143a2c355"
+            ]
+        ]
+    },
+    {
+        "id": "853d176b30c65b57",
+        "type": "inject",
+        "z": "13952ff3682a9fc4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "60",
+        "payloadType": "num",
+        "x": 150,
+        "y": 260,
+        "wires": [
+            [
+                "1535d33324d63d8f"
+            ]
+        ]
+    },
+    {
+        "id": "4d34a17143a2c355",
+        "type": "change",
+        "z": "13952ff3682a9fc4",
+        "name": "set tank capacity",
+        "rules": [
+            {
+                "t": "set",
+                "p": "tank_capacity",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 670,
+        "y": 260,
+        "wires": [
+            [
+                "4f1524a1e922f485"
+            ]
+        ]
+    },
+    {
+        "id": "d850506da8fb975c",
+        "type": "link out",
+        "z": "13952ff3682a9fc4",
+        "name": "valve_1_gpio",
+        "mode": "link",
+        "links": [
+            "1101cf3640e2ece0"
+        ],
+        "x": 1095,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "c26791e7295a5c67",
+        "type": "link out",
+        "z": "13952ff3682a9fc4",
+        "name": "valve_1_gpio",
+        "mode": "link",
+        "links": [
+            "57aee4dc74f81aab"
+        ],
+        "x": 1095,
+        "y": 500,
+        "wires": []
     }
 ]
