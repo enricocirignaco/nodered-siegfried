@@ -1629,7 +1629,7 @@
         "payload": "",
         "unit": "percent",
         "onStep": "0",
-        "x": 940,
+        "x": 1080,
         "y": 1000,
         "wires": []
     },
@@ -1643,7 +1643,7 @@
         "payload": "",
         "unit": "percent",
         "onStep": "0",
-        "x": 940,
+        "x": 1080,
         "y": 800,
         "wires": []
     },
@@ -1657,7 +1657,7 @@
         "payload": "",
         "unit": "percent",
         "onStep": "0",
-        "x": 940,
+        "x": 1080,
         "y": 840,
         "wires": []
     },
@@ -1671,7 +1671,7 @@
         "payload": "",
         "unit": "percent",
         "onStep": "0",
-        "x": 940,
+        "x": 1080,
         "y": 880,
         "wires": []
     },
@@ -1685,7 +1685,7 @@
         "payload": "",
         "unit": "percent",
         "onStep": "0",
-        "x": 940,
+        "x": 1080,
         "y": 920,
         "wires": []
     },
@@ -1699,7 +1699,7 @@
         "payload": "",
         "unit": "percent",
         "onStep": "0",
-        "x": 940,
+        "x": 1080,
         "y": 960,
         "wires": []
     },
@@ -1722,7 +1722,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 370,
+        "x": 510,
         "y": 800,
         "wires": [
             [
@@ -1738,8 +1738,8 @@
         "label": "main light     h",
         "tooltip": "",
         "group": "23c60b13edc12513",
-        "order": 4,
-        "width": "10",
+        "order": 2,
+        "width": "7",
         "height": "1",
         "passthru": true,
         "outs": "end",
@@ -1749,7 +1749,7 @@
         "max": "100",
         "step": "5",
         "className": "",
-        "x": 170,
+        "x": 310,
         "y": 800,
         "wires": [
             [
@@ -1765,7 +1765,7 @@
         "label": "round lights rear",
         "tooltip": "",
         "group": "23c60b13edc12513",
-        "order": 4,
+        "order": 3,
         "width": "10",
         "height": "1",
         "passthru": true,
@@ -1776,7 +1776,7 @@
         "max": "100",
         "step": "5",
         "className": "",
-        "x": 180,
+        "x": 320,
         "y": 840,
         "wires": [
             [
@@ -1803,7 +1803,7 @@
         "max": "100",
         "step": "5",
         "className": "",
-        "x": 160,
+        "x": 300,
         "y": 1000,
         "wires": [
             [
@@ -1819,7 +1819,7 @@
         "label": "light column",
         "tooltip": "",
         "group": "23c60b13edc12513",
-        "order": 4,
+        "order": 5,
         "width": "10",
         "height": "1",
         "passthru": true,
@@ -1830,7 +1830,7 @@
         "max": "100",
         "step": "5",
         "className": "",
-        "x": 170,
+        "x": 310,
         "y": 920,
         "wires": [
             [
@@ -1846,7 +1846,7 @@
         "label": "light door   ",
         "tooltip": "",
         "group": "23c60b13edc12513",
-        "order": 4,
+        "order": 6,
         "width": "10",
         "height": "1",
         "passthru": true,
@@ -1857,7 +1857,7 @@
         "max": "100",
         "step": "5",
         "className": "",
-        "x": 160,
+        "x": 300,
         "y": 960,
         "wires": [
             [
@@ -1930,7 +1930,7 @@
         "links": [
             "5ec99543396b4c4a"
         ],
-        "x": 575,
+        "x": 715,
         "y": 780,
         "wires": [
             [
@@ -1950,7 +1950,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 720,
+        "x": 860,
         "y": 800,
         "wires": [
             []
@@ -1964,7 +1964,7 @@
         "label": "round lights front",
         "tooltip": "",
         "group": "23c60b13edc12513",
-        "order": 4,
+        "order": 7,
         "width": "10",
         "height": "1",
         "passthru": true,
@@ -1975,7 +1975,7 @@
         "max": "100",
         "step": "5",
         "className": "",
-        "x": 190,
+        "x": 330,
         "y": 880,
         "wires": [
             [
@@ -1993,7 +1993,7 @@
         "payload": "",
         "unit": "percent",
         "onStep": "0",
-        "x": 940,
+        "x": 1080,
         "y": 1040,
         "wires": []
     },
@@ -2007,7 +2007,7 @@
         "payload": "",
         "unit": "percent",
         "onStep": "0",
-        "x": 940,
+        "x": 1080,
         "y": 1080,
         "wires": []
     },
@@ -2021,7 +2021,7 @@
         "payload": "",
         "unit": "percent",
         "onStep": "0",
-        "x": 940,
+        "x": 1080,
         "y": 1120,
         "wires": []
     },
@@ -2035,7 +2035,7 @@
         "payload": "",
         "unit": "percent",
         "onStep": "0",
-        "x": 940,
+        "x": 1080,
         "y": 1160,
         "wires": []
     },
@@ -2045,7 +2045,7 @@
         "z": "4f5b0833ab0a95bb",
         "name": "TODO",
         "info": "setup high frequency to remove flicxker",
-        "x": 150,
+        "x": 290,
         "y": 1060,
         "wires": []
     },
@@ -2318,6 +2318,27 @@
         "info": "",
         "x": 850,
         "y": 400,
+        "wires": []
+    },
+    {
+        "id": "06d7d6198d1f5936",
+        "type": "ui_text",
+        "z": "4f5b0833ab0a95bb",
+        "group": "23c60b13edc12513",
+        "order": 1,
+        "width": "3",
+        "height": "1",
+        "name": "",
+        "label": "main light",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 120,
+        "y": 800,
         "wires": []
     },
     {
