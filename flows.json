@@ -151,21 +151,20 @@
             "afd54341bce38b3e",
             "8df345a7f0caaad9",
             "11134be126d8a9e0",
-            "f7eed2bf0f910603",
-            "530e96924044a08f",
-            "79d1dc7a0f8ebdbf",
             "0dfd21a273207c9f",
             "8c0ea0e11e39eaf0",
             "f0c81d8d65642c43",
             "2f3766856057ef0d",
             "c1b3a7704468558e",
-            "f772fbd75017c73b",
             "dbefbde828d006d7",
             "3dadbe1cb4047158",
             "fe5440428b83da93",
             "57d367224d09ccd6",
             "d2ac302f1c601a2b",
-            "3809706fd2674d67"
+            "3809706fd2674d67",
+            "7510582f92b6dfdd",
+            "494b9f025a690547",
+            "3be3ad5243d93026"
         ],
         "x": 194,
         "y": 39,
@@ -4079,8 +4078,10 @@
                 "23862c18ac493199",
                 "0dfd21a273207c9f",
                 "11134be126d8a9e0",
-                "79d1dc7a0f8ebdbf",
-                "3809706fd2674d67"
+                "3809706fd2674d67",
+                "7510582f92b6dfdd",
+                "494b9f025a690547",
+                "3be3ad5243d93026"
             ]
         ]
     },
@@ -4180,86 +4181,6 @@
         "wires": [
             [
                 "8df345a7f0caaad9"
-            ]
-        ]
-    },
-    {
-        "id": "f7eed2bf0f910603",
-        "type": "ui_led",
-        "z": "68eb8e61689f5b6b",
-        "g": "eaf8bdbc0b32a5bb",
-        "order": 11,
-        "group": "847e6ebb38b5779a",
-        "width": "5",
-        "height": 1,
-        "label": " ",
-        "labelPlacement": "left",
-        "labelAlignment": "left",
-        "colorForValue": [
-            {
-                "color": "#dea900",
-                "value": "ON",
-                "valueType": "str"
-            }
-        ],
-        "allowColorForValueInMessage": false,
-        "shape": "circle",
-        "showGlow": true,
-        "name": "load_led",
-        "x": 640,
-        "y": 280,
-        "wires": []
-    },
-    {
-        "id": "530e96924044a08f",
-        "type": "ui_switch",
-        "z": "68eb8e61689f5b6b",
-        "g": "eaf8bdbc0b32a5bb",
-        "name": "",
-        "label": "Load Enable",
-        "tooltip": "",
-        "group": "847e6ebb38b5779a",
-        "order": 10,
-        "width": "5",
-        "height": 1,
-        "passthru": true,
-        "decouple": "false",
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "onvalue": "1",
-        "onvalueType": "num",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "0",
-        "offvalueType": "num",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "className": "",
-        "x": 650,
-        "y": 320,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "79d1dc7a0f8ebdbf",
-        "type": "function",
-        "z": "68eb8e61689f5b6b",
-        "g": "eaf8bdbc0b32a5bb",
-        "name": "Parser",
-        "func": "msg.payload = msg.payload.LOAD;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 490,
-        "y": 280,
-        "wires": [
-            [
-                "f7eed2bf0f910603"
             ]
         ]
     },
@@ -4421,7 +4342,7 @@
         "fontSize": 16,
         "color": "#000000",
         "x": 650,
-        "y": 380,
+        "y": 280,
         "wires": []
     },
     {
@@ -4443,7 +4364,7 @@
         "fontSize": 16,
         "color": "#000000",
         "x": 650,
-        "y": 420,
+        "y": 320,
         "wires": []
     },
     {
@@ -4465,7 +4386,7 @@
         "fontSize": 16,
         "color": "#000000",
         "x": 660,
-        "y": 500,
+        "y": 400,
         "wires": []
     },
     {
@@ -4487,7 +4408,7 @@
         "fontSize": 16,
         "color": "#000000",
         "x": 660,
-        "y": 540,
+        "y": 440,
         "wires": []
     },
     {
@@ -4509,34 +4430,8 @@
         "fontSize": 16,
         "color": "#000000",
         "x": 640,
-        "y": 460,
+        "y": 360,
         "wires": []
-    },
-    {
-        "id": "f772fbd75017c73b",
-        "type": "inject",
-        "z": "68eb8e61689f5b6b",
-        "g": "eaf8bdbc0b32a5bb",
-        "name": "",
-        "props": [
-            {
-                "p": "enabled",
-                "v": "false",
-                "vt": "bool"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 470,
-        "y": 320,
-        "wires": [
-            [
-                "530e96924044a08f"
-            ]
-        ]
     },
     {
         "id": "3809706fd2674d67",
@@ -4544,7 +4439,7 @@
         "z": "68eb8e61689f5b6b",
         "g": "eaf8bdbc0b32a5bb",
         "name": "Parser",
-        "func": "msg.payload = msg.payload.V;\nreturn msg;",
+        "func": "msg.payload = Math.round(msg.payload.V / 1000);\n\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -4552,10 +4447,73 @@
         "finalize": "",
         "libs": [],
         "x": 490,
-        "y": 380,
+        "y": 400,
+        "wires": [
+            [
+                "57d367224d09ccd6"
+            ]
+        ]
+    },
+    {
+        "id": "7510582f92b6dfdd",
+        "type": "function",
+        "z": "68eb8e61689f5b6b",
+        "g": "eaf8bdbc0b32a5bb",
+        "name": "Parser",
+        "func": "msg.payload = Math.round(msg.payload.I / 1000);\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 440,
+        "wires": [
+            [
+                "dbefbde828d006d7"
+            ]
+        ]
+    },
+    {
+        "id": "494b9f025a690547",
+        "type": "function",
+        "z": "68eb8e61689f5b6b",
+        "g": "eaf8bdbc0b32a5bb",
+        "name": "Parser",
+        "func": "msg.payload = Math.round(msg.payload.VPV / 1000);\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 280,
         "wires": [
             [
                 "3dadbe1cb4047158"
+            ]
+        ]
+    },
+    {
+        "id": "3be3ad5243d93026",
+        "type": "function",
+        "z": "68eb8e61689f5b6b",
+        "g": "eaf8bdbc0b32a5bb",
+        "name": "Parser",
+        "func": "msg.payload = Math.round(msg.payload.PPV / (msg.payload.V / 1000));\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 320,
+        "wires": [
+            [
+                "fe5440428b83da93"
             ]
         ]
     },
