@@ -1714,6 +1714,13 @@
                 "pt": "flow",
                 "to": "payload",
                 "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
             }
         ],
         "action": "",
@@ -1721,7 +1728,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 730,
+        "x": 700,
         "y": 800,
         "wires": [
             [
@@ -2462,6 +2469,13 @@
                 "pt": "flow",
                 "to": "payload",
                 "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
             }
         ],
         "action": "",
@@ -2469,7 +2483,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 730,
+        "x": 700,
         "y": 840,
         "wires": [
             [
@@ -2490,6 +2504,13 @@
                 "pt": "flow",
                 "to": "payload",
                 "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
             }
         ],
         "action": "",
@@ -2497,7 +2518,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 730,
+        "x": 700,
         "y": 880,
         "wires": [
             [
@@ -2518,6 +2539,13 @@
                 "pt": "flow",
                 "to": "payload",
                 "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
             }
         ],
         "action": "",
@@ -2525,7 +2553,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 730,
+        "x": 700,
         "y": 920,
         "wires": [
             [
@@ -2546,6 +2574,13 @@
                 "pt": "flow",
                 "to": "payload",
                 "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
             }
         ],
         "action": "",
@@ -2553,7 +2588,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 730,
+        "x": 700,
         "y": 960,
         "wires": [
             [
@@ -2574,6 +2609,13 @@
                 "pt": "flow",
                 "to": "payload",
                 "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
             }
         ],
         "action": "",
@@ -2581,7 +2623,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 730,
+        "x": 700,
         "y": 1000,
         "wires": [
             [
@@ -2882,8 +2924,7 @@
         "wires": [
             [
                 "5ec99543396b4c4a",
-                "eab68d389e1a065c",
-                "3e80afa6d3577b67"
+                "eab68d389e1a065c"
             ]
         ]
     },
@@ -3499,22 +3540,6 @@
         "name": "ignition",
         "x": 1280,
         "y": 540,
-        "wires": []
-    },
-    {
-        "id": "3e80afa6d3577b67",
-        "type": "debug",
-        "z": "4f5b0833ab0a95bb",
-        "name": "debug 4",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1280,
-        "y": 620,
         "wires": []
     },
     {
