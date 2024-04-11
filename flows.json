@@ -2290,6 +2290,108 @@
         ]
     },
     {
+        "id": "6e7d1356c241bed9",
+        "type": "ui_switch",
+        "z": "4f5b0833ab0a95bb",
+        "name": "",
+        "label": "switch 1",
+        "tooltip": "",
+        "group": "80e5e30f3656b98c",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 160,
+        "y": 200,
+        "wires": [
+            [
+                "0a432f883018e195"
+            ]
+        ]
+    },
+    {
+        "id": "6cbb9dc84446d9cc",
+        "type": "ui_switch",
+        "z": "4f5b0833ab0a95bb",
+        "name": "",
+        "label": "switch 2",
+        "tooltip": "",
+        "group": "80e5e30f3656b98c",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 160,
+        "y": 240,
+        "wires": [
+            [
+                "ec58200f216d9a89"
+            ]
+        ]
+    },
+    {
+        "id": "15c8e385a9683d12",
+        "type": "ui_switch",
+        "z": "4f5b0833ab0a95bb",
+        "name": "",
+        "label": "switch 3",
+        "tooltip": "",
+        "group": "80e5e30f3656b98c",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 160,
+        "y": 280,
+        "wires": [
+            [
+                "b277ff3b6120e37b"
+            ]
+        ]
+    },
+    {
         "id": "0094be9ee0b66230",
         "type": "ui_gauge",
         "z": "8f469e385c0b1581",
