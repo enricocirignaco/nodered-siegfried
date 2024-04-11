@@ -1056,7 +1056,7 @@
         "id": "4ab78910fec37e29",
         "type": "link in",
         "z": "4f5b0833ab0a95bb",
-        "name": "link in 1",
+        "name": "inverter_gpio",
         "links": [
             "4cc17cb982627297"
         ],
@@ -1072,7 +1072,7 @@
         "id": "c7ddfcd77752d339",
         "type": "link in",
         "z": "4f5b0833ab0a95bb",
-        "name": "link in 2",
+        "name": "leisure_charger_gpio",
         "links": [
             "5f7d5aaa077569f7"
         ],
@@ -1088,7 +1088,7 @@
         "id": "e8ee6714fa622f88",
         "type": "link in",
         "z": "4f5b0833ab0a95bb",
-        "name": "link in 3",
+        "name": "fridge_gpio",
         "links": [
             "b7f3b176e4b124f4"
         ],
@@ -1516,12 +1516,11 @@
         "id": "ba947f4deae7306a",
         "type": "link out",
         "z": "4f5b0833ab0a95bb",
-        "name": "ignition",
+        "name": "ignition_gpio",
         "mode": "link",
         "links": [
             "a175a803f3969b0a",
-            "d3e2da3d93171ad1",
-            "6ea5a70a5cde8d0e"
+            "d3e2da3d93171ad1"
         ],
         "x": 995,
         "y": 560,
@@ -1549,8 +1548,8 @@
         "z": "4f5b0833ab0a95bb",
         "name": "valve_0_gpio",
         "links": [
-            "fc2dde5f98b3403e",
-            "d850506da8fb975c"
+            "d850506da8fb975c",
+            "fc2dde5f98b3403e"
         ],
         "x": 405,
         "y": 480,
@@ -1600,7 +1599,7 @@
         "payload": "",
         "unit": "percent",
         "onStep": "0",
-        "x": 760,
+        "x": 960,
         "y": 1000,
         "wires": []
     },
@@ -1614,7 +1613,7 @@
         "payload": "",
         "unit": "percent",
         "onStep": "0",
-        "x": 760,
+        "x": 960,
         "y": 1040,
         "wires": []
     },
@@ -1628,7 +1627,7 @@
         "payload": "",
         "unit": "percent",
         "onStep": "0",
-        "x": 760,
+        "x": 960,
         "y": 1080,
         "wires": []
     },
@@ -1642,7 +1641,7 @@
         "payload": "",
         "unit": "percent",
         "onStep": "0",
-        "x": 760,
+        "x": 960,
         "y": 1120,
         "wires": []
     },
@@ -1656,7 +1655,7 @@
         "payload": "",
         "unit": "percent",
         "onStep": "0",
-        "x": 760,
+        "x": 960,
         "y": 1160,
         "wires": []
     },
@@ -1670,7 +1669,7 @@
         "payload": "",
         "unit": "percent",
         "onStep": "0",
-        "x": 760,
+        "x": 960,
         "y": 800,
         "wires": []
     },
@@ -1684,7 +1683,7 @@
         "payload": "",
         "unit": "percent",
         "onStep": "0",
-        "x": 760,
+        "x": 960,
         "y": 840,
         "wires": []
     },
@@ -1698,7 +1697,7 @@
         "payload": "",
         "unit": "percent",
         "onStep": "0",
-        "x": 760,
+        "x": 960,
         "y": 880,
         "wires": []
     },
@@ -1712,7 +1711,7 @@
         "payload": "",
         "unit": "percent",
         "onStep": "0",
-        "x": 760,
+        "x": 960,
         "y": 920,
         "wires": []
     },
@@ -1726,7 +1725,7 @@
         "payload": "",
         "unit": "percent",
         "onStep": "0",
-        "x": 760,
+        "x": 960,
         "y": 960,
         "wires": []
     },
@@ -1749,11 +1748,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 530,
+        "x": 370,
         "y": 800,
         "wires": [
             [
-                "906de414a5d047ae"
+                "4a31e52f27d18f02"
             ]
         ]
     },
@@ -1776,7 +1775,7 @@
         "max": "100",
         "step": "5",
         "className": "",
-        "x": 320,
+        "x": 160,
         "y": 800,
         "wires": [
             [
@@ -1803,7 +1802,7 @@
         "max": "100",
         "step": "5",
         "className": "",
-        "x": 330,
+        "x": 170,
         "y": 840,
         "wires": [
             []
@@ -1828,7 +1827,7 @@
         "max": "100",
         "step": "5",
         "className": "",
-        "x": 320,
+        "x": 160,
         "y": 880,
         "wires": [
             []
@@ -1853,7 +1852,7 @@
         "max": "100",
         "step": "5",
         "className": "",
-        "x": 330,
+        "x": 170,
         "y": 920,
         "wires": [
             []
@@ -1878,10 +1877,103 @@
         "max": "100",
         "step": "5",
         "className": "",
-        "x": 320,
+        "x": 160,
         "y": 960,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "5ec99543396b4c4a",
+        "type": "link out",
+        "z": "4f5b0833ab0a95bb",
+        "name": "switch_1_gpio",
+        "mode": "link",
+        "links": [
+            "fa07b686d66dd586"
+        ],
+        "x": 975,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "5e7a82ac94513fb0",
+        "type": "link out",
+        "z": "4f5b0833ab0a95bb",
+        "name": "switch_2_gpio",
+        "mode": "link",
+        "links": [],
+        "x": 975,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "b4dd9a7691a5b247",
+        "type": "link out",
+        "z": "4f5b0833ab0a95bb",
+        "name": "switch_3_gpio",
+        "mode": "link",
+        "links": [],
+        "x": 975,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "7e6995508c9e5007",
+        "type": "link out",
+        "z": "4f5b0833ab0a95bb",
+        "name": "switch_4_gpio",
+        "mode": "link",
+        "links": [],
+        "x": 975,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "40f5f34d56c294d5",
+        "type": "link out",
+        "z": "4f5b0833ab0a95bb",
+        "name": "switch_kitchen_gpio",
+        "mode": "link",
+        "links": [],
+        "x": 975,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "fa07b686d66dd586",
+        "type": "link in",
+        "z": "4f5b0833ab0a95bb",
+        "name": "",
+        "links": [
+            "5ec99543396b4c4a"
+        ],
+        "x": 575,
+        "y": 780,
+        "wires": [
+            [
+                "4a31e52f27d18f02"
+            ]
+        ]
+    },
+    {
+        "id": "4a31e52f27d18f02",
+        "type": "function",
+        "z": "4f5b0833ab0a95bb",
+        "name": "set pwm value",
+        "func": "if(msg.payload === true){\n    msg.payload = flow.get(\"pwm.main_light\");\n}else{\n    msg.payload = 0;\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 800,
+        "wires": [
+            [
+                "906de414a5d047ae"
+            ]
         ]
     },
     {
@@ -3343,7 +3435,10 @@
         "z": "15311a68299dc024",
         "name": "fridge_ignition",
         "links": [
-            "ba947f4deae7306a"
+            "ba947f4deae7306a",
+            "608b1b86a5decca9",
+            "f89db17f96a0fdb4",
+            "02d204d2cab60514"
         ],
         "x": 185,
         "y": 180,
@@ -3638,7 +3733,10 @@
         "z": "7d2ee9cb73f16e0a",
         "name": "link in 4",
         "links": [
-            "ba947f4deae7306a"
+            "ba947f4deae7306a",
+            "608b1b86a5decca9",
+            "f89db17f96a0fdb4",
+            "02d204d2cab60514"
         ],
         "x": 75,
         "y": 220,
