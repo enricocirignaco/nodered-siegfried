@@ -408,7 +408,7 @@
     {
         "id": "af392092454b5034",
         "type": "ui_group",
-        "name": "Fridge",
+        "name": "test",
         "tab": "d277d26d62f17195",
         "order": 2,
         "disp": true,
