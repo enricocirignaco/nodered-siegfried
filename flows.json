@@ -1735,7 +1735,7 @@
         "type": "ui_slider",
         "z": "4f5b0833ab0a95bb",
         "name": "",
-        "label": "main light     h",
+        "label": "",
         "tooltip": "",
         "group": "23c60b13edc12513",
         "order": 2,
@@ -1749,7 +1749,7 @@
         "max": "100",
         "step": "5",
         "className": "",
-        "x": 310,
+        "x": 290,
         "y": 800,
         "wires": [
             [
