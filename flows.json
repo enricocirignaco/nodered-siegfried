@@ -4532,7 +4532,7 @@
         "height": 0,
         "name": "yield today",
         "label": "Yield Today",
-        "format": "{{msg.payload}}0Wh",
+        "format": "{{msg.payload.H20}}0Wh",
         "layout": "row-spread",
         "className": "",
         "style": false,
