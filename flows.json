@@ -158,7 +158,14 @@
             "8c0ea0e11e39eaf0",
             "f0c81d8d65642c43",
             "2f3766856057ef0d",
-            "c1b3a7704468558e"
+            "c1b3a7704468558e",
+            "f772fbd75017c73b",
+            "dbefbde828d006d7",
+            "3dadbe1cb4047158",
+            "fe5440428b83da93",
+            "57d367224d09ccd6",
+            "d2ac302f1c601a2b",
+            "3809706fd2674d67"
         ],
         "x": 194,
         "y": 39,
@@ -4052,7 +4059,7 @@
         "fontSize": "",
         "color": "#000000",
         "x": 650,
-        "y": 480,
+        "y": 120,
         "wires": []
     },
     {
@@ -4199,7 +4206,7 @@
         "showGlow": true,
         "name": "load_led",
         "x": 640,
-        "y": 560,
+        "y": 280,
         "wires": []
     },
     {
@@ -4230,11 +4237,9 @@
         "animate": false,
         "className": "",
         "x": 650,
-        "y": 520,
+        "y": 320,
         "wires": [
-            [
-                "f7eed2bf0f910603"
-            ]
+            []
         ]
     },
     {
@@ -4400,6 +4405,7 @@
         "id": "3dadbe1cb4047158",
         "type": "ui_text",
         "z": "68eb8e61689f5b6b",
+        "g": "eaf8bdbc0b32a5bb",
         "group": "847e6ebb38b5779a",
         "order": 4,
         "width": 0,
@@ -4413,14 +4419,15 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 210,
-        "y": 740,
+        "x": 650,
+        "y": 380,
         "wires": []
     },
     {
         "id": "fe5440428b83da93",
         "type": "ui_text",
         "z": "68eb8e61689f5b6b",
+        "g": "eaf8bdbc0b32a5bb",
         "group": "847e6ebb38b5779a",
         "order": 5,
         "width": 0,
@@ -4434,14 +4441,15 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 210,
-        "y": 780,
+        "x": 650,
+        "y": 420,
         "wires": []
     },
     {
         "id": "57d367224d09ccd6",
         "type": "ui_text",
         "z": "68eb8e61689f5b6b",
+        "g": "eaf8bdbc0b32a5bb",
         "group": "847e6ebb38b5779a",
         "order": 7,
         "width": 0,
@@ -4455,14 +4463,15 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 220,
-        "y": 860,
+        "x": 660,
+        "y": 500,
         "wires": []
     },
     {
         "id": "dbefbde828d006d7",
         "type": "ui_text",
         "z": "68eb8e61689f5b6b",
+        "g": "eaf8bdbc0b32a5bb",
         "group": "847e6ebb38b5779a",
         "order": 8,
         "width": 0,
@@ -4476,14 +4485,15 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 220,
-        "y": 900,
+        "x": 660,
+        "y": 540,
         "wires": []
     },
     {
         "id": "d2ac302f1c601a2b",
         "type": "ui_text",
         "z": "68eb8e61689f5b6b",
+        "g": "eaf8bdbc0b32a5bb",
         "group": "847e6ebb38b5779a",
         "order": 6,
         "width": 0,
@@ -4497,9 +4507,54 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 200,
-        "y": 820,
+        "x": 640,
+        "y": 460,
         "wires": []
+    },
+    {
+        "id": "f772fbd75017c73b",
+        "type": "inject",
+        "z": "68eb8e61689f5b6b",
+        "g": "eaf8bdbc0b32a5bb",
+        "name": "",
+        "props": [
+            {
+                "p": "enabled",
+                "v": "false",
+                "vt": "bool"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 470,
+        "y": 320,
+        "wires": [
+            [
+                "530e96924044a08f"
+            ]
+        ]
+    },
+    {
+        "id": "3809706fd2674d67",
+        "type": "function",
+        "z": "68eb8e61689f5b6b",
+        "g": "eaf8bdbc0b32a5bb",
+        "name": "Parser",
+        "func": "msg.payload = msg.payload.V;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 380,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "b4c35b2e757c1d11",
