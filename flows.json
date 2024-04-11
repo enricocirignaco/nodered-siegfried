@@ -166,8 +166,7 @@
             "494b9f025a690547",
             "3be3ad5243d93026",
             "0a679e414a51a829",
-            "d6785ee679911bd6",
-            "b734759e84fd7f28"
+            "d6785ee679911bd6"
         ],
         "x": 194,
         "y": 39,
@@ -4086,7 +4085,7 @@
                 "494b9f025a690547",
                 "3be3ad5243d93026",
                 "d6785ee679911bd6",
-                "b734759e84fd7f28"
+                "0a679e414a51a829"
             ]
         ]
     },
@@ -4533,7 +4532,7 @@
         "height": 0,
         "name": "yield today",
         "label": "Yield Today",
-        "format": "{{msg.payload}}A",
+        "format": "{{msg.payload}}0Wh",
         "layout": "row-spread",
         "className": "",
         "style": false,
@@ -4555,7 +4554,7 @@
         "height": 0,
         "name": "may power today",
         "label": "Max. Power Today",
-        "format": "{{msg.payload.H20}}A",
+        "format": "{{msg.payload.H21}}W",
         "layout": "row-spread",
         "className": "",
         "style": false,
@@ -4565,27 +4564,6 @@
         "x": 670,
         "y": 400,
         "wires": []
-    },
-    {
-        "id": "b734759e84fd7f28",
-        "type": "function",
-        "z": "68eb8e61689f5b6b",
-        "g": "eaf8bdbc0b32a5bb",
-        "name": "Parser",
-        "func": "msg.payload = msg.payload.H21;\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 490,
-        "y": 360,
-        "wires": [
-            [
-                "0a679e414a51a829"
-            ]
-        ]
     },
     {
         "id": "b4c35b2e757c1d11",
