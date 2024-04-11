@@ -1212,7 +1212,7 @@
         "y": 280,
         "wires": [
             [
-                "9a878ce8946fe604"
+                "54f0d8d906d373c6"
             ]
         ]
     },
@@ -1497,6 +1497,24 @@
                 "pt": "global",
                 "to": "payload",
                 "tot": "msg"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "0",
+                "fromt": "num",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "1",
+                "fromt": "num",
+                "to": "true",
+                "tot": "bool"
             }
         ],
         "action": "",
@@ -2788,6 +2806,24 @@
                 "pt": "global",
                 "to": "payload",
                 "tot": "msg"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "0",
+                "fromt": "num",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "1",
+                "fromt": "num",
+                "to": "false",
+                "tot": "bool"
             }
         ],
         "action": "",
@@ -2863,6 +2899,24 @@
                 "pt": "global",
                 "to": "payload",
                 "tot": "msg"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "0",
+                "fromt": "num",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "1",
+                "fromt": "num",
+                "to": "true",
+                "tot": "bool"
             }
         ],
         "action": "",
@@ -2891,6 +2945,24 @@
                 "pt": "global",
                 "to": "payload",
                 "tot": "msg"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "0",
+                "fromt": "num",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "1",
+                "fromt": "num",
+                "to": "true",
+                "tot": "bool"
             }
         ],
         "action": "",
@@ -2919,6 +2991,24 @@
                 "pt": "global",
                 "to": "payload",
                 "tot": "msg"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "0",
+                "fromt": "num",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "1",
+                "fromt": "num",
+                "to": "true",
+                "tot": "bool"
             }
         ],
         "action": "",
@@ -2932,34 +3022,6 @@
             [
                 "7e6995508c9e5007",
                 "5316bc4a49ec3ce6"
-            ]
-        ]
-    },
-    {
-        "id": "9a878ce8946fe604",
-        "type": "change",
-        "z": "4f5b0833ab0a95bb",
-        "name": "door sensor",
-        "rules": [
-            {
-                "t": "set",
-                "p": "status.door_sensor",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1050,
-        "y": 280,
-        "wires": [
-            [
-                "697021be5ce94774",
-                "6bc7e1972f7c6f09"
             ]
         ]
     },
@@ -3454,6 +3516,52 @@
         "x": 1280,
         "y": 620,
         "wires": []
+    },
+    {
+        "id": "54f0d8d906d373c6",
+        "type": "change",
+        "z": "4f5b0833ab0a95bb",
+        "name": "door sensor",
+        "rules": [
+            {
+                "t": "set",
+                "p": "status.door_sensor",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "0",
+                "fromt": "num",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "1",
+                "fromt": "num",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1050,
+        "y": 280,
+        "wires": [
+            [
+                "6bc7e1972f7c6f09",
+                "697021be5ce94774"
+            ]
+        ]
     },
     {
         "id": "de58fdee4a97426e",
