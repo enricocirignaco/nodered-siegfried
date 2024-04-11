@@ -2409,7 +2409,7 @@
         "type": "ui_template",
         "z": "4f5b0833ab0a95bb",
         "group": "23c60b13edc12513",
-        "name": "light door   ",
+        "name": "light door   gfbfgnfnfnf",
         "order": 7,
         "width": "4",
         "height": "1",
@@ -2419,7 +2419,7 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 120,
+        "x": 160,
         "y": 960,
         "wires": [
             []
