@@ -102,17 +102,18 @@
             "d9ac4e5b6e2bb63d",
             "f351f4af7934daf0",
             "3b8cc007df89f286",
-            "b850689cb2dcc1db",
             "c0742511f4277387",
             "098183b4045c6339",
             "4562a99cb7e72896",
             "e4055112bf86b97c",
-            "e6ea961978efc0f1"
+            "e6ea961978efc0f1",
+            "6fc257af612e0459",
+            "840116530488dba5"
         ],
         "x": 34,
         "y": 219,
         "w": 1032,
-        "h": 229.5
+        "h": 262
     },
     {
         "id": "4f72bd100e0aeb55",
@@ -131,7 +132,7 @@
             "7b77d1ea2e1d6b18"
         ],
         "x": 34,
-        "y": 459,
+        "y": 519,
         "w": 1032,
         "h": 182
     },
@@ -167,12 +168,14 @@
             "3be3ad5243d93026",
             "0a679e414a51a829",
             "d6785ee679911bd6",
-            "e3b03333b844e614"
+            "e3b03333b844e614",
+            "9af0b603d3c5615e",
+            "e8293c6ee77da59e"
         ],
         "x": 94,
         "y": 39,
-        "w": 592,
-        "h": 602
+        "w": 612,
+        "h": 682
     },
     {
         "id": "cd72b915c94ff1a4",
@@ -639,7 +642,7 @@
         "z": "6d564b0b71763d89",
         "g": "b10498f78b9fb638",
         "name": "debug adc",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -669,7 +672,8 @@
         "wires": [
             [
                 "d99ec2a5f880790f",
-                "3168cfd8a06313e9"
+                "3168cfd8a06313e9",
+                "840116530488dba5"
             ],
             [],
             []
@@ -735,7 +739,8 @@
         "wires": [
             [
                 "d9ac4e5b6e2bb63d",
-                "f351f4af7934daf0"
+                "f351f4af7934daf0",
+                "840116530488dba5"
             ],
             [],
             []
@@ -779,7 +784,8 @@
         "y": 400,
         "wires": [
             [
-                "3b8cc007df89f286"
+                "3b8cc007df89f286",
+                "840116530488dba5"
             ],
             [],
             []
@@ -803,37 +809,6 @@
         "wires": [
             [
                 "098183b4045c6339"
-            ]
-        ]
-    },
-    {
-        "id": "b850689cb2dcc1db",
-        "type": "inject",
-        "z": "6d564b0b71763d89",
-        "d": true,
-        "g": "dbe48b6a4f7bad55",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "10",
-        "crontab": "",
-        "once": false,
-        "onceDelay": "1",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 150,
-        "y": 280,
-        "wires": [
-            [
-                "5037b72635b1b458"
             ]
         ]
     },
@@ -887,7 +862,7 @@
         "name": "MPPT broadcast",
         "serial": "f1b90aff42e3f29a",
         "x": 140,
-        "y": 580,
+        "y": 640,
         "wires": [
             [
                 "b3e115c07c82ac4d"
@@ -908,7 +883,7 @@
         "finalize": "",
         "libs": [],
         "x": 570,
-        "y": 580,
+        "y": 640,
         "wires": [
             [
                 "0e5e047ad2d0bce5",
@@ -935,7 +910,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 940,
-        "y": 600,
+        "y": 660,
         "wires": []
     },
     {
@@ -960,7 +935,7 @@
         "reduceInitType": "",
         "reduceFixup": "",
         "x": 310,
-        "y": 580,
+        "y": 640,
         "wires": [
             [
                 "d398aa2f1dc0021d"
@@ -982,7 +957,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 950,
-        "y": 560,
+        "y": 620,
         "wires": []
     },
     {
@@ -1035,7 +1010,7 @@
             "77afc3390d3c1c72"
         ],
         "x": 1025,
-        "y": 500,
+        "y": 560,
         "wires": []
     },
     {
@@ -1043,13 +1018,61 @@
         "type": "link out",
         "z": "6d564b0b71763d89",
         "g": "b10498f78b9fb638",
-        "name": "fridge_temp",
+        "name": "adc_out",
         "mode": "link",
         "links": [
-            "05ade75e1ba4a9f0"
+            "e8293c6ee77da59e"
         ],
         "x": 1025,
         "y": 140,
+        "wires": []
+    },
+    {
+        "id": "6fc257af612e0459",
+        "type": "inject",
+        "z": "6d564b0b71763d89",
+        "g": "dbe48b6a4f7bad55",
+        "name": "10s trigger",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 280,
+        "wires": [
+            [
+                "5037b72635b1b458"
+            ]
+        ]
+    },
+    {
+        "id": "840116530488dba5",
+        "type": "debug",
+        "z": "6d564b0b71763d89",
+        "g": "dbe48b6a4f7bad55",
+        "name": "debug 1-Wire",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 440,
         "wires": []
     },
     {
@@ -3142,8 +3165,7 @@
         "name": "fridge_temp",
         "links": [
             "380baa39b73ad74b",
-            "4562a99cb7e72896",
-            "a26469027be8a376"
+            "4562a99cb7e72896"
         ],
         "x": 185,
         "y": 260,
@@ -4272,7 +4294,7 @@
         "useDifferentColor": false,
         "className": "",
         "x": 530,
-        "y": 600,
+        "y": 680,
         "wires": [
             []
         ]
@@ -4291,7 +4313,7 @@
         "finalize": "",
         "libs": [],
         "x": 360,
-        "y": 600,
+        "y": 680,
         "wires": [
             [
                 "f0c81d8d65642c43"
@@ -4321,7 +4343,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 210,
-        "y": 600,
+        "y": 680,
         "wires": [
             [
                 "2f3766856057ef0d"
@@ -4585,10 +4607,49 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 350,
-        "y": 560,
+        "y": 640,
         "wires": [
             [
                 "f0c81d8d65642c43"
+            ]
+        ]
+    },
+    {
+        "id": "9af0b603d3c5615e",
+        "type": "ui_text",
+        "z": "68eb8e61689f5b6b",
+        "g": "eaf8bdbc0b32a5bb",
+        "group": "847e6ebb38b5779a",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "name": "starter battery voltage",
+        "label": "Starter Battery Voltage",
+        "format": "{{msg.payload}}V",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 580,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "e8293c6ee77da59e",
+        "type": "link in",
+        "z": "68eb8e61689f5b6b",
+        "g": "eaf8bdbc0b32a5bb",
+        "name": "broadcast_data",
+        "links": [
+            "a26469027be8a376"
+        ],
+        "x": 145,
+        "y": 560,
+        "wires": [
+            [
+                "9af0b603d3c5615e"
             ]
         ]
     },
