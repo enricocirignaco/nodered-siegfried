@@ -401,20 +401,9 @@
         "type": "ui_group",
         "name": "Status",
         "tab": "9d7781fc6afac662",
-        "order": 3,
+        "order": 1,
         "disp": true,
-        "width": "10",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "810db7c28f8ce7ea",
-        "type": "ui_group",
-        "name": "Controls",
-        "tab": "9d7781fc6afac662",
-        "order": 8,
-        "disp": true,
-        "width": "10",
+        "width": "5",
         "collapse": false,
         "className": ""
     },
@@ -476,9 +465,9 @@
         "type": "ui_group",
         "name": "General",
         "tab": "9d7781fc6afac662",
-        "order": 1,
+        "order": 2,
         "disp": true,
-        "width": "10",
+        "width": "5",
         "collapse": false,
         "className": ""
     },
@@ -506,9 +495,9 @@
         "type": "ui_group",
         "name": "Fridge",
         "tab": "9d7781fc6afac662",
-        "order": 2,
+        "order": 3,
         "disp": true,
-        "width": "10",
+        "width": "5",
         "collapse": false,
         "className": ""
     },
@@ -519,7 +508,7 @@
         "tab": "9d7781fc6afac662",
         "order": 4,
         "disp": true,
-        "width": "10",
+        "width": "5",
         "collapse": false,
         "className": ""
     },
@@ -547,9 +536,9 @@
         "type": "ui_group",
         "name": "Water",
         "tab": "9d7781fc6afac662",
-        "order": 6,
+        "order": 5,
         "disp": true,
-        "width": "6",
+        "width": "5",
         "collapse": false,
         "className": ""
     },
@@ -2931,213 +2920,11 @@
         ]
     },
     {
-        "id": "0094be9ee0b66230",
-        "type": "ui_gauge",
-        "z": "8f469e385c0b1581",
-        "name": "",
-        "group": "7dbe224d7e5b35ba",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "gtype": "gage",
-        "title": "Starter Battery",
-        "label": "V",
-        "format": "{{value}}",
-        "min": "10",
-        "max": "14.6",
-        "colors": [
-            "#ff2600",
-            "#fffb00",
-            "#00f900"
-        ],
-        "seg1": "12",
-        "seg2": "12.6",
-        "diff": false,
-        "className": "",
-        "x": 640,
-        "y": 180,
-        "wires": []
-    },
-    {
-        "id": "a6b8733363d241aa",
-        "type": "ui_gauge",
-        "z": "8f469e385c0b1581",
-        "name": "",
-        "group": "7dbe224d7e5b35ba",
-        "order": 2,
-        "width": "0",
-        "height": "0",
-        "gtype": "gage",
-        "title": "Leisure Battery",
-        "label": "V",
-        "format": "{{msg.payload}}",
-        "min": "10",
-        "max": "14.6",
-        "colors": [
-            "#ff2600",
-            "#ff9300",
-            "#00f900"
-        ],
-        "seg1": "12",
-        "seg2": "13",
-        "diff": false,
-        "className": "",
-        "x": 640,
-        "y": 140,
-        "wires": []
-    },
-    {
-        "id": "78d0adcda013a033",
-        "type": "random",
-        "z": "8f469e385c0b1581",
-        "name": "",
-        "low": "10",
-        "high": "14",
-        "inte": "false",
-        "property": "payload",
-        "x": 260,
-        "y": 140,
-        "wires": [
-            [
-                "3e24db53.7a6d94"
-            ]
-        ]
-    },
-    {
-        "id": "ea47da121e2fae95",
-        "type": "inject",
-        "z": "8f469e385c0b1581",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "10",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 110,
-        "y": 140,
-        "wires": [
-            [
-                "78d0adcda013a033"
-            ]
-        ]
-    },
-    {
-        "id": "3e24db53.7a6d94",
-        "type": "change",
-        "z": "8f469e385c0b1581",
-        "name": "Round",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "$round(payload, 1)",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 430,
-        "y": 140,
-        "wires": [
-            [
-                "a6b8733363d241aa"
-            ]
-        ]
-    },
-    {
-        "id": "2fb4f2d329aed31a",
-        "type": "random",
-        "z": "8f469e385c0b1581",
-        "name": "",
-        "low": "10",
-        "high": "14",
-        "inte": "false",
-        "property": "payload",
-        "x": 260,
-        "y": 180,
-        "wires": [
-            [
-                "ce994c656d5c61ef"
-            ]
-        ]
-    },
-    {
-        "id": "5c4197e6fc170077",
-        "type": "inject",
-        "z": "8f469e385c0b1581",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "10",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 110,
-        "y": 180,
-        "wires": [
-            [
-                "2fb4f2d329aed31a"
-            ]
-        ]
-    },
-    {
-        "id": "ce994c656d5c61ef",
-        "type": "change",
-        "z": "8f469e385c0b1581",
-        "name": "Round",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "$round(payload, 1)",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 430,
-        "y": 180,
-        "wires": [
-            [
-                "0094be9ee0b66230"
-            ]
-        ]
-    },
-    {
         "id": "bf37a5fe2bb8ce58",
         "type": "ui_led",
         "z": "8f469e385c0b1581",
-        "order": 8,
-        "group": "810db7c28f8ce7ea",
+        "order": 2,
+        "group": "7dbe224d7e5b35ba",
         "width": 0,
         "height": 0,
         "label": "Ignition",
@@ -3159,16 +2946,16 @@
         "shape": "circle",
         "showGlow": false,
         "name": "led ignition",
-        "x": 650,
-        "y": 260,
+        "x": 410,
+        "y": 180,
         "wires": []
     },
     {
         "id": "f99e6ed654942297",
         "type": "ui_led",
         "z": "8f469e385c0b1581",
-        "order": 7,
-        "group": "810db7c28f8ce7ea",
+        "order": 1,
+        "group": "7dbe224d7e5b35ba",
         "width": 0,
         "height": 0,
         "label": "Inverter",
@@ -3190,16 +2977,16 @@
         "shape": "circle",
         "showGlow": false,
         "name": "led inverter",
-        "x": 650,
-        "y": 220,
+        "x": 410,
+        "y": 140,
         "wires": []
     },
     {
         "id": "de58fdee4a97426e",
         "type": "ui_led",
         "z": "8f469e385c0b1581",
-        "order": 1,
-        "group": "810db7c28f8ce7ea",
+        "order": 3,
+        "group": "7dbe224d7e5b35ba",
         "width": 3,
         "height": 1,
         "label": " Hearbeat",
@@ -3331,7 +3118,7 @@
         "name": "",
         "group": "6fd6f055a36d0f78",
         "order": 7,
-        "width": "7",
+        "width": "5",
         "height": "1",
         "passthru": false,
         "label": "System shutdown",
