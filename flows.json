@@ -2816,6 +2816,24 @@
                 "pt": "global",
                 "to": "payload",
                 "tot": "msg"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "0",
+                "fromt": "num",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "1",
+                "fromt": "num",
+                "to": "true",
+                "tot": "bool"
             }
         ],
         "action": "",
