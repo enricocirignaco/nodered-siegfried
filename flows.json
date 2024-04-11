@@ -4764,6 +4764,27 @@
         "wires": []
     },
     {
+        "id": "f4b7d598a2779255",
+        "type": "ui_text",
+        "z": "7d2ee9cb73f16e0a",
+        "group": "70b7c0b4ee421ca7",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "text",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 890,
+        "y": 520,
+        "wires": []
+    },
+    {
         "id": "b4c35b2e757c1d11",
         "type": "ui_gauge",
         "z": "13952ff3682a9fc4",
