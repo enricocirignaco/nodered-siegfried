@@ -78,11 +78,12 @@
             "735962933b07806b",
             "8fd56c6b0a475c8d",
             "97a5e37cf3a5ed25",
-            "28ee8cbf1004c486"
+            "28ee8cbf1004c486",
+            "a26469027be8a376"
         ],
         "x": 34,
         "y": 39,
-        "w": 992,
+        "w": 1032,
         "h": 142
     },
     {
@@ -126,12 +127,13 @@
             "d398aa2f1dc0021d",
             "834eead8c677744d",
             "b3e115c07c82ac4d",
-            "0e5e047ad2d0bce5"
+            "0e5e047ad2d0bce5",
+            "7b77d1ea2e1d6b18"
         ],
         "x": 34,
-        "y": 479,
-        "w": 932,
-        "h": 129.5
+        "y": 459,
+        "w": 1032,
+        "h": 182
     },
     {
         "id": "eaf8bdbc0b32a5bb",
@@ -193,8 +195,8 @@
             "1d6edc267b855506",
             "6ffbd83f0720507a"
         ],
-        "x": 1094,
-        "y": 759,
+        "x": 1154,
+        "y": 99,
         "w": 612,
         "h": 122
     },
@@ -501,331 +503,6 @@
         "className": ""
     },
     {
-        "id": "1285ba85761c8a8e",
-        "type": "rpi-gpio in",
-        "z": "6d564b0b71763d89",
-        "name": "high_input_10",
-        "pin": "18",
-        "intype": "tri",
-        "debounce": "25",
-        "read": true,
-        "bcm": true,
-        "x": 2470,
-        "y": 80,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "b0a47468b27614f9",
-        "type": "rpi-gpio in",
-        "z": "6d564b0b71763d89",
-        "name": "Input_6",
-        "pin": "20",
-        "intype": "tri",
-        "debounce": "25",
-        "read": true,
-        "bcm": true,
-        "x": 2450,
-        "y": 400,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "c1d8f217c7080e32",
-        "type": "rpi-gpio in",
-        "z": "6d564b0b71763d89",
-        "name": "high_input_9",
-        "pin": "23",
-        "intype": "tri",
-        "debounce": "25",
-        "read": true,
-        "bcm": true,
-        "x": 2470,
-        "y": 120,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "f43cfa52785e10c2",
-        "type": "rpi-gpio in",
-        "z": "6d564b0b71763d89",
-        "name": "Input_4",
-        "pin": "24",
-        "intype": "tri",
-        "debounce": "25",
-        "read": true,
-        "bcm": true,
-        "x": 2450,
-        "y": 160,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "c20f7e3129e5baeb",
-        "type": "rpi-gpio in",
-        "z": "6d564b0b71763d89",
-        "name": "Input_3",
-        "pin": "25",
-        "intype": "tri",
-        "debounce": "25",
-        "read": true,
-        "bcm": true,
-        "x": 2450,
-        "y": 200,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "0d915c0a65a9d51f",
-        "type": "rpi-gpio in",
-        "z": "6d564b0b71763d89",
-        "name": "Input_2",
-        "pin": "8",
-        "intype": "tri",
-        "debounce": "25",
-        "read": true,
-        "bcm": true,
-        "x": 2450,
-        "y": 240,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "86b7d4cd37f7f15c",
-        "type": "rpi-gpio in",
-        "z": "6d564b0b71763d89",
-        "name": "Input_1",
-        "pin": "7",
-        "intype": "tri",
-        "debounce": "25",
-        "read": true,
-        "bcm": true,
-        "x": 2450,
-        "y": 280,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "f62f3b70f1771830",
-        "type": "rpi-gpio in",
-        "z": "6d564b0b71763d89",
-        "name": "Input_8",
-        "pin": "12",
-        "intype": "tri",
-        "debounce": "25",
-        "read": true,
-        "bcm": true,
-        "x": 2450,
-        "y": 320,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "ac8440fa45ca5e08",
-        "type": "rpi-gpio in",
-        "z": "6d564b0b71763d89",
-        "name": "Input_7",
-        "pin": "16",
-        "intype": "tri",
-        "debounce": "25",
-        "read": true,
-        "bcm": true,
-        "x": 2450,
-        "y": 360,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "c08639fdd741192e",
-        "type": "rpi-gpio in",
-        "z": "6d564b0b71763d89",
-        "name": "Input_5",
-        "pin": "21",
-        "intype": "tri",
-        "debounce": "25",
-        "read": true,
-        "bcm": true,
-        "x": 2450,
-        "y": 440,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "40e93bc82cba990a",
-        "type": "rpi-gpio out",
-        "z": "6d564b0b71763d89",
-        "name": "pwm_en",
-        "pin": "17",
-        "set": true,
-        "level": "0",
-        "freq": "",
-        "out": "out",
-        "bcm": true,
-        "x": 2300,
-        "y": 40,
-        "wires": []
-    },
-    {
-        "id": "a463946963c3fdd0",
-        "type": "rpi-gpio out",
-        "z": "6d564b0b71763d89",
-        "name": "output_4",
-        "pin": "27",
-        "set": true,
-        "level": "0",
-        "freq": "",
-        "out": "out",
-        "bcm": true,
-        "x": 2300,
-        "y": 80,
-        "wires": []
-    },
-    {
-        "id": "abfa590ae18cd5ce",
-        "type": "rpi-gpio out",
-        "z": "6d564b0b71763d89",
-        "name": "output_3",
-        "pin": "22",
-        "set": true,
-        "level": "0",
-        "freq": "",
-        "out": "out",
-        "bcm": true,
-        "x": 2300,
-        "y": 120,
-        "wires": []
-    },
-    {
-        "id": "bcaaa28673fe7273",
-        "type": "rpi-gpio out",
-        "z": "6d564b0b71763d89",
-        "name": "output_6",
-        "pin": "10",
-        "set": true,
-        "level": "0",
-        "freq": "",
-        "out": "out",
-        "bcm": true,
-        "x": 2300,
-        "y": 160,
-        "wires": []
-    },
-    {
-        "id": "048f858874bdbfb0",
-        "type": "rpi-gpio out",
-        "z": "6d564b0b71763d89",
-        "name": "output_5",
-        "pin": "9",
-        "set": true,
-        "level": "0",
-        "freq": "",
-        "out": "out",
-        "bcm": true,
-        "x": 2300,
-        "y": 200,
-        "wires": []
-    },
-    {
-        "id": "595152c9ee690275",
-        "type": "rpi-gpio out",
-        "z": "6d564b0b71763d89",
-        "name": "output_10",
-        "pin": "11",
-        "set": true,
-        "level": "1",
-        "freq": "",
-        "out": "out",
-        "bcm": true,
-        "x": 2300,
-        "y": 240,
-        "wires": []
-    },
-    {
-        "id": "1436b97ee9de2079",
-        "type": "rpi-gpio out",
-        "z": "6d564b0b71763d89",
-        "name": "output_9",
-        "pin": "5",
-        "set": true,
-        "level": "1",
-        "freq": "",
-        "out": "out",
-        "bcm": true,
-        "x": 2300,
-        "y": 280,
-        "wires": []
-    },
-    {
-        "id": "b1b3ae6931a90b92",
-        "type": "rpi-gpio out",
-        "z": "6d564b0b71763d89",
-        "name": "output_2",
-        "pin": "6",
-        "set": true,
-        "level": "0",
-        "freq": "",
-        "out": "out",
-        "bcm": true,
-        "x": 2300,
-        "y": 320,
-        "wires": []
-    },
-    {
-        "id": "c77b1a0bfaafc50b",
-        "type": "rpi-gpio out",
-        "z": "6d564b0b71763d89",
-        "name": "output_1",
-        "pin": "13",
-        "set": true,
-        "level": "0",
-        "freq": "",
-        "out": "out",
-        "bcm": true,
-        "x": 2300,
-        "y": 360,
-        "wires": []
-    },
-    {
-        "id": "eeec09b503c34a67",
-        "type": "rpi-gpio out",
-        "z": "6d564b0b71763d89",
-        "name": "output_8",
-        "pin": "19",
-        "set": true,
-        "level": "0",
-        "freq": "",
-        "out": "out",
-        "bcm": true,
-        "x": 2300,
-        "y": 400,
-        "wires": []
-    },
-    {
-        "id": "28eebe1098e23495",
-        "type": "rpi-gpio out",
-        "z": "6d564b0b71763d89",
-        "name": "output_7",
-        "pin": "26",
-        "set": true,
-        "level": "0",
-        "freq": "",
-        "out": "out",
-        "bcm": true,
-        "x": 2300,
-        "y": 440,
-        "wires": []
-    },
-    {
         "id": "201c2c30807ef967",
         "type": "inject",
         "z": "6d564b0b71763d89",
@@ -866,7 +543,7 @@
         "address": "104",
         "command": "128",
         "count": "3",
-        "x": 530,
+        "x": 510,
         "y": 80,
         "wires": [
             []
@@ -878,13 +555,14 @@
         "z": "6d564b0b71763d89",
         "g": "b10498f78b9fb638",
         "name": "data parser",
-        "func": "// check if adc conversion ended\nif(msg.payload[2] == 0) {\n    // build adc value with data bytes\n    var adc_val = msg.payload[1]+ (msg.payload[0]<<8);\n    // calculate voltage divider (10k -100k)--> 1/11\n    adc_val = Math.round(adc_val*1.114)/100;\n    \n    return {payload:adc_val};\n}",
+        "func": "// check if adc conversion ended\nif(msg.payload[2] == 0) {\n    // build adc value with data bytes\n    var adc_val = msg.payload[1]+ (msg.payload[0]<<8);\n    // calculate voltage divider (10k -100k)--> 1/11\n    adc_val = Math.round(adc_val*1.114)/100;\n\n    global.set(\"sensors.starter_voltage\", adc_val);\n    return {payload:adc_val};\n}",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 730,
+        "x": 710,
         "y": 140,
         "wires": [
             [
@@ -911,7 +589,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 330,
+        "x": 310,
         "y": 140,
         "wires": [
             [
@@ -929,7 +607,7 @@
         "address": "104",
         "command": "0",
         "count": "3",
-        "x": 530,
+        "x": 510,
         "y": 140,
         "wires": [
             [
@@ -950,10 +628,12 @@
         "septopics": true,
         "property": "payload",
         "topi": "topic",
-        "x": 920,
+        "x": 900,
         "y": 140,
         "wires": [
-            []
+            [
+                "a26469027be8a376"
+            ]
         ]
     },
     {
@@ -961,69 +641,18 @@
         "type": "debug",
         "z": "6d564b0b71763d89",
         "g": "b10498f78b9fb638",
-        "name": "debug 1",
+        "name": "debug adc",
         "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 900,
+        "x": 890,
         "y": 100,
         "wires": []
-    },
-    {
-        "id": "4717603353fdd3f1",
-        "type": "inject",
-        "z": "6d564b0b71763d89",
-        "name": "false",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "false",
-        "payloadType": "bool",
-        "x": 2010,
-        "y": 60,
-        "wires": [
-            [
-                "a463946963c3fdd0",
-                "40e93bc82cba990a"
-            ]
-        ]
-    },
-    {
-        "id": "da02265dbadd2772",
-        "type": "inject",
-        "z": "6d564b0b71763d89",
-        "name": "true",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 2010,
-        "y": 20,
-        "wires": [
-            [
-                "a463946963c3fdd0",
-                "40e93bc82cba990a"
-            ]
-        ]
     },
     {
         "id": "5037b72635b1b458",
@@ -1254,456 +883,6 @@
         ]
     },
     {
-        "id": "c9c7b556be9ea9cc",
-        "type": "inject",
-        "z": "6d564b0b71763d89",
-        "name": "false",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "false",
-        "payloadType": "bool",
-        "x": 2010,
-        "y": 140,
-        "wires": [
-            [
-                "abfa590ae18cd5ce"
-            ]
-        ]
-    },
-    {
-        "id": "f2c1dde7ae9ae21c",
-        "type": "inject",
-        "z": "6d564b0b71763d89",
-        "name": "true",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 2010,
-        "y": 100,
-        "wires": [
-            [
-                "abfa590ae18cd5ce"
-            ]
-        ]
-    },
-    {
-        "id": "d5ed024abe1e9596",
-        "type": "inject",
-        "z": "6d564b0b71763d89",
-        "name": "false",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "false",
-        "payloadType": "bool",
-        "x": 2010,
-        "y": 220,
-        "wires": [
-            [
-                "bcaaa28673fe7273"
-            ]
-        ]
-    },
-    {
-        "id": "326997d0390f1d8d",
-        "type": "inject",
-        "z": "6d564b0b71763d89",
-        "name": "true",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 2010,
-        "y": 180,
-        "wires": [
-            [
-                "bcaaa28673fe7273"
-            ]
-        ]
-    },
-    {
-        "id": "30d96590253e5399",
-        "type": "inject",
-        "z": "6d564b0b71763d89",
-        "name": "false",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "false",
-        "payloadType": "bool",
-        "x": 2010,
-        "y": 300,
-        "wires": [
-            [
-                "048f858874bdbfb0"
-            ]
-        ]
-    },
-    {
-        "id": "f2b91b76d5daf3fb",
-        "type": "inject",
-        "z": "6d564b0b71763d89",
-        "name": "true",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 2010,
-        "y": 260,
-        "wires": [
-            [
-                "048f858874bdbfb0"
-            ]
-        ]
-    },
-    {
-        "id": "ef80d388011ba1b8",
-        "type": "inject",
-        "z": "6d564b0b71763d89",
-        "name": "false",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "false",
-        "payloadType": "bool",
-        "x": 1970,
-        "y": 380,
-        "wires": [
-            [
-                "595152c9ee690275"
-            ]
-        ]
-    },
-    {
-        "id": "1d4d734369a5522b",
-        "type": "inject",
-        "z": "6d564b0b71763d89",
-        "name": "true",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 1970,
-        "y": 340,
-        "wires": [
-            [
-                "595152c9ee690275"
-            ]
-        ]
-    },
-    {
-        "id": "cfb1725abe3ed50c",
-        "type": "inject",
-        "z": "6d564b0b71763d89",
-        "name": "false",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "false",
-        "payloadType": "bool",
-        "x": 1970,
-        "y": 460,
-        "wires": [
-            [
-                "1436b97ee9de2079"
-            ]
-        ]
-    },
-    {
-        "id": "bb5baa778ee61d63",
-        "type": "inject",
-        "z": "6d564b0b71763d89",
-        "name": "true",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 1970,
-        "y": 420,
-        "wires": [
-            [
-                "1436b97ee9de2079"
-            ]
-        ]
-    },
-    {
-        "id": "39e0bb6082c39a27",
-        "type": "inject",
-        "z": "6d564b0b71763d89",
-        "name": "false",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "false",
-        "payloadType": "bool",
-        "x": 2010,
-        "y": 540,
-        "wires": [
-            [
-                "b1b3ae6931a90b92"
-            ]
-        ]
-    },
-    {
-        "id": "e131390ab8b99dd0",
-        "type": "inject",
-        "z": "6d564b0b71763d89",
-        "name": "true",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 2010,
-        "y": 500,
-        "wires": [
-            [
-                "b1b3ae6931a90b92"
-            ]
-        ]
-    },
-    {
-        "id": "c4f21e0afa48e9ad",
-        "type": "inject",
-        "z": "6d564b0b71763d89",
-        "name": "false",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "false",
-        "payloadType": "bool",
-        "x": 2010,
-        "y": 620,
-        "wires": [
-            [
-                "c77b1a0bfaafc50b"
-            ]
-        ]
-    },
-    {
-        "id": "914443d76a8dbdc4",
-        "type": "inject",
-        "z": "6d564b0b71763d89",
-        "name": "true",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 2010,
-        "y": 580,
-        "wires": [
-            [
-                "c77b1a0bfaafc50b"
-            ]
-        ]
-    },
-    {
-        "id": "b77db4c78ad116a0",
-        "type": "inject",
-        "z": "6d564b0b71763d89",
-        "name": "false",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "false",
-        "payloadType": "bool",
-        "x": 2010,
-        "y": 700,
-        "wires": [
-            [
-                "eeec09b503c34a67"
-            ]
-        ]
-    },
-    {
-        "id": "012151b669a72e0f",
-        "type": "inject",
-        "z": "6d564b0b71763d89",
-        "name": "true",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 2010,
-        "y": 660,
-        "wires": [
-            [
-                "eeec09b503c34a67"
-            ]
-        ]
-    },
-    {
-        "id": "ba41526e516af080",
-        "type": "inject",
-        "z": "6d564b0b71763d89",
-        "name": "false",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "false",
-        "payloadType": "bool",
-        "x": 2010,
-        "y": 780,
-        "wires": [
-            [
-                "28eebe1098e23495"
-            ]
-        ]
-    },
-    {
-        "id": "47c95224ef088d35",
-        "type": "inject",
-        "z": "6d564b0b71763d89",
-        "name": "true",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 2010,
-        "y": 740,
-        "wires": [
-            [
-                "28eebe1098e23495"
-            ]
-        ]
-    },
-    {
         "id": "0b3aacd51f241ec7",
         "type": "serial in",
         "z": "6d564b0b71763d89",
@@ -1711,7 +890,7 @@
         "name": "MPPT broadcast",
         "serial": "f1b90aff42e3f29a",
         "x": 140,
-        "y": 560,
+        "y": 580,
         "wires": [
             [
                 "b3e115c07c82ac4d"
@@ -1731,11 +910,12 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 530,
-        "y": 560,
+        "x": 570,
+        "y": 580,
         "wires": [
             [
-                "0e5e047ad2d0bce5"
+                "0e5e047ad2d0bce5",
+                "7b77d1ea2e1d6b18"
             ],
             [
                 "834eead8c677744d"
@@ -1757,8 +937,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 840,
-        "y": 560,
+        "x": 940,
+        "y": 600,
         "wires": []
     },
     {
@@ -1782,8 +962,8 @@
         "reduceInit": "",
         "reduceInitType": "",
         "reduceFixup": "",
-        "x": 330,
-        "y": 560,
+        "x": 310,
+        "y": 580,
         "wires": [
             [
                 "d398aa2f1dc0021d"
@@ -1795,318 +975,18 @@
         "type": "debug",
         "z": "6d564b0b71763d89",
         "g": "4f72bd100e0aeb55",
-        "name": "debug 2",
+        "name": "debug serial",
         "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 820,
-        "y": 520,
-        "wires": []
-    },
-    {
-        "id": "941ecb4ddd78054f",
-        "type": "PCA9685 out",
-        "z": "6d564b0b71763d89",
-        "name": "",
-        "pca9685": "e6b261de3d937e74",
-        "channel": "5",
-        "payload": "",
-        "unit": "percent",
-        "onStep": "0",
-        "x": 1460,
-        "y": 520,
-        "wires": []
-    },
-    {
-        "id": "4b840a6a82d5c1d4",
-        "type": "PCA9685 out",
-        "z": "6d564b0b71763d89",
-        "name": "",
-        "pca9685": "e6b261de3d937e74",
-        "channel": "6",
-        "payload": "",
-        "unit": "percent",
-        "onStep": "0",
-        "x": 1460,
+        "x": 950,
         "y": 560,
         "wires": []
-    },
-    {
-        "id": "9901123d9c76ccdc",
-        "type": "PCA9685 out",
-        "z": "6d564b0b71763d89",
-        "name": "",
-        "pca9685": "e6b261de3d937e74",
-        "channel": "7",
-        "payload": "",
-        "unit": "percent",
-        "onStep": "0",
-        "x": 1460,
-        "y": 600,
-        "wires": []
-    },
-    {
-        "id": "6fef33851e4780eb",
-        "type": "PCA9685 out",
-        "z": "6d564b0b71763d89",
-        "name": "",
-        "pca9685": "e6b261de3d937e74",
-        "channel": "8",
-        "payload": "",
-        "unit": "percent",
-        "onStep": "0",
-        "x": 1460,
-        "y": 640,
-        "wires": []
-    },
-    {
-        "id": "803e0f1b00b98a01",
-        "type": "PCA9685 out",
-        "z": "6d564b0b71763d89",
-        "name": "",
-        "pca9685": "e6b261de3d937e74",
-        "channel": "9",
-        "payload": "",
-        "unit": "percent",
-        "onStep": "0",
-        "x": 1460,
-        "y": 680,
-        "wires": []
-    },
-    {
-        "id": "906de414a5d047ae",
-        "type": "PCA9685 out",
-        "z": "6d564b0b71763d89",
-        "name": "",
-        "pca9685": "e6b261de3d937e74",
-        "channel": "0",
-        "payload": "",
-        "unit": "percent",
-        "onStep": "0",
-        "x": 1460,
-        "y": 320,
-        "wires": []
-    },
-    {
-        "id": "f15741b17bd997eb",
-        "type": "PCA9685 out",
-        "z": "6d564b0b71763d89",
-        "name": "",
-        "pca9685": "e6b261de3d937e74",
-        "channel": "1",
-        "payload": "",
-        "unit": "percent",
-        "onStep": "0",
-        "x": 1460,
-        "y": 360,
-        "wires": []
-    },
-    {
-        "id": "a75a4c86edddc56a",
-        "type": "PCA9685 out",
-        "z": "6d564b0b71763d89",
-        "name": "",
-        "pca9685": "e6b261de3d937e74",
-        "channel": "2",
-        "payload": "",
-        "unit": "percent",
-        "onStep": "0",
-        "x": 1460,
-        "y": 400,
-        "wires": []
-    },
-    {
-        "id": "22e953c7bff14115",
-        "type": "PCA9685 out",
-        "z": "6d564b0b71763d89",
-        "name": "",
-        "pca9685": "e6b261de3d937e74",
-        "channel": "3",
-        "payload": "",
-        "unit": "percent",
-        "onStep": "0",
-        "x": 1460,
-        "y": 440,
-        "wires": []
-    },
-    {
-        "id": "5285818c72fda0f3",
-        "type": "PCA9685 out",
-        "z": "6d564b0b71763d89",
-        "name": "",
-        "pca9685": "e6b261de3d937e74",
-        "channel": "4",
-        "payload": "",
-        "unit": "percent",
-        "onStep": "0",
-        "x": 1460,
-        "y": 480,
-        "wires": []
-    },
-    {
-        "id": "4f74bc8d0eb70d35",
-        "type": "inject",
-        "z": "6d564b0b71763d89",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "60",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1170,
-        "y": 80,
-        "wires": [
-            [
-                "11416c64c8ee5717",
-                "b2061aef925c5e7c",
-                "31e5d5e997197d8a"
-            ]
-        ]
-    },
-    {
-        "id": "11416c64c8ee5717",
-        "type": "random",
-        "z": "6d564b0b71763d89",
-        "name": "",
-        "low": "-10",
-        "high": "15",
-        "inte": "true",
-        "property": "payload",
-        "x": 1360,
-        "y": 80,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "f272501184bbe878",
-        "type": "change",
-        "z": "6d564b0b71763d89",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "sensors.fridge_temp",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1650,
-        "y": 80,
-        "wires": [
-            [
-                "380baa39b73ad74b"
-            ]
-        ]
-    },
-    {
-        "id": "b2061aef925c5e7c",
-        "type": "random",
-        "z": "6d564b0b71763d89",
-        "name": "",
-        "low": "-10",
-        "high": "40",
-        "inte": "true",
-        "property": "payload",
-        "x": 1360,
-        "y": 120,
-        "wires": [
-            [
-                "a8b3359c8146d388"
-            ]
-        ]
-    },
-    {
-        "id": "a8b3359c8146d388",
-        "type": "change",
-        "z": "6d564b0b71763d89",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "sensors.indoor_temp",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1650,
-        "y": 120,
-        "wires": [
-            [
-                "660d97c7f697109d"
-            ]
-        ]
-    },
-    {
-        "id": "aa46d25bd18cdb62",
-        "type": "change",
-        "z": "6d564b0b71763d89",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "sensors.outdoor_temp",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1660,
-        "y": 160,
-        "wires": [
-            [
-                "f67bde4ab2656b44"
-            ]
-        ]
-    },
-    {
-        "id": "31e5d5e997197d8a",
-        "type": "random",
-        "z": "6d564b0b71763d89",
-        "name": "",
-        "low": "-10",
-        "high": "40",
-        "inte": "true",
-        "property": "payload",
-        "x": 1360,
-        "y": 160,
-        "wires": [
-            [
-                "aa46d25bd18cdb62"
-            ]
-        ]
     },
     {
         "id": "4562a99cb7e72896",
@@ -2147,124 +1027,6 @@
         "wires": []
     },
     {
-        "id": "380baa39b73ad74b",
-        "type": "link out",
-        "z": "6d564b0b71763d89",
-        "name": "fridge_temp",
-        "mode": "link",
-        "links": [
-            "05ade75e1ba4a9f0"
-        ],
-        "x": 1865,
-        "y": 80,
-        "wires": []
-    },
-    {
-        "id": "660d97c7f697109d",
-        "type": "link out",
-        "z": "6d564b0b71763d89",
-        "name": "indoor_temp",
-        "mode": "link",
-        "links": [],
-        "x": 1865,
-        "y": 120,
-        "wires": []
-    },
-    {
-        "id": "f67bde4ab2656b44",
-        "type": "link out",
-        "z": "6d564b0b71763d89",
-        "name": "outdoor_temp",
-        "mode": "link",
-        "links": [],
-        "x": 1865,
-        "y": 160,
-        "wires": []
-    },
-    {
-        "id": "a9023e5cfa3afa49",
-        "type": "inject",
-        "z": "6d564b0b71763d89",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "4",
-        "payloadType": "num",
-        "x": 1150,
-        "y": 160,
-        "wires": [
-            [
-                "f272501184bbe878"
-            ]
-        ]
-    },
-    {
-        "id": "4a108b554617aee7",
-        "type": "inject",
-        "z": "6d564b0b71763d89",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "10",
-        "payloadType": "num",
-        "x": 1150,
-        "y": 200,
-        "wires": [
-            [
-                "f272501184bbe878"
-            ]
-        ]
-    },
-    {
-        "id": "8014f5fa946648a5",
-        "type": "inject",
-        "z": "6d564b0b71763d89",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "-2",
-        "payloadType": "num",
-        "x": 1150,
-        "y": 240,
-        "wires": [
-            [
-                "f272501184bbe878"
-            ]
-        ]
-    },
-    {
         "id": "90ac10f75058bd6c",
         "type": "ui_gauge",
         "z": "6d564b0b71763d89",
@@ -2289,8 +1051,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 1620,
-        "y": 840,
+        "x": 1680,
+        "y": 180,
         "wires": []
     },
     {
@@ -2318,8 +1080,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 1620,
-        "y": 800,
+        "x": 1680,
+        "y": 140,
         "wires": []
     },
     {
@@ -2331,8 +1093,8 @@
         "links": [
             "e53ab43e069dd8a3"
         ],
-        "x": 1495,
-        "y": 800,
+        "x": 1555,
+        "y": 140,
         "wires": [
             [
                 "0ddebecdce249942"
@@ -2348,8 +1110,8 @@
         "links": [
             "00a386aa3c73ecfd"
         ],
-        "x": 1495,
-        "y": 840,
+        "x": 1555,
+        "y": 180,
         "wires": [
             [
                 "90ac10f75058bd6c"
@@ -2366,8 +1128,8 @@
         "high": "40",
         "inte": "true",
         "property": "payload",
-        "x": 1380,
-        "y": 840,
+        "x": 1440,
+        "y": 180,
         "wires": [
             [
                 "90ac10f75058bd6c"
@@ -2384,8 +1146,8 @@
         "high": "40",
         "inte": "true",
         "property": "payload",
-        "x": 1380,
-        "y": 800,
+        "x": 1440,
+        "y": 140,
         "wires": [
             [
                 "0ddebecdce249942"
@@ -2414,8 +1176,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1210,
-        "y": 800,
+        "x": 1270,
+        "y": 140,
         "wires": [
             [
                 "d8357db7db07799b"
@@ -2444,13 +1206,39 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1210,
-        "y": 840,
+        "x": 1270,
+        "y": 180,
         "wires": [
             [
                 "25cb50231328a18c"
             ]
         ]
+    },
+    {
+        "id": "7b77d1ea2e1d6b18",
+        "type": "link out",
+        "z": "6d564b0b71763d89",
+        "g": "4f72bd100e0aeb55",
+        "name": "mppt_broadcast",
+        "mode": "link",
+        "links": [],
+        "x": 1025,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "a26469027be8a376",
+        "type": "link out",
+        "z": "6d564b0b71763d89",
+        "g": "b10498f78b9fb638",
+        "name": "fridge_temp",
+        "mode": "link",
+        "links": [
+            "05ade75e1ba4a9f0"
+        ],
+        "x": 1025,
+        "y": 140,
+        "wires": []
     },
     {
         "id": "0094be9ee0b66230",
@@ -3574,6 +2362,146 @@
         ]
     },
     {
+        "id": "941ecb4ddd78054f",
+        "type": "PCA9685 out",
+        "z": "4f5b0833ab0a95bb",
+        "name": "",
+        "pca9685": "e6b261de3d937e74",
+        "channel": "5",
+        "payload": "",
+        "unit": "percent",
+        "onStep": "0",
+        "x": 560,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "4b840a6a82d5c1d4",
+        "type": "PCA9685 out",
+        "z": "4f5b0833ab0a95bb",
+        "name": "",
+        "pca9685": "e6b261de3d937e74",
+        "channel": "6",
+        "payload": "",
+        "unit": "percent",
+        "onStep": "0",
+        "x": 560,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "9901123d9c76ccdc",
+        "type": "PCA9685 out",
+        "z": "4f5b0833ab0a95bb",
+        "name": "",
+        "pca9685": "e6b261de3d937e74",
+        "channel": "7",
+        "payload": "",
+        "unit": "percent",
+        "onStep": "0",
+        "x": 560,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "6fef33851e4780eb",
+        "type": "PCA9685 out",
+        "z": "4f5b0833ab0a95bb",
+        "name": "",
+        "pca9685": "e6b261de3d937e74",
+        "channel": "8",
+        "payload": "",
+        "unit": "percent",
+        "onStep": "0",
+        "x": 560,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "803e0f1b00b98a01",
+        "type": "PCA9685 out",
+        "z": "4f5b0833ab0a95bb",
+        "name": "",
+        "pca9685": "e6b261de3d937e74",
+        "channel": "9",
+        "payload": "",
+        "unit": "percent",
+        "onStep": "0",
+        "x": 560,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "906de414a5d047ae",
+        "type": "PCA9685 out",
+        "z": "4f5b0833ab0a95bb",
+        "name": "",
+        "pca9685": "e6b261de3d937e74",
+        "channel": "0",
+        "payload": "",
+        "unit": "percent",
+        "onStep": "0",
+        "x": 560,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "f15741b17bd997eb",
+        "type": "PCA9685 out",
+        "z": "4f5b0833ab0a95bb",
+        "name": "",
+        "pca9685": "e6b261de3d937e74",
+        "channel": "1",
+        "payload": "",
+        "unit": "percent",
+        "onStep": "0",
+        "x": 560,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "a75a4c86edddc56a",
+        "type": "PCA9685 out",
+        "z": "4f5b0833ab0a95bb",
+        "name": "",
+        "pca9685": "e6b261de3d937e74",
+        "channel": "2",
+        "payload": "",
+        "unit": "percent",
+        "onStep": "0",
+        "x": 560,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "22e953c7bff14115",
+        "type": "PCA9685 out",
+        "z": "4f5b0833ab0a95bb",
+        "name": "",
+        "pca9685": "e6b261de3d937e74",
+        "channel": "3",
+        "payload": "",
+        "unit": "percent",
+        "onStep": "0",
+        "x": 560,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "5285818c72fda0f3",
+        "type": "PCA9685 out",
+        "z": "4f5b0833ab0a95bb",
+        "name": "",
+        "pca9685": "e6b261de3d937e74",
+        "channel": "4",
+        "payload": "",
+        "unit": "percent",
+        "onStep": "0",
+        "x": 560,
+        "y": 960,
+        "wires": []
+    },
+    {
         "id": "29b2917c6d628102",
         "type": "function",
         "z": "c6c05e7764275064",
@@ -4281,7 +3209,8 @@
         "name": "fridge_temp",
         "links": [
             "380baa39b73ad74b",
-            "4562a99cb7e72896"
+            "4562a99cb7e72896",
+            "a26469027be8a376"
         ],
         "x": 185,
         "y": 260,
