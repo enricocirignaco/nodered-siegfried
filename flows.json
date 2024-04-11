@@ -408,8 +408,8 @@
     {
         "id": "af392092454b5034",
         "type": "ui_group",
-        "name": "test",
-        "tab": "d277d26d62f17195",
+        "name": "Fridge",
+        "tab": "6f01fee901ee4e98",
         "order": 2,
         "disp": true,
         "width": "10",
@@ -2067,10 +2067,10 @@
         "animate": false,
         "className": "",
         "x": 160,
-        "y": 320,
+        "y": 160,
         "wires": [
             [
-                "238d777e8f91f75d"
+                "2e7a22334ba4ea5d"
             ]
         ]
     },
@@ -2203,10 +2203,10 @@
         "animate": false,
         "className": "",
         "x": 160,
-        "y": 480,
+        "y": 320,
         "wires": [
             [
-                "2e7a22334ba4ea5d"
+                "238d777e8f91f75d"
             ]
         ]
     },
