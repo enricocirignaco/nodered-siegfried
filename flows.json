@@ -169,7 +169,7 @@
             "d6785ee679911bd6",
             "e3b03333b844e614"
         ],
-        "x": 194,
+        "x": 94,
         "y": 39,
         "w": 592,
         "h": 602
@@ -504,7 +504,7 @@
         "type": "inject",
         "z": "6d564b0b71763d89",
         "g": "b10498f78b9fb638",
-        "name": "1s trigger",
+        "name": "10s trigger",
         "props": [
             {
                 "p": "payload"
@@ -514,14 +514,14 @@
                 "vt": "str"
             }
         ],
-        "repeat": "",
+        "repeat": "10",
         "crontab": "",
-        "once": false,
+        "once": true,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 140,
+        "x": 150,
         "y": 140,
         "wires": [
             [
@@ -926,7 +926,7 @@
         "z": "6d564b0b71763d89",
         "g": "4f72bd100e0aeb55",
         "name": "data corrupted",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -973,7 +973,7 @@
         "z": "6d564b0b71763d89",
         "g": "4f72bd100e0aeb55",
         "name": "debug serial",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -4038,7 +4038,7 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 650,
+        "x": 550,
         "y": 80,
         "wires": []
     },
@@ -4060,7 +4060,7 @@
         "font": "",
         "fontSize": "",
         "color": "#000000",
-        "x": 650,
+        "x": 550,
         "y": 120,
         "wires": []
     },
@@ -4073,7 +4073,7 @@
         "links": [
             "7b77d1ea2e1d6b18"
         ],
-        "x": 245,
+        "x": 145,
         "y": 280,
         "wires": [
             [
@@ -4103,7 +4103,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 490,
+        "x": 390,
         "y": 120,
         "wires": [
             [
@@ -4136,7 +4136,7 @@
         "seg2": "1",
         "diff": false,
         "className": "",
-        "x": 660,
+        "x": 560,
         "y": 160,
         "wires": []
     },
@@ -4165,7 +4165,7 @@
         "seg2": "150",
         "diff": false,
         "className": "",
-        "x": 650,
+        "x": 550,
         "y": 200,
         "wires": []
     },
@@ -4181,7 +4181,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 490,
+        "x": 390,
         "y": 200,
         "wires": [
             [
@@ -4202,7 +4202,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 490,
+        "x": 390,
         "y": 160,
         "wires": [
             [
@@ -4228,7 +4228,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 630,
+        "x": 530,
         "y": 240,
         "wires": []
     },
@@ -4271,7 +4271,7 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 630,
+        "x": 530,
         "y": 600,
         "wires": [
             []
@@ -4290,7 +4290,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 460,
+        "x": 360,
         "y": 600,
         "wires": [
             [
@@ -4320,7 +4320,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 310,
+        "x": 210,
         "y": 600,
         "wires": [
             [
@@ -4346,7 +4346,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 650,
+        "x": 550,
         "y": 280,
         "wires": []
     },
@@ -4368,7 +4368,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 650,
+        "x": 550,
         "y": 320,
         "wires": []
     },
@@ -4390,7 +4390,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 660,
+        "x": 560,
         "y": 480,
         "wires": []
     },
@@ -4412,7 +4412,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 660,
+        "x": 560,
         "y": 520,
         "wires": []
     },
@@ -4434,7 +4434,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 640,
+        "x": 540,
         "y": 440,
         "wires": []
     },
@@ -4451,7 +4451,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 490,
+        "x": 390,
         "y": 480,
         "wires": [
             [
@@ -4472,7 +4472,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 490,
+        "x": 390,
         "y": 520,
         "wires": [
             [
@@ -4493,7 +4493,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 490,
+        "x": 390,
         "y": 280,
         "wires": [
             [
@@ -4514,7 +4514,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 490,
+        "x": 390,
         "y": 320,
         "wires": [
             [
@@ -4540,7 +4540,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 650,
+        "x": 550,
         "y": 360,
         "wires": []
     },
@@ -4562,7 +4562,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 670,
+        "x": 570,
         "y": 400,
         "wires": []
     },
@@ -4584,7 +4584,7 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 450,
+        "x": 350,
         "y": 560,
         "wires": [
             [
