@@ -1897,14 +1897,10 @@
         "step": "5",
         "className": "",
         "x": 160,
-        "y": 1020,
+        "y": 1000,
         "wires": [
             [
-                "941ecb4ddd78054f",
-                "4b840a6a82d5c1d4",
-                "9901123d9c76ccdc",
-                "6fef33851e4780eb",
-                "803e0f1b00b98a01"
+                "941ecb4ddd78054f"
             ]
         ]
     },
@@ -2023,6 +2019,114 @@
         "wires": [
             [
                 "a75a4c86edddc56a"
+            ]
+        ]
+    },
+    {
+        "id": "cb3dc73d550fe872",
+        "type": "ui_slider",
+        "z": "4f5b0833ab0a95bb",
+        "name": "",
+        "label": "light 1  ",
+        "tooltip": "",
+        "group": "23c60b13edc12513",
+        "order": 4,
+        "width": "10",
+        "height": "1",
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "100",
+        "step": "5",
+        "className": "",
+        "x": 150,
+        "y": 1040,
+        "wires": [
+            [
+                "4b840a6a82d5c1d4"
+            ]
+        ]
+    },
+    {
+        "id": "73c3e4add57ae1aa",
+        "type": "ui_slider",
+        "z": "4f5b0833ab0a95bb",
+        "name": "",
+        "label": "light 2",
+        "tooltip": "",
+        "group": "23c60b13edc12513",
+        "order": 4,
+        "width": "10",
+        "height": "1",
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "100",
+        "step": "5",
+        "className": "",
+        "x": 150,
+        "y": 1080,
+        "wires": [
+            [
+                "9901123d9c76ccdc"
+            ]
+        ]
+    },
+    {
+        "id": "c6a687c0287d672b",
+        "type": "ui_slider",
+        "z": "4f5b0833ab0a95bb",
+        "name": "",
+        "label": "light 3  ",
+        "tooltip": "",
+        "group": "23c60b13edc12513",
+        "order": 4,
+        "width": "10",
+        "height": "1",
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "100",
+        "step": "5",
+        "className": "",
+        "x": 150,
+        "y": 1120,
+        "wires": [
+            [
+                "6fef33851e4780eb"
+            ]
+        ]
+    },
+    {
+        "id": "223d768b545b3ac1",
+        "type": "ui_slider",
+        "z": "4f5b0833ab0a95bb",
+        "name": "",
+        "label": "light 3  ",
+        "tooltip": "",
+        "group": "23c60b13edc12513",
+        "order": 4,
+        "width": "10",
+        "height": "1",
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "100",
+        "step": "5",
+        "className": "",
+        "x": 150,
+        "y": 1160,
+        "wires": [
+            [
+                "803e0f1b00b98a01"
             ]
         ]
     },
