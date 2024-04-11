@@ -1801,7 +1801,7 @@
         "type": "ui_slider",
         "z": "4f5b0833ab0a95bb",
         "name": "",
-        "label": "round lights",
+        "label": "round lights rear",
         "tooltip": "",
         "group": "23c60b13edc12513",
         "order": 4,
@@ -1815,7 +1815,7 @@
         "max": "100",
         "step": "5",
         "className": "",
-        "x": 170,
+        "x": 180,
         "y": 840,
         "wires": [
             [
@@ -1843,10 +1843,10 @@
         "step": "5",
         "className": "",
         "x": 160,
-        "y": 880,
+        "y": 920,
         "wires": [
             [
-                "a75a4c86edddc56a"
+                "22e953c7bff14115"
             ]
         ]
     },
@@ -1870,10 +1870,10 @@
         "step": "5",
         "className": "",
         "x": 170,
-        "y": 920,
+        "y": 960,
         "wires": [
             [
-                "22e953c7bff14115"
+                "5285818c72fda0f3"
             ]
         ]
     },
@@ -1897,10 +1897,9 @@
         "step": "5",
         "className": "",
         "x": 160,
-        "y": 960,
+        "y": 1020,
         "wires": [
             [
-                "5285818c72fda0f3",
                 "941ecb4ddd78054f",
                 "4b840a6a82d5c1d4",
                 "9901123d9c76ccdc",
@@ -1998,6 +1997,33 @@
         "y": 800,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "8606a9d0f4e58377",
+        "type": "ui_slider",
+        "z": "4f5b0833ab0a95bb",
+        "name": "",
+        "label": "round lights front",
+        "tooltip": "",
+        "group": "23c60b13edc12513",
+        "order": 4,
+        "width": "10",
+        "height": "1",
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "100",
+        "step": "5",
+        "className": "",
+        "x": 190,
+        "y": 880,
+        "wires": [
+            [
+                "a75a4c86edddc56a"
+            ]
         ]
     },
     {
