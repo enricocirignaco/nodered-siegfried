@@ -2313,6 +2313,16 @@
         ]
     },
     {
+        "id": "5a9b9382b9ae3869",
+        "type": "comment",
+        "z": "4f5b0833ab0a95bb",
+        "name": "door sensor",
+        "info": "",
+        "x": 850,
+        "y": 400,
+        "wires": []
+    },
+    {
         "id": "0094be9ee0b66230",
         "type": "ui_gauge",
         "z": "8f469e385c0b1581",
