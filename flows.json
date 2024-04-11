@@ -483,17 +483,6 @@
         "className": ""
     },
     {
-        "id": "2fe1f9c9616fe19a",
-        "type": "ui_group",
-        "name": "Water",
-        "tab": "9d7781fc6afac662",
-        "order": 1,
-        "disp": true,
-        "width": "10",
-        "collapse": false,
-        "className": ""
-    },
-    {
         "id": "57ca5f37d1ee1a2a",
         "type": "ui_group",
         "name": "Temperature",
@@ -503,25 +492,6 @@
         "width": "10",
         "collapse": false,
         "className": ""
-    },
-    {
-        "id": "f65614f6ce28c59b",
-        "type": "serial-port",
-        "serialport": "/dev/ttyS0",
-        "serialbaud": "19200",
-        "databits": "8",
-        "parity": "none",
-        "stopbits": "1",
-        "waitfor": "",
-        "dtr": "none",
-        "rts": "none",
-        "cts": "none",
-        "dsr": "none",
-        "newline": "\\n",
-        "bin": "bin",
-        "out": "char",
-        "addchar": "",
-        "responsetimeout": "10000"
     },
     {
         "id": "9d7781fc6afac662",
