@@ -580,7 +580,7 @@
         "name": "single shot request",
         "busno": "1",
         "address": "105",
-        "command": "160",
+        "command": "128",
         "count": "3",
         "x": 510,
         "y": 80,
@@ -2828,7 +2828,8 @@
         "wires": [
             [
                 "5ec99543396b4c4a",
-                "eab68d389e1a065c"
+                "eab68d389e1a065c",
+                "3e80afa6d3577b67"
             ]
         ]
     },
@@ -3418,6 +3419,22 @@
         "name": "ignition",
         "x": 1280,
         "y": 540,
+        "wires": []
+    },
+    {
+        "id": "3e80afa6d3577b67",
+        "type": "debug",
+        "z": "4f5b0833ab0a95bb",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1280,
+        "y": 620,
         "wires": []
     },
     {
