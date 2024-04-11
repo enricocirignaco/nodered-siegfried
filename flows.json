@@ -4481,7 +4481,7 @@
         "z": "68eb8e61689f5b6b",
         "g": "eaf8bdbc0b32a5bb",
         "name": "Parser",
-        "func": "msg.payload = Math.round(msg.payload.VPV / 1000);\n\nreturn msg;",
+        "func": "msg.payload = msg.payload.VPV / 1000;\n\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
