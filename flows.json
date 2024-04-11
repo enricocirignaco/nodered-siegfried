@@ -6042,5 +6042,34 @@
                 "90ac10f75058bd6c"
             ]
         ]
+    },
+    {
+        "id": "89c7b98f77611e37",
+        "type": "inject",
+        "z": "13952ff3682a9fc4",
+        "name": "",
+        "props": [
+            {
+                "p": "enabled",
+                "v": "false",
+                "vt": "bool"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 150,
+        "y": 100,
+        "wires": [
+            [
+                "5a39df5cc1fe2616",
+                "1535d33324d63d8f",
+                "12996cef4976cab0",
+                "68c5af39b6d9781e",
+                "b4c35b2e757c1d11"
+            ]
+        ]
     }
 ]
