@@ -1093,10 +1093,10 @@
             "4cc17cb982627297"
         ],
         "x": 405,
-        "y": 320,
+        "y": 240,
         "wires": [
             [
-                "238d777e8f91f75d"
+                "ec58200f216d9a89"
             ]
         ]
     },
@@ -1109,10 +1109,10 @@
             "5f7d5aaa077569f7"
         ],
         "x": 405,
-        "y": 400,
+        "y": 440,
         "wires": [
             [
-                "c5f4335c5d949044"
+                "929776411fb44892"
             ]
         ]
     },
@@ -1125,10 +1125,10 @@
             "b7f3b176e4b124f4"
         ],
         "x": 405,
-        "y": 360,
+        "y": 480,
         "wires": [
             [
-                "99eb2f8b28890f61"
+                "2e7a22334ba4ea5d"
             ]
         ]
     },
@@ -1567,27 +1567,25 @@
             "b571123d946be4c9"
         ],
         "x": 405,
-        "y": 440,
+        "y": 520,
         "wires": [
-            [
-                "929776411fb44892"
-            ]
+            []
         ]
     },
     {
         "id": "1101cf3640e2ece0",
         "type": "link in",
         "z": "4f5b0833ab0a95bb",
-        "name": "valve_0_gpio",
+        "name": "valve_2_gpio",
         "links": [
             "d850506da8fb975c",
             "fc2dde5f98b3403e"
         ],
         "x": 405,
-        "y": 480,
+        "y": 280,
         "wires": [
             [
-                "2e7a22334ba4ea5d"
+                "b277ff3b6120e37b"
             ]
         ]
     },
@@ -1598,10 +1596,10 @@
         "name": "valve_1_gpio",
         "links": [],
         "x": 405,
-        "y": 520,
+        "y": 320,
         "wires": [
             [
-                "e730899400c089da"
+                "238d777e8f91f75d"
             ]
         ]
     },
@@ -1614,10 +1612,10 @@
             "c26791e7295a5c67"
         ],
         "x": 405,
-        "y": 560,
+        "y": 200,
         "wires": [
             [
-                "2ffa2e3c9c3157b5"
+                "0a432f883018e195"
             ]
         ]
     },
@@ -1737,7 +1735,7 @@
         "type": "ui_slider",
         "z": "4f5b0833ab0a95bb",
         "name": "",
-        "label": "main light     ",
+        "label": "main light     h",
         "tooltip": "",
         "group": "23c60b13edc12513",
         "order": 4,
@@ -1751,7 +1749,7 @@
         "max": "100",
         "step": "5",
         "className": "",
-        "x": 160,
+        "x": 170,
         "y": 800,
         "wires": [
             [
@@ -2056,7 +2054,7 @@
         "type": "ui_switch",
         "z": "4f5b0833ab0a95bb",
         "name": "",
-        "label": "inevrter",
+        "label": "inverter",
         "tooltip": "",
         "group": "80e5e30f3656b98c",
         "order": 5,
@@ -2179,8 +2177,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 340,
-        "y": 640,
+        "x": 180,
+        "y": 520,
         "wires": [
             []
         ]
@@ -2304,8 +2302,8 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 110,
-        "y": 640,
+        "x": 150,
+        "y": 600,
         "wires": [
             [
                 "24cfc3eae12dacc9"
