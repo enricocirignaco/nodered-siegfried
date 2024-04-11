@@ -1059,6 +1059,7 @@
         "id": "0ddebecdce249942",
         "type": "ui_gauge",
         "z": "6d564b0b71763d89",
+        "d": true,
         "g": "cd72b915c94ff1a4",
         "name": "temp_out",
         "group": "57ca5f37d1ee1a2a",
