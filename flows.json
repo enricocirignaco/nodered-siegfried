@@ -3710,9 +3710,7 @@
         "y": 140,
         "wires": [
             [],
-            [
-                "db15f5b5f97c2e54"
-            ],
+            [],
             []
         ]
     },
@@ -3745,22 +3743,6 @@
         ]
     },
     {
-        "id": "db15f5b5f97c2e54",
-        "type": "debug",
-        "z": "8f469e385c0b1581",
-        "name": "debug 3",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1460,
-        "y": 140,
-        "wires": []
-    },
-    {
         "id": "c04f6d51505bc927",
         "type": "comment",
         "z": "8f469e385c0b1581",
@@ -3779,6 +3761,54 @@
         "x": 940,
         "y": 100,
         "wires": []
+    },
+    {
+        "id": "b5ea178a830b30d7",
+        "type": "exec",
+        "z": "8f469e385c0b1581",
+        "command": "sudo reboot",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 1190,
+        "y": 200,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "ed23cd5c9b8813d6",
+        "type": "ui_button",
+        "z": "8f469e385c0b1581",
+        "name": "",
+        "group": "6fd6f055a36d0f78",
+        "order": 7,
+        "width": "5",
+        "height": "1",
+        "passthru": false,
+        "label": "System reboot",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 940,
+        "y": 200,
+        "wires": [
+            [
+                "b5ea178a830b30d7"
+            ]
+        ]
     },
     {
         "id": "29b2917c6d628102",
