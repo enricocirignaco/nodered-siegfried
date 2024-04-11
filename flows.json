@@ -205,19 +205,14 @@
         },
         "nodes": [
             "941ecb4ddd78054f",
-            "906de414a5d047ae",
             "f15741b17bd997eb",
             "a75a4c86edddc56a",
             "22e953c7bff14115",
             "5285818c72fda0f3",
-            "4cee8337e5e3dada",
-            "60e52cda8562b45d",
             "cc46016ddf54fa22",
             "8c8cccf47c37b852",
             "3f461fe14af0a35c",
             "92b3cc025d4102a5",
-            "fa07b686d66dd586",
-            "4a31e52f27d18f02",
             "8606a9d0f4e58377",
             "4b840a6a82d5c1d4",
             "9901123d9c76ccdc",
@@ -243,7 +238,12 @@
             "8ba987c931153074",
             "d1ed3015c3aacb5a",
             "fa9b0f22bc36fb6d",
-            "7b4e8d55dfaebf07"
+            "7b4e8d55dfaebf07",
+            "d947cbfaf62684b6",
+            "44e87c730b602fb5",
+            "4a1369f77b454bcd",
+            "3662bbabcf55b91f",
+            "db348f41992c6d47"
         ],
         "x": 214,
         "y": 739,
@@ -1627,21 +1627,6 @@
         "wires": []
     },
     {
-        "id": "906de414a5d047ae",
-        "type": "PCA9685 out",
-        "z": "4f5b0833ab0a95bb",
-        "g": "f93b0d515e50b6cf",
-        "name": "",
-        "pca9685": "e6b261de3d937e74",
-        "channel": "0",
-        "payload": "",
-        "unit": "percent",
-        "onStep": "0",
-        "x": 1260,
-        "y": 800,
-        "wires": []
-    },
-    {
         "id": "f15741b17bd997eb",
         "type": "PCA9685 out",
         "z": "4f5b0833ab0a95bb",
@@ -1700,69 +1685,6 @@
         "x": 1260,
         "y": 960,
         "wires": []
-    },
-    {
-        "id": "4cee8337e5e3dada",
-        "type": "change",
-        "z": "4f5b0833ab0a95bb",
-        "g": "f93b0d515e50b6cf",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "pwm.main_light",
-                "pt": "flow",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 700,
-        "y": 800,
-        "wires": [
-            [
-                "4a31e52f27d18f02"
-            ]
-        ]
-    },
-    {
-        "id": "60e52cda8562b45d",
-        "type": "ui_slider",
-        "z": "4f5b0833ab0a95bb",
-        "g": "f93b0d515e50b6cf",
-        "name": "main light",
-        "label": "",
-        "tooltip": "",
-        "group": "23c60b13edc12513",
-        "order": 2,
-        "width": "7",
-        "height": "1",
-        "passthru": true,
-        "outs": "end",
-        "topic": "topic",
-        "topicType": "msg",
-        "min": 0,
-        "max": "100",
-        "step": "5",
-        "className": "",
-        "x": 480,
-        "y": 800,
-        "wires": [
-            [
-                "906de414a5d047ae"
-            ]
-        ]
     },
     {
         "id": "cc46016ddf54fa22",
@@ -1883,7 +1805,8 @@
         "name": "switch_1_gpio",
         "mode": "link",
         "links": [
-            "fa07b686d66dd586"
+            "fa07b686d66dd586",
+            "db348f41992c6d47"
         ],
         "x": 1405,
         "y": 520,
@@ -1937,42 +1860,6 @@
         "x": 1405,
         "y": 360,
         "wires": []
-    },
-    {
-        "id": "fa07b686d66dd586",
-        "type": "link in",
-        "z": "4f5b0833ab0a95bb",
-        "g": "f93b0d515e50b6cf",
-        "name": "",
-        "links": [
-            "5ec99543396b4c4a"
-        ],
-        "x": 895,
-        "y": 780,
-        "wires": [
-            [
-                "4a31e52f27d18f02"
-            ]
-        ]
-    },
-    {
-        "id": "4a31e52f27d18f02",
-        "type": "function",
-        "z": "4f5b0833ab0a95bb",
-        "g": "f93b0d515e50b6cf",
-        "name": "set pwm value",
-        "func": "if(msg.payload === true){\n    msg.payload = flow.get(\"pwm.main_light\");\n}else{\n    msg.payload = 0;\n}\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1040,
-        "y": 800,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "8606a9d0f4e58377",
@@ -3583,6 +3470,122 @@
             [
                 "6bc7e1972f7c6f09",
                 "697021be5ce94774"
+            ]
+        ]
+    },
+    {
+        "id": "d947cbfaf62684b6",
+        "type": "PCA9685 out",
+        "z": "4f5b0833ab0a95bb",
+        "g": "f93b0d515e50b6cf",
+        "name": "",
+        "pca9685": "e6b261de3d937e74",
+        "channel": "0",
+        "payload": "",
+        "unit": "percent",
+        "onStep": "0",
+        "x": 1260,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "44e87c730b602fb5",
+        "type": "ui_slider",
+        "z": "4f5b0833ab0a95bb",
+        "g": "f93b0d515e50b6cf",
+        "name": "main light",
+        "label": "",
+        "tooltip": "",
+        "group": "23c60b13edc12513",
+        "order": 4,
+        "width": "7",
+        "height": "1",
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "100",
+        "step": "5",
+        "className": "",
+        "x": 480,
+        "y": 800,
+        "wires": [
+            [
+                "4a1369f77b454bcd"
+            ]
+        ]
+    },
+    {
+        "id": "4a1369f77b454bcd",
+        "type": "change",
+        "z": "4f5b0833ab0a95bb",
+        "g": "f93b0d515e50b6cf",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "pwm.main_light",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 800,
+        "wires": [
+            [
+                "3662bbabcf55b91f"
+            ]
+        ]
+    },
+    {
+        "id": "3662bbabcf55b91f",
+        "type": "function",
+        "z": "4f5b0833ab0a95bb",
+        "g": "f93b0d515e50b6cf",
+        "name": "set pwm value",
+        "func": "if(msg.payload === true){\n    msg.payload = flow.get(\"pwm.main_light\");\n}else{\n    msg.payload = 0;\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1040,
+        "y": 800,
+        "wires": [
+            [
+                "d947cbfaf62684b6"
+            ]
+        ]
+    },
+    {
+        "id": "db348f41992c6d47",
+        "type": "link in",
+        "z": "4f5b0833ab0a95bb",
+        "g": "f93b0d515e50b6cf",
+        "name": "",
+        "links": [
+            "5ec99543396b4c4a"
+        ],
+        "x": 895,
+        "y": 780,
+        "wires": [
+            [
+                "3662bbabcf55b91f"
             ]
         ]
     },
