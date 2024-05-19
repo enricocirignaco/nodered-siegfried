@@ -2048,6 +2048,7 @@
         "id": "24cfc3eae12dacc9",
         "type": "ui_switch",
         "z": "4f5b0833ab0a95bb",
+        "d": true,
         "name": "",
         "label": "starter charger",
         "tooltip": "",
