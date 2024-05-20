@@ -367,7 +367,7 @@
         },
         "site": {
             "name": "Siegfried",
-            "hideToolbar": "false",
+            "hideToolbar": "true",
             "allowSwipe": "true",
             "lockMenu": "false",
             "allowTempTheme": "true",
