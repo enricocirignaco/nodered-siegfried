@@ -673,7 +673,7 @@
         "z": "6d564b0b71763d89",
         "g": "b10498f78b9fb638",
         "name": "debug adc",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
