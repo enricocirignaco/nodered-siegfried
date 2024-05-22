@@ -1596,11 +1596,11 @@
             "c26791e7295a5c67"
         ],
         "x": 395,
-        "y": 200,
+        "y": 560,
         "wires": [
             [
-                "0a432f883018e195",
-                "bf37a5fe2bb8ce58"
+                "bf37a5fe2bb8ce58",
+                "2ffa2e3c9c3157b5"
             ]
         ]
     },
@@ -2071,7 +2071,7 @@
         "animate": false,
         "className": "",
         "x": 200,
-        "y": 540,
+        "y": 520,
         "wires": [
             [
                 "e730899400c089da"
@@ -2173,7 +2173,7 @@
         "animate": false,
         "className": "",
         "x": 170,
-        "y": 200,
+        "y": 560,
         "wires": [
             [
                 "2ffa2e3c9c3157b5"
@@ -2972,7 +2972,7 @@
         "showGlow": false,
         "name": "led pump",
         "x": 520,
-        "y": 180,
+        "y": 540,
         "wires": []
     },
     {
