@@ -572,7 +572,7 @@
         "name": "single shot request",
         "busno": "1",
         "address": "105",
-        "command": "160",
+        "command": "128",
         "count": "3",
         "x": 510,
         "y": 80,
