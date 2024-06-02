@@ -1498,7 +1498,7 @@
                 "pt": "msg",
                 "from": "0",
                 "fromt": "num",
-                "to": "false",
+                "to": "true",
                 "tot": "bool"
             },
             {
@@ -1507,7 +1507,7 @@
                 "pt": "msg",
                 "from": "1",
                 "fromt": "num",
-                "to": "true",
+                "to": "false",
                 "tot": "bool"
             }
         ],
