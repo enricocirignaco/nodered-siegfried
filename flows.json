@@ -1840,7 +1840,9 @@
         "z": "4f5b0833ab0a95bb",
         "name": "switch_4_gpio",
         "mode": "link",
-        "links": [],
+        "links": [
+            "de22dce2df13f5f3"
+        ],
         "x": 1405,
         "y": 440,
         "wires": []
@@ -2931,6 +2933,13 @@
                 "fromt": "num",
                 "to": "true",
                 "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "inverter",
+                "tot": "str"
             }
         ],
         "action": "",
@@ -3836,7 +3845,8 @@
         "name": "high_voltage_control",
         "links": [
             "3184fc21642792b4",
-            "819f986947063229"
+            "819f986947063229",
+            "7e6995508c9e5007"
         ],
         "x": 75,
         "y": 260,
