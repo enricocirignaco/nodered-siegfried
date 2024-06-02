@@ -1486,13 +1486,6 @@
         "name": "ignition",
         "rules": [
             {
-                "t": "set",
-                "p": "status.ignition",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
                 "t": "change",
                 "p": "payload",
                 "pt": "msg",
@@ -1521,7 +1514,8 @@
         "wires": [
             [
                 "ba947f4deae7306a",
-                "13cfc5ece438a9f2"
+                "13cfc5ece438a9f2",
+                "77ee5917b38765fa"
             ]
         ]
     },
@@ -3625,6 +3619,31 @@
                 "8c8cccf47c37b852",
                 "8606a9d0f4e58377"
             ]
+        ]
+    },
+    {
+        "id": "77ee5917b38765fa",
+        "type": "change",
+        "z": "4f5b0833ab0a95bb",
+        "name": "ignition",
+        "rules": [
+            {
+                "t": "set",
+                "p": "status.ignition",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1100,
+        "y": 100,
+        "wires": [
+            []
         ]
     },
     {
