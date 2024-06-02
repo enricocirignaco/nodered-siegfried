@@ -5145,8 +5145,8 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "false",
-        "payloadType": "bool",
+        "payload": "auto",
+        "payloadType": "str",
         "x": 190,
         "y": 260,
         "wires": [
@@ -5174,8 +5174,8 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "false",
-        "payloadType": "bool",
+        "payload": "auto",
+        "payloadType": "str",
         "x": 190,
         "y": 300,
         "wires": [
