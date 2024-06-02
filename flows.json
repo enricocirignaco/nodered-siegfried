@@ -1823,7 +1823,7 @@
         "name": "switch_3_gpio",
         "mode": "link",
         "links": [
-            "d1ed3015c3aacb5a"
+            "7b4e8d55dfaebf07"
         ],
         "x": 1405,
         "y": 480,
@@ -2654,9 +2654,7 @@
         "z": "4f5b0833ab0a95bb",
         "g": "f93b0d515e50b6cf",
         "name": "",
-        "links": [
-            "b4dd9a7691a5b247"
-        ],
+        "links": [],
         "x": 895,
         "y": 900,
         "wires": [
@@ -2689,7 +2687,7 @@
         "g": "f93b0d515e50b6cf",
         "name": "",
         "links": [
-            "697021be5ce94774"
+            "b4dd9a7691a5b247"
         ],
         "x": 895,
         "y": 980,
@@ -2706,8 +2704,7 @@
         "name": "door_sensor_gpio",
         "mode": "link",
         "links": [
-            "fa9b0f22bc36fb6d",
-            "7b4e8d55dfaebf07"
+            "fa9b0f22bc36fb6d"
         ],
         "x": 1405,
         "y": 280,
