@@ -3595,6 +3595,39 @@
         ]
     },
     {
+        "id": "78f649f98f7b1168",
+        "type": "inject",
+        "z": "4f5b0833ab0a95bb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "50",
+        "payloadType": "num",
+        "x": 290,
+        "y": 700,
+        "wires": [
+            [
+                "44e87c730b602fb5",
+                "cc46016ddf54fa22",
+                "92b3cc025d4102a5",
+                "8c8cccf47c37b852",
+                "8606a9d0f4e58377"
+            ]
+        ]
+    },
+    {
         "id": "de58fdee4a97426e",
         "type": "ui_led",
         "z": "8f469e385c0b1581",
