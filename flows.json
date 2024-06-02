@@ -4870,17 +4870,14 @@
         "z": "15311a68299dc024",
         "name": "fridge_ignition",
         "links": [
-            "ba947f4deae7306a",
-            "608b1b86a5decca9",
-            "f89db17f96a0fdb4",
-            "02d204d2cab60514"
+            "ba947f4deae7306a"
         ],
-        "x": 185,
-        "y": 180,
+        "x": 55,
+        "y": 220,
         "wires": [
             [
-                "a9c76782de77f2d3",
-                "8f6a175b5f9ee867"
+                "8f6a175b5f9ee867",
+                "e9a2b1ea2ea7af0f"
             ]
         ]
     },
@@ -4914,6 +4911,31 @@
         "x": 390,
         "y": 220,
         "wires": []
+    },
+    {
+        "id": "e9a2b1ea2ea7af0f",
+        "type": "delay",
+        "z": "15311a68299dc024",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 200,
+        "y": 180,
+        "wires": [
+            [
+                "a9c76782de77f2d3"
+            ]
+        ]
     },
     {
         "id": "0daefb168cc93c70",
