@@ -4784,8 +4784,8 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "false",
-        "payloadType": "bool",
+        "payload": "auto",
+        "payloadType": "str",
         "x": 250,
         "y": 80,
         "wires": [
