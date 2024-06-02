@@ -5195,8 +5195,8 @@
             "f89db17f96a0fdb4",
             "02d204d2cab60514"
         ],
-        "x": 75,
-        "y": 220,
+        "x": 155,
+        "y": 140,
         "wires": [
             [
                 "1fbdea3f07502179"
@@ -5208,7 +5208,7 @@
         "type": "function",
         "z": "7d2ee9cb73f16e0a",
         "name": "starter algorithm",
-        "func": "if (msg.topic === \"setting\") flow.set(\"starterSetting\", msg.payload);\n\nlet inverter = global.get(\"status.inverter\");\nlet setting = flow.get(\"starterSetting\");\n\nif (setting === \"auto\") setting = inverter;\n\nmsg.payload = setting;\n\nreturn msg;",
+        "func": "if (msg.topic === \"setting\") flow.set(\"starterSetting\", msg.payload);\n\nlet inverter = global.get(\"status.inverter\");\nlet setting = flow.get(\"starterSetting\");\nlet ignition = global.get(\"status.ignition\");\nif (setting === \"auto\") setting = inverter;\nif (ignition === true) setting = false;\nmsg.payload = setting;\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -5252,8 +5252,8 @@
         "links": [
             "4cc17cb982627297"
         ],
-        "x": 75,
-        "y": 340,
+        "x": 155,
+        "y": 400,
         "wires": [
             [
                 "22fdd30ae7af2b4a"
