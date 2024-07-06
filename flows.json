@@ -5088,7 +5088,7 @@
         "type": "function",
         "z": "7d2ee9cb73f16e0a",
         "name": "leisure algorithm",
-        "func": "if(msg.topic === \"setting\") flow.set(\"leisureSetting\", msg.payload);\n\nlet ignition = global.get(\"status.ignition\");\nlet setting = flow.get(\"leisureSetting\");\n\nif(setting === \"auto\") setting = ignition;\n\nmsg.payload = setting;\nmsg.topic = \"charger\";\nreturn msg;",
+        "func": "if(msg.topic === \"setting\") flow.set(\"leisureSetting\", msg.payload);\n\nlet ignition = global.get(\"status.ignition\");\nlet setting = flow.get(\"leisureSetting\");\n\nif(setting === \"auto\") setting = ignition;\n\nmsg.payload = setting;\nmsg.topic = \"leisureCharger\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
