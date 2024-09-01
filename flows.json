@@ -682,7 +682,7 @@
         "z": "6d564b0b71763d89",
         "g": "b10498f78b9fb638",
         "name": "debug adc",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -3769,6 +3769,27 @@
             [
                 "b5ea178a830b30d7"
             ]
+        ]
+    },
+    {
+        "id": "0727783fc90d07de",
+        "type": "ui_template",
+        "z": "8f469e385c0b1581",
+        "group": "7dbe224d7e5b35ba",
+        "name": "",
+        "order": 11,
+        "width": 0,
+        "height": 0,
+        "format": "<button id=\"fullscreenButton\" style=\"font-size: 16px; padding: 10px;\">Enter Full Screen</button>\n\n<script>\n    (function(scope) {\n    document.getElementById(\"fullscreenButton\").addEventListener(\"click\", function() {\n      if (!document.fullscreenElement) {\n        document.documentElement.requestFullscreen().catch((err) => {\n          console.error(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);\n        });\n      } else {\n        document.exitFullscreen();\n      }\n    });\n  })(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 300,
+        "y": 400,
+        "wires": [
+            []
         ]
     },
     {
