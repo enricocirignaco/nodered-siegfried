@@ -432,7 +432,7 @@
         "name": "Solar",
         "tab": "6e2e8a772b0722ac",
         "order": 2,
-        "disp": false,
+        "disp": true,
         "width": "10",
         "collapse": false,
         "className": ""
