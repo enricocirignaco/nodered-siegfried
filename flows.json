@@ -402,7 +402,7 @@
         "tab": "9d7781fc6afac662",
         "order": 1,
         "disp": true,
-        "width": "3",
+        "width": 2,
         "collapse": false,
         "className": ""
     },
@@ -3293,7 +3293,7 @@
         "z": "4f5b0833ab0a95bb",
         "order": 7,
         "group": "7dbe224d7e5b35ba",
-        "width": 3,
+        "width": 2,
         "height": 6,
         "label": "Ignition",
         "labelPlacement": "left",
