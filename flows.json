@@ -483,7 +483,7 @@
         "type": "ui_group",
         "name": "Fridge",
         "tab": "9d7781fc6afac662",
-        "order": 5,
+        "order": 3,
         "disp": true,
         "width": 5,
         "collapse": false,
@@ -494,7 +494,7 @@
         "type": "ui_group",
         "name": "Chargers & Inverter",
         "tab": "9d7781fc6afac662",
-        "order": 3,
+        "order": 2,
         "disp": true,
         "width": 5,
         "collapse": false,
@@ -516,7 +516,7 @@
         "type": "ui_group",
         "name": "Water",
         "tab": "9d7781fc6afac662",
-        "order": 6,
+        "order": 5,
         "disp": true,
         "width": 5,
         "collapse": false,
@@ -531,6 +531,16 @@
         "order": 11,
         "width": "4",
         "height": "2"
+    },
+    {
+        "id": "fa514a058ef09111",
+        "type": "ui_spacer",
+        "z": "7d2ee9cb73f16e0a",
+        "name": "spacer",
+        "group": "80e5e30f3656b98c",
+        "order": 4,
+        "width": 1,
+        "height": 1
     },
     {
         "id": "201c2c30807ef967",
