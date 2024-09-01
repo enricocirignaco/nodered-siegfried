@@ -534,17 +534,6 @@
         "className": ""
     },
     {
-        "id": "0d054da8a009aaec",
-        "type": "ui_group",
-        "name": "Outputs",
-        "tab": "9d7781fc6afac662",
-        "order": 4,
-        "disp": true,
-        "width": "3",
-        "collapse": false,
-        "className": ""
-    },
-    {
         "id": "201c2c30807ef967",
         "type": "inject",
         "z": "6d564b0b71763d89",
@@ -1129,8 +1118,7 @@
         "y": 440,
         "wires": [
             [
-                "929776411fb44892",
-                "87b6939a962348ba"
+                "929776411fb44892"
             ]
         ]
     },
@@ -1557,7 +1545,6 @@
         "y": 520,
         "wires": [
             [
-                "8cceda34fc71ed1d",
                 "e730899400c089da"
             ]
         ]
@@ -2964,7 +2951,7 @@
         "type": "ui_led",
         "z": "4f5b0833ab0a95bb",
         "order": 5,
-        "group": "0d054da8a009aaec",
+        "group": "25087c53b8fc6993",
         "width": 0,
         "height": 0,
         "label": "Pump",
@@ -3026,7 +3013,7 @@
         "type": "ui_led",
         "z": "4f5b0833ab0a95bb",
         "order": 6,
-        "group": "0d054da8a009aaec",
+        "group": "25087c53b8fc6993",
         "width": 0,
         "height": 0,
         "label": "Valve 1",
@@ -3057,7 +3044,7 @@
         "type": "ui_led",
         "z": "4f5b0833ab0a95bb",
         "order": 7,
-        "group": "0d054da8a009aaec",
+        "group": "25087c53b8fc6993",
         "width": 0,
         "height": 0,
         "label": "Valve 2",
@@ -3084,42 +3071,11 @@
         "wires": []
     },
     {
-        "id": "87b6939a962348ba",
-        "type": "ui_led",
-        "z": "4f5b0833ab0a95bb",
-        "order": 3,
-        "group": "0d054da8a009aaec",
-        "width": 0,
-        "height": 0,
-        "label": "Leisure charger",
-        "labelPlacement": "left",
-        "labelAlignment": "left",
-        "colorForValue": [
-            {
-                "color": "#919191",
-                "value": "false",
-                "valueType": "bool"
-            },
-            {
-                "color": "#dea900",
-                "value": "true",
-                "valueType": "bool"
-            }
-        ],
-        "allowColorForValueInMessage": false,
-        "shape": "circle",
-        "showGlow": false,
-        "name": "led leisure charger",
-        "x": 550,
-        "y": 420,
-        "wires": []
-    },
-    {
         "id": "8ce1885ebf3009ea",
         "type": "ui_led",
         "z": "4f5b0833ab0a95bb",
         "order": 2,
-        "group": "0d054da8a009aaec",
+        "group": "466866a9d24aa546",
         "width": 0,
         "height": 0,
         "label": "Fridge",
@@ -3143,37 +3099,6 @@
         "name": "led fridge",
         "x": 520,
         "y": 460,
-        "wires": []
-    },
-    {
-        "id": "8cceda34fc71ed1d",
-        "type": "ui_led",
-        "z": "4f5b0833ab0a95bb",
-        "order": 4,
-        "group": "0d054da8a009aaec",
-        "width": 0,
-        "height": 0,
-        "label": "Starter Charger",
-        "labelPlacement": "left",
-        "labelAlignment": "left",
-        "colorForValue": [
-            {
-                "color": "#919191",
-                "value": "false",
-                "valueType": "bool"
-            },
-            {
-                "color": "#dea900",
-                "value": "true",
-                "valueType": "bool"
-            }
-        ],
-        "allowColorForValueInMessage": false,
-        "shape": "circle",
-        "showGlow": false,
-        "name": "led starter charger",
-        "x": 550,
-        "y": 500,
         "wires": []
     },
     {
