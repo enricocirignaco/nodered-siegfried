@@ -402,7 +402,7 @@
         "tab": "9d7781fc6afac662",
         "order": 1,
         "disp": true,
-        "width": 3,
+        "width": 4,
         "collapse": false,
         "className": ""
     },
@@ -534,63 +534,63 @@
         "className": ""
     },
     {
-        "id": "b3269d3af26c8db5",
+        "id": "fb0a15e582abb3f9",
         "type": "ui_spacer",
         "z": "7d2ee9cb73f16e0a",
         "name": "spacer",
         "group": "7dbe224d7e5b35ba",
         "order": 8,
-        "width": 1,
+        "width": 2,
         "height": 1
     },
     {
-        "id": "b369c4cff370e898",
+        "id": "589aa7d0995af116",
         "type": "ui_spacer",
         "z": "7d2ee9cb73f16e0a",
         "name": "spacer",
         "group": "7dbe224d7e5b35ba",
         "order": 9,
-        "width": 1,
+        "width": 2,
         "height": 1
     },
     {
-        "id": "d86d9682c9e4b9be",
+        "id": "4072fd886cb32671",
         "type": "ui_spacer",
         "z": "7d2ee9cb73f16e0a",
         "name": "spacer",
         "group": "7dbe224d7e5b35ba",
         "order": 10,
-        "width": 1,
+        "width": 2,
         "height": 1
     },
     {
-        "id": "515dadd88c88e61a",
+        "id": "c8c6bf2e129cc65d",
         "type": "ui_spacer",
         "z": "7d2ee9cb73f16e0a",
         "name": "spacer",
         "group": "7dbe224d7e5b35ba",
         "order": 11,
-        "width": 1,
+        "width": 2,
         "height": 1
     },
     {
-        "id": "e9f82ccc5da4951a",
+        "id": "f202e3c36a693d9b",
         "type": "ui_spacer",
         "z": "7d2ee9cb73f16e0a",
         "name": "spacer",
         "group": "7dbe224d7e5b35ba",
         "order": 12,
-        "width": 1,
+        "width": 2,
         "height": 1
     },
     {
-        "id": "7bab46af94d691d2",
+        "id": "2b29544cb8c31275",
         "type": "ui_spacer",
         "z": "7d2ee9cb73f16e0a",
         "name": "spacer",
         "group": "7dbe224d7e5b35ba",
         "order": 13,
-        "width": 1,
+        "width": 2,
         "height": 1
     },
     {
