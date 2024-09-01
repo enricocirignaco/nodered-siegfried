@@ -4561,12 +4561,12 @@
         "type": "ui_slider",
         "z": "15311a68299dc024",
         "name": "",
-        "label": "Upper temperature threshold\\n",
+        "label": "",
         "tooltip": "",
         "group": "466866a9d24aa546",
         "order": 1,
         "width": 7,
-        "height": "3",
+        "height": "1",
         "passthru": true,
         "outs": "end",
         "topic": "topic",
@@ -4575,7 +4575,7 @@
         "max": "15",
         "step": 1,
         "className": "",
-        "x": 390,
+        "x": 310,
         "y": 380,
         "wires": [
             [
@@ -4587,13 +4587,13 @@
         "id": "932d0b15c2f26574",
         "type": "ui_slider",
         "z": "15311a68299dc024",
-        "name": "",
-        "label": "Lower temperature threshold",
+        "name": "Lower temperature threshold",
+        "label": "",
         "tooltip": "",
         "group": "466866a9d24aa546",
         "order": 2,
         "width": 7,
-        "height": 2,
+        "height": "1",
         "passthru": true,
         "outs": "end",
         "topic": "topic",
@@ -4603,7 +4603,7 @@
         "step": 1,
         "className": "",
         "x": 380,
-        "y": 420,
+        "y": 460,
         "wires": [
             [
                 "49fbd3a192947c76"
@@ -4630,7 +4630,7 @@
         "to": "",
         "reg": false,
         "x": 640,
-        "y": 420,
+        "y": 460,
         "wires": [
             []
         ]
@@ -4824,7 +4824,7 @@
         "payload": "1",
         "payloadType": "num",
         "x": 150,
-        "y": 420,
+        "y": 460,
         "wires": [
             [
                 "932d0b15c2f26574"
@@ -4903,6 +4903,48 @@
                 "a9c76782de77f2d3"
             ]
         ]
+    },
+    {
+        "id": "597e4df0620992c0",
+        "type": "ui_text",
+        "z": "15311a68299dc024",
+        "group": "af392092454b5034",
+        "order": 5,
+        "width": "7",
+        "height": "1",
+        "name": "",
+        "label": "Upper temperature threshold",
+        "format": "",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 380,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "6a28e23ad803c3c7",
+        "type": "ui_text",
+        "z": "15311a68299dc024",
+        "group": "af392092454b5034",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Lower temperature threshold",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 380,
+        "y": 420,
+        "wires": []
     },
     {
         "id": "0daefb168cc93c70",
