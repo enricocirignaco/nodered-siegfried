@@ -4395,7 +4395,7 @@
         "label": "",
         "tooltip": "inverter between changing inverter state and high voltage applicances",
         "group": "1f51103af332e4a2",
-        "order": 2,
+        "order": 4,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -4968,111 +4968,6 @@
         "wires": []
     },
     {
-        "id": "0daefb168cc93c70",
-        "type": "ui_led",
-        "z": "7d2ee9cb73f16e0a",
-        "order": 1,
-        "group": "1f51103af332e4a2",
-        "width": 0,
-        "height": 0,
-        "label": "Leisure charger",
-        "labelPlacement": "left",
-        "labelAlignment": "left",
-        "colorForValue": [
-            {
-                "color": "#919191",
-                "value": "false",
-                "valueType": "bool"
-            },
-            {
-                "color": "#dea900",
-                "value": "true",
-                "valueType": "bool"
-            }
-        ],
-        "allowColorForValueInMessage": false,
-        "shape": "circle",
-        "showGlow": false,
-        "name": "led leisure charger",
-        "x": 1070,
-        "y": 260,
-        "wires": []
-    },
-    {
-        "id": "bc2b0f423be5d0f7",
-        "type": "ui_led",
-        "z": "7d2ee9cb73f16e0a",
-        "order": 3,
-        "group": "1f51103af332e4a2",
-        "width": 0,
-        "height": 0,
-        "label": "Starter charger",
-        "labelPlacement": "left",
-        "labelAlignment": "left",
-        "colorForValue": [
-            {
-                "color": "#919191",
-                "value": "false",
-                "valueType": "bool"
-            },
-            {
-                "color": "#dea900",
-                "value": "true",
-                "valueType": "bool"
-            }
-        ],
-        "allowColorForValueInMessage": false,
-        "shape": "circle",
-        "showGlow": false,
-        "name": "led starter charger",
-        "x": 1070,
-        "y": 300,
-        "wires": []
-    },
-    {
-        "id": "f1d8acc740a01bcf",
-        "type": "ui_dropdown",
-        "z": "7d2ee9cb73f16e0a",
-        "name": "leisure charger",
-        "label": "",
-        "tooltip": "",
-        "place": "Off",
-        "group": "1f51103af332e4a2",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "multiple": false,
-        "options": [
-            {
-                "label": "Off",
-                "value": false,
-                "type": "bool"
-            },
-            {
-                "label": "On",
-                "value": true,
-                "type": "bool"
-            },
-            {
-                "label": "Auto(when ignition is on)",
-                "value": "auto",
-                "type": "str"
-            }
-        ],
-        "payload": "",
-        "topic": "setting",
-        "topicType": "str",
-        "className": "",
-        "x": 400,
-        "y": 260,
-        "wires": [
-            [
-                "dbf6b2b61f5fb9ad"
-            ]
-        ]
-    },
-    {
         "id": "93b36a4c1af7244a",
         "type": "ui_dropdown",
         "z": "7d2ee9cb73f16e0a",
@@ -5081,7 +4976,7 @@
         "tooltip": "",
         "place": "Off",
         "group": "1f51103af332e4a2",
-        "order": 4,
+        "order": 7,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -5151,8 +5046,8 @@
         "y": 260,
         "wires": [
             [
-                "0daefb168cc93c70",
-                "819f986947063229"
+                "819f986947063229",
+                "0daefb168cc93c70"
             ]
         ]
     },
@@ -5269,8 +5164,8 @@
         "y": 300,
         "wires": [
             [
-                "bc2b0f423be5d0f7",
-                "b571123d946be4c9"
+                "b571123d946be4c9",
+                "bc2b0f423be5d0f7"
             ]
         ]
     },
@@ -5349,7 +5244,7 @@
         "label": "Chargers delay in seconds",
         "tooltip": "inverter between changing inverter state and high voltage applicances",
         "group": "1f51103af332e4a2",
-        "order": 5,
+        "order": 3,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -5499,6 +5394,111 @@
         ],
         "x": 995,
         "y": 340,
+        "wires": []
+    },
+    {
+        "id": "bc2b0f423be5d0f7",
+        "type": "ui_led",
+        "z": "7d2ee9cb73f16e0a",
+        "order": 6,
+        "group": "1f51103af332e4a2",
+        "width": 0,
+        "height": 0,
+        "label": "Starter charger",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#919191",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#dea900",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": false,
+        "name": "led starter charger",
+        "x": 1070,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "f1d8acc740a01bcf",
+        "type": "ui_dropdown",
+        "z": "7d2ee9cb73f16e0a",
+        "name": "leisure charger",
+        "label": "",
+        "tooltip": "",
+        "place": "Off",
+        "group": "1f51103af332e4a2",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Off",
+                "value": false,
+                "type": "bool"
+            },
+            {
+                "label": "On",
+                "value": true,
+                "type": "bool"
+            },
+            {
+                "label": "Auto(when ignition is on)",
+                "value": "auto",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "setting",
+        "topicType": "str",
+        "className": "",
+        "x": 400,
+        "y": 260,
+        "wires": [
+            [
+                "dbf6b2b61f5fb9ad"
+            ]
+        ]
+    },
+    {
+        "id": "0daefb168cc93c70",
+        "type": "ui_led",
+        "z": "7d2ee9cb73f16e0a",
+        "order": 2,
+        "group": "1f51103af332e4a2",
+        "width": 0,
+        "height": 0,
+        "label": "Leisure charger",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#919191",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#dea900",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": false,
+        "name": "led leisure charger",
+        "x": 1070,
+        "y": 260,
         "wires": []
     },
     {
