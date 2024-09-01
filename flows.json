@@ -464,9 +464,9 @@
         "type": "ui_group",
         "name": "General",
         "tab": "9d7781fc6afac662",
-        "order": 4,
+        "order": 5,
         "disp": true,
-        "width": "7",
+        "width": 6,
         "collapse": false,
         "className": ""
     },
@@ -494,7 +494,7 @@
         "type": "ui_group",
         "name": "Fridge",
         "tab": "9d7781fc6afac662",
-        "order": 5,
+        "order": 4,
         "disp": true,
         "width": 7,
         "collapse": false,
@@ -518,7 +518,7 @@
         "tab": "9d7781fc6afac662",
         "order": 3,
         "disp": true,
-        "width": "7",
+        "width": 6,
         "collapse": false,
         "className": ""
     },
@@ -529,7 +529,7 @@
         "tab": "9d7781fc6afac662",
         "order": 7,
         "disp": true,
-        "width": 7,
+        "width": 6,
         "collapse": false,
         "className": ""
     },
