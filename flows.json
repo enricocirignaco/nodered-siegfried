@@ -169,12 +169,14 @@
             "d6785ee679911bd6",
             "e3b03333b844e614",
             "9af0b603d3c5615e",
-            "e8293c6ee77da59e"
+            "e8293c6ee77da59e",
+            "684f89f895a628c6",
+            "07cbc3f57b741996"
         ],
         "x": 94,
         "y": 39,
         "w": 612,
-        "h": 682
+        "h": 762
     },
     {
         "id": "cd72b915c94ff1a4",
@@ -6014,7 +6016,7 @@
         "type": "ui_text",
         "z": "68eb8e61689f5b6b",
         "g": "eaf8bdbc0b32a5bb",
-        "group": "7c129b20979e21c8",
+        "group": "847e6ebb38b5779a",
         "order": 4,
         "width": 0,
         "height": 0,
@@ -6053,7 +6055,9 @@
                 "494b9f025a690547",
                 "3be3ad5243d93026",
                 "d6785ee679911bd6",
-                "0a679e414a51a829"
+                "0a679e414a51a829",
+                "684f89f895a628c6",
+                "07cbc3f57b741996"
             ]
         ]
     },
@@ -6218,7 +6222,7 @@
         "useDifferentColor": false,
         "className": "",
         "x": 530,
-        "y": 680,
+        "y": 760,
         "wires": [
             []
         ]
@@ -6238,7 +6242,7 @@
         "finalize": "",
         "libs": [],
         "x": 360,
-        "y": 680,
+        "y": 760,
         "wires": [
             [
                 "f0c81d8d65642c43"
@@ -6269,7 +6273,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 210,
-        "y": 680,
+        "y": 760,
         "wires": [
             [
                 "2f3766856057ef0d"
@@ -6282,7 +6286,7 @@
         "z": "68eb8e61689f5b6b",
         "g": "eaf8bdbc0b32a5bb",
         "group": "847e6ebb38b5779a",
-        "order": 3,
+        "order": 2,
         "width": 0,
         "height": 0,
         "name": "solar voltage",
@@ -6304,7 +6308,7 @@
         "z": "68eb8e61689f5b6b",
         "g": "eaf8bdbc0b32a5bb",
         "group": "847e6ebb38b5779a",
-        "order": 4,
+        "order": 3,
         "width": 0,
         "height": 0,
         "name": "solar current",
@@ -6339,7 +6343,7 @@
         "fontSize": 16,
         "color": "#000000",
         "x": 560,
-        "y": 480,
+        "y": 560,
         "wires": []
     },
     {
@@ -6361,7 +6365,7 @@
         "fontSize": 16,
         "color": "#000000",
         "x": 560,
-        "y": 520,
+        "y": 600,
         "wires": []
     },
     {
@@ -6378,7 +6382,7 @@
         "finalize": "",
         "libs": [],
         "x": 390,
-        "y": 480,
+        "y": 560,
         "wires": [
             [
                 "57d367224d09ccd6"
@@ -6399,7 +6403,7 @@
         "finalize": "",
         "libs": [],
         "x": 390,
-        "y": 520,
+        "y": 600,
         "wires": [
             [
                 "dbefbde828d006d7"
@@ -6512,7 +6516,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 350,
-        "y": 640,
+        "y": 720,
         "wires": [
             [
                 "f0c81d8d65642c43"
@@ -6538,7 +6542,7 @@
         "fontSize": 16,
         "color": "#000000",
         "x": 580,
-        "y": 560,
+        "y": 640,
         "wires": []
     },
     {
@@ -6551,11 +6555,55 @@
             "a26469027be8a376"
         ],
         "x": 145,
-        "y": 560,
+        "y": 640,
         "wires": [
             [
                 "9af0b603d3c5615e"
             ]
         ]
+    },
+    {
+        "id": "684f89f895a628c6",
+        "type": "ui_text",
+        "z": "68eb8e61689f5b6b",
+        "g": "eaf8bdbc0b32a5bb",
+        "group": "847e6ebb38b5779a",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "yield today",
+        "label": "Yield Yesterday",
+        "format": "{{msg.payload.H22}}0Wh",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 550,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "07cbc3f57b741996",
+        "type": "ui_text",
+        "z": "68eb8e61689f5b6b",
+        "g": "eaf8bdbc0b32a5bb",
+        "group": "847e6ebb38b5779a",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "may power today",
+        "label": "Max. Power Yesterday",
+        "format": "{{msg.payload.H23}}W",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 570,
+        "y": 480,
+        "wires": []
     }
 ]
