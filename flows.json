@@ -429,7 +429,7 @@
     {
         "id": "847e6ebb38b5779a",
         "type": "ui_group",
-        "name": "Solar 1",
+        "name": "Solar",
         "tab": "6e2e8a772b0722ac",
         "order": 2,
         "disp": false,
@@ -549,7 +549,7 @@
         "tab": "6e2e8a772b0722ac",
         "order": 3,
         "disp": true,
-        "width": "6",
+        "width": "10",
         "collapse": false,
         "className": ""
     },
