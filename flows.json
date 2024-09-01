@@ -503,11 +503,11 @@
     {
         "id": "1f51103af332e4a2",
         "type": "ui_group",
-        "name": "Chargers",
+        "name": "Chargers & Inverter",
         "tab": "9d7781fc6afac662",
         "order": 6,
         "disp": true,
-        "width": 6,
+        "width": "6",
         "collapse": false,
         "className": ""
     },
@@ -2995,7 +2995,7 @@
         "type": "ui_led",
         "z": "4f5b0833ab0a95bb",
         "order": 1,
-        "group": "0d054da8a009aaec",
+        "group": "1f51103af332e4a2",
         "width": 0,
         "height": 0,
         "label": "Inverter",
