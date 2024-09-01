@@ -530,7 +530,7 @@
         "group": "7dbe224d7e5b35ba",
         "order": 12,
         "width": "4",
-        "height": "2"
+        "height": "1"
     },
     {
         "id": "fa514a058ef09111",
@@ -3788,6 +3788,27 @@
         "className": "",
         "x": 330,
         "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fb9f280684776bcd",
+        "type": "ui_template",
+        "z": "8f469e385c0b1581",
+        "group": "7dbe224d7e5b35ba",
+        "name": "",
+        "order": 12,
+        "width": 0,
+        "height": 0,
+        "format": "<script>\n    (function(scope) {\n    scope.$watch('msg.payload', function(value) {\n        if (!isNaN(value)) {\n            // Assuming you have a slider input with id 'mySlider'\n            var slider = document.getElementById('mySlider');\n            slider.value = Number(value); // Explicitly cast to a number\n        }\n    });\n    \n    // Event listener for slider to send value back to Node-RED\n    document.getElementById('mySlider').addEventListener('input', function(event) {\n        var newValue = parseFloat(event.target.value); // Ensure it's a number\n        if (!isNaN(newValue)) {\n            scope.send({payload: newValue});  // Send value to Node-RED\n        }\n    });\n})(scope);\n</script>\n\n<!-- Add the actual slider -->\n<input id=\"mySlider\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"50\">",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 300,
+        "y": 460,
         "wires": [
             []
         ]
