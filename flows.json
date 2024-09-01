@@ -538,9 +538,9 @@
         "z": "7d2ee9cb73f16e0a",
         "name": "spacer",
         "group": "80e5e30f3656b98c",
-        "order": 4,
-        "width": 1,
-        "height": 1
+        "order": 8,
+        "width": "5",
+        "height": "4"
     },
     {
         "id": "201c2c30807ef967",
