@@ -4561,12 +4561,12 @@
         "type": "ui_slider",
         "z": "15311a68299dc024",
         "name": "",
-        "label": "Upper temperature threshold           svkmfd vdjvnd",
+        "label": "Upper temperature threshold",
         "tooltip": "",
         "group": "466866a9d24aa546",
         "order": 1,
         "width": 7,
-        "height": 2,
+        "height": "3",
         "passthru": true,
         "outs": "end",
         "topic": "topic",
@@ -4575,7 +4575,7 @@
         "max": "15",
         "step": 1,
         "className": "",
-        "x": 430,
+        "x": 380,
         "y": 380,
         "wires": [
             [
