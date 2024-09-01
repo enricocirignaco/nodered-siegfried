@@ -6571,7 +6571,7 @@
         "order": 5,
         "width": 0,
         "height": 0,
-        "name": "yield today",
+        "name": "yield yesterday",
         "label": "Yield Yesterday",
         "format": "{{msg.payload.H22}}0Wh",
         "layout": "row-spread",
@@ -6580,7 +6580,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 550,
+        "x": 560,
         "y": 440,
         "wires": []
     },
@@ -6593,7 +6593,7 @@
         "order": 6,
         "width": 0,
         "height": 0,
-        "name": "may power today",
+        "name": "may power yesterday",
         "label": "Max. Power Yesterday",
         "format": "{{msg.payload.H23}}W",
         "layout": "row-spread",
@@ -6602,7 +6602,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 570,
+        "x": 580,
         "y": 480,
         "wires": []
     }
