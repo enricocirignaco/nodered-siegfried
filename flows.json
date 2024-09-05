@@ -152,7 +152,6 @@
             "8df345a7f0caaad9",
             "11134be126d8a9e0",
             "0dfd21a273207c9f",
-            "8c0ea0e11e39eaf0",
             "f0c81d8d65642c43",
             "2f3766856057ef0d",
             "c1b3a7704468558e",
@@ -160,7 +159,6 @@
             "3dadbe1cb4047158",
             "fe5440428b83da93",
             "57d367224d09ccd6",
-            "d2ac302f1c601a2b",
             "3809706fd2674d67",
             "7510582f92b6dfdd",
             "494b9f025a690547",
@@ -5991,6 +5989,56 @@
         "x": 380,
         "y": 300,
         "wires": []
+    },
+    {
+        "id": "19ce1545c0e5b94f",
+        "type": "ui_template",
+        "z": "13952ff3682a9fc4",
+        "group": "57ca5f37d1ee1a2a",
+        "name": "",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n    @media (max-width: 768px) {\n\n        /* For iPhone or smaller devices */\n        .nr-dashboard-cardclass {\n            width: 100% !important;\n            /* Full width for small screens */\n        }\n    }\n\n    @media (min-width: 769px) and (max-width: 1024px) {\n\n        /* For iPad or medium devices */\n        .nr-dashboard-cardclass {\n            width: 50% !important;\n            /* Half width for medium screens */\n        }\n    }\n\n    @media (min-width: 1025px) {\n\n        /* For larger screens */\n        .nr-dashboard-cardclass {\n            width: 33% !important;\n            /* One-third width for larger screens */\n        }\n    }\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 320,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8b83c82c942b5194",
+        "type": "inject",
+        "z": "13952ff3682a9fc4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 400,
+        "wires": [
+            [
+                "19ce1545c0e5b94f"
+            ]
+        ]
     },
     {
         "id": "49f184367216d935",
