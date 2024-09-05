@@ -282,7 +282,7 @@
     {
         "id": "6f01fee901ee4e98",
         "type": "ui_tab",
-        "name": "Living",
+        "name": "Home",
         "icon": "dashboard",
         "order": 1,
         "disabled": false,
@@ -422,7 +422,7 @@
     {
         "id": "6e2e8a772b0722ac",
         "type": "ui_tab",
-        "name": "Solar",
+        "name": "Energy",
         "icon": "solar",
         "order": 2,
         "disabled": false,
