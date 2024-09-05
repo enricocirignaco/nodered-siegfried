@@ -169,11 +169,13 @@
             "9af0b603d3c5615e",
             "e8293c6ee77da59e",
             "684f89f895a628c6",
-            "07cbc3f57b741996"
+            "07cbc3f57b741996",
+            "4820962ab881b1b6",
+            "fbe7107c5e83ca0f"
         ],
         "x": 94,
         "y": 39,
-        "w": 612,
+        "w": 712,
         "h": 762
     },
     {
@@ -400,7 +402,7 @@
         "type": "ui_group",
         "name": "General",
         "tab": "9d7781fc6afac662",
-        "order": 1,
+        "order": 2,
         "disp": true,
         "width": "4",
         "collapse": false,
@@ -441,8 +443,8 @@
         "id": "23c60b13edc12513",
         "type": "ui_group",
         "name": "Lights",
-        "tab": "6f01fee901ee4e98",
-        "order": 4,
+        "tab": "9d7781fc6afac662",
+        "order": 1,
         "disp": true,
         "width": "10",
         "collapse": false,
@@ -483,7 +485,7 @@
         "type": "ui_group",
         "name": "Fridge",
         "tab": "9d7781fc6afac662",
-        "order": 3,
+        "order": 4,
         "disp": true,
         "width": 5,
         "collapse": false,
@@ -494,7 +496,7 @@
         "type": "ui_group",
         "name": "Chargers & Inverter",
         "tab": "9d7781fc6afac662",
-        "order": 2,
+        "order": 3,
         "disp": true,
         "width": 5,
         "collapse": false,
@@ -505,7 +507,7 @@
         "type": "ui_group",
         "name": "Manual Controls",
         "tab": "9d7781fc6afac662",
-        "order": 4,
+        "order": 5,
         "disp": true,
         "width": 5,
         "collapse": false,
@@ -516,7 +518,7 @@
         "type": "ui_group",
         "name": "Water",
         "tab": "9d7781fc6afac662",
-        "order": 5,
+        "order": 6,
         "disp": true,
         "width": 5,
         "collapse": false,
@@ -562,6 +564,17 @@
         "order": 3,
         "width": 1,
         "height": 1
+    },
+    {
+        "id": "d6bbdaf404807775",
+        "type": "ui_group",
+        "name": "Solar",
+        "tab": "6f01fee901ee4e98",
+        "order": 4,
+        "disp": true,
+        "width": "10",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "201c2c30807ef967",
@@ -6065,7 +6078,8 @@
                 "d6785ee679911bd6",
                 "0a679e414a51a829",
                 "684f89f895a628c6",
-                "07cbc3f57b741996"
+                "07cbc3f57b741996",
+                "4820962ab881b1b6"
             ]
         ]
     },
@@ -6086,7 +6100,8 @@
         "y": 120,
         "wires": [
             [
-                "8a9f649dd8a4d08e"
+                "8a9f649dd8a4d08e",
+                "fbe7107c5e83ca0f"
             ]
         ]
     },
@@ -6612,6 +6627,57 @@
         "color": "#000000",
         "x": 580,
         "y": 480,
+        "wires": []
+    },
+    {
+        "id": "4820962ab881b1b6",
+        "type": "ui_gauge",
+        "z": "68eb8e61689f5b6b",
+        "g": "eaf8bdbc0b32a5bb",
+        "name": "Solar Power",
+        "group": "d6bbdaf404807775",
+        "order": 1,
+        "width": "10",
+        "height": "4",
+        "gtype": "gage",
+        "title": "Solar",
+        "label": "W",
+        "format": "{{msg.payload.PPV}}",
+        "min": 0,
+        "max": "200",
+        "colors": [
+            "#dea900",
+            "#dea900",
+            "#dea900"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 710,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "fbe7107c5e83ca0f",
+        "type": "ui_text",
+        "z": "68eb8e61689f5b6b",
+        "g": "eaf8bdbc0b32a5bb",
+        "group": "d6bbdaf404807775",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "mppt state",
+        "label": "MPPT State",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 710,
+        "y": 120,
         "wires": []
     }
 ]
