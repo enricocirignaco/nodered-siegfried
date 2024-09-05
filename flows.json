@@ -368,7 +368,7 @@
         "site": {
             "name": "Siegfried",
             "hideToolbar": "false",
-            "allowSwipe": "true",
+            "allowSwipe": "false",
             "lockMenu": "false",
             "allowTempTheme": "true",
             "dateFormat": "DD/MM/YYYY",
@@ -5989,56 +5989,6 @@
         "x": 380,
         "y": 300,
         "wires": []
-    },
-    {
-        "id": "19ce1545c0e5b94f",
-        "type": "ui_template",
-        "z": "13952ff3682a9fc4",
-        "group": "57ca5f37d1ee1a2a",
-        "name": "",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "format": "<style>\n    /* CSS to initially set the width of the widget to auto */\n    .nr-dashboard-cardclass {\n        width: auto !important;\n        /* Initial auto width for flexibility */\n    }\n\n    /* Set max width to 100% when screen width is smaller than the widget */\n    @media (max-width: 600px) {\n\n        /* Adjust this value based on your default widget size */\n        .nr-dashboard-cardclass {\n            width: 100% !important;\n            /* Force full width */\n            max-width: 100% !important;\n            /* Ensure it doesn't exceed screen width */\n            box-sizing: border-box;\n            /* Include padding and border in the width calculation */\n        }\n    }\n</style>\n\n<script>\n    (function() {\n        function adjustWidgetWidth() {\n            var screenWidth = window.innerWidth; // Get the current screen width\n            var widgets = document.querySelectorAll('.nr-dashboard-cardclass'); // Select all dashboard widgets\n            \n            widgets.forEach(function(widget) {\n                var defaultWidth = widget.offsetWidth; // Get the default width of each widget\n                if (defaultWidth > screenWidth) { // If the default width exceeds screen width\n                    widget.style.width = '100%'; // Set width to 100%\n                    widget.style.maxWidth = '100%'; // Ensure it does not exceed screen width\n                } else {\n                    widget.style.width = 'auto'; // Reset to auto if it fits\n                }\n            });\n        }\n\n        // Call the function on load and resize\n        window.addEventListener('load', adjustWidgetWidth);\n        window.addEventListener('resize', adjustWidgetWidth);\n    })();\n</script>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 320,
-        "y": 400,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "8b83c82c942b5194",
-        "type": "inject",
-        "z": "13952ff3682a9fc4",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 120,
-        "y": 400,
-        "wires": [
-            [
-                "19ce1545c0e5b94f"
-            ]
-        ]
     },
     {
         "id": "49f184367216d935",
