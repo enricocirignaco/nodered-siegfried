@@ -5898,6 +5898,31 @@
         ]
     },
     {
+        "id": "0cbc832629899d28",
+        "type": "inject",
+        "z": "13952ff3682a9fc4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 290,
+        "y": 80,
+        "wires": [
+            [
+                "862ee734b969889d"
+            ]
+        ]
+    },
+    {
         "id": "49f184367216d935",
         "type": "ui_gauge",
         "z": "68eb8e61689f5b6b",
