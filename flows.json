@@ -194,8 +194,8 @@
             "70d8484d067914b5",
             "85a8f1a036b01587"
         ],
-        "x": 394,
-        "y": 479,
+        "x": 154,
+        "y": 319,
         "w": 252,
         "h": 122
     },
@@ -1254,13 +1254,15 @@
         "name": "Input_3",
         "pin": "25",
         "intype": "tri",
-        "debounce": "25",
+        "debounce": "0",
         "read": true,
         "bcm": true,
         "x": 870,
         "y": 320,
         "wires": [
-            []
+            [
+                "5a2e31d0c3261144"
+            ]
         ]
     },
     {
@@ -1594,10 +1596,7 @@
         "type": "link in",
         "z": "4f5b0833ab0a95bb",
         "name": "valve_2_gpio",
-        "links": [
-            "d850506da8fb975c",
-            "fc2dde5f98b3403e"
-        ],
+        "links": [],
         "x": 395,
         "y": 280,
         "wires": [
@@ -1612,7 +1611,10 @@
         "type": "link in",
         "z": "4f5b0833ab0a95bb",
         "name": "valve_1_gpio",
-        "links": [],
+        "links": [
+            "d850506da8fb975c",
+            "fc2dde5f98b3403e"
+        ],
         "x": 395,
         "y": 320,
         "wires": [
@@ -2215,29 +2217,6 @@
             [
                 "2ffa2e3c9c3157b5"
             ]
-        ]
-    },
-    {
-        "id": "20ceaa1f73b958fc",
-        "type": "inject",
-        "z": "4f5b0833ab0a95bb",
-        "name": "",
-        "props": [
-            {
-                "p": "enabled",
-                "v": "false",
-                "vt": "bool"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 110,
-        "y": 620,
-        "wires": [
-            []
         ]
     },
     {
@@ -3572,7 +3551,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1100,
+        "x": 1280,
         "y": 100,
         "wires": [
             []
@@ -3731,6 +3710,19 @@
         "name": "led inverter",
         "x": 530,
         "y": 180,
+        "wires": []
+    },
+    {
+        "id": "5a2e31d0c3261144",
+        "type": "link out",
+        "z": "4f5b0833ab0a95bb",
+        "name": "water_sensor_gpio",
+        "mode": "link",
+        "links": [
+            "37b73a8acb305236"
+        ],
+        "x": 1405,
+        "y": 320,
         "wires": []
     },
     {
@@ -5524,39 +5516,9 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 1270,
-        "y": 220,
+        "x": 1290,
+        "y": 160,
         "wires": []
-    },
-    {
-        "id": "fc2dde5f98b3403e",
-        "type": "link out",
-        "z": "13952ff3682a9fc4",
-        "name": "valve_0_gpio",
-        "mode": "link",
-        "links": [
-            "1101cf3640e2ece0"
-        ],
-        "x": 1095,
-        "y": 420,
-        "wires": []
-    },
-    {
-        "id": "bc64d185a368e816",
-        "type": "link in",
-        "z": "13952ff3682a9fc4",
-        "name": "hardware_state_trigger",
-        "links": [
-            "48f32c625a731684",
-            "e9f912577a5edc23"
-        ],
-        "x": 695,
-        "y": 420,
-        "wires": [
-            [
-                "4f1524a1e922f485"
-            ]
-        ]
     },
     {
         "id": "4f1524a1e922f485",
@@ -5569,7 +5531,7 @@
                 "p": "payload",
                 "pt": "msg",
                 "to": "water_meter_cnt",
-                "tot": "global"
+                "tot": "flow"
             }
         ],
         "action": "",
@@ -5578,7 +5540,7 @@
         "to": "",
         "reg": false,
         "x": 910,
-        "y": 220,
+        "y": 160,
         "wires": [
             [
                 "c137f6a704608c74"
@@ -5605,7 +5567,7 @@
         "to": "",
         "reg": false,
         "x": 670,
-        "y": 220,
+        "y": 160,
         "wires": [
             [
                 "4f1524a1e922f485"
@@ -5617,7 +5579,7 @@
         "type": "function",
         "z": "13952ff3682a9fc4",
         "name": "conversion",
-        "func": "\nconst capacity = 15.0;\nvar consumed_in_l = msg.payload/500.0;\nmsg.payload = capacity - consumed_in_l;\nreturn msg;",
+        "func": "\nconst capacity = flow.get(\"tank_capacity\")\nconst counter = flow.get(\"water_meter_cnt\");\n\nlet consumed_in_l = counter/500.0;\nmsg.payload = capacity - consumed_in_l;\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -5625,7 +5587,7 @@
         "finalize": "",
         "libs": [],
         "x": 1110,
-        "y": 220,
+        "y": 160,
         "wires": [
             [
                 "b4c35b2e757c1d11"
@@ -5653,95 +5615,10 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 290,
-        "y": 220,
+        "y": 160,
         "wires": [
             [
                 "4bd594781653cbd1"
-            ]
-        ]
-    },
-    {
-        "id": "68c5af39b6d9781e",
-        "type": "ui_switch",
-        "z": "13952ff3682a9fc4",
-        "name": "",
-        "label": "Internal tank",
-        "tooltip": "",
-        "group": "689ec1180c141d67",
-        "order": 2,
-        "width": "3",
-        "height": 1,
-        "passthru": false,
-        "decouple": "false",
-        "topic": "",
-        "topicType": "str",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "className": "",
-        "x": 930,
-        "y": 460,
-        "wires": [
-            [
-                "d850506da8fb975c"
-            ]
-        ]
-    },
-    {
-        "id": "12996cef4976cab0",
-        "type": "ui_switch",
-        "z": "13952ff3682a9fc4",
-        "name": "",
-        "label": "External Tank",
-        "tooltip": "",
-        "group": "689ec1180c141d67",
-        "order": 4,
-        "width": "3",
-        "height": 1,
-        "passthru": false,
-        "decouple": "false",
-        "topic": "aux_output",
-        "topicType": "str",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "className": "",
-        "x": 940,
-        "y": 420,
-        "wires": [
-            [
-                "fc2dde5f98b3403e"
-            ]
-        ]
-    },
-    {
-        "id": "10799c20c2d92595",
-        "type": "random",
-        "z": "13952ff3682a9fc4",
-        "name": "",
-        "low": "0",
-        "high": "60",
-        "inte": "true",
-        "property": "payload",
-        "x": 940,
-        "y": 120,
-        "wires": [
-            [
-                "b4c35b2e757c1d11"
             ]
         ]
     },
@@ -5765,7 +5642,7 @@
         "step": 1,
         "className": "",
         "x": 380,
-        "y": 260,
+        "y": 200,
         "wires": [
             [
                 "4d34a17143a2c355"
@@ -5790,7 +5667,7 @@
         "payload": "60",
         "payloadType": "num",
         "x": 150,
-        "y": 260,
+        "y": 200,
         "wires": [
             [
                 "1535d33324d63d8f"
@@ -5817,38 +5694,12 @@
         "to": "",
         "reg": false,
         "x": 670,
-        "y": 260,
+        "y": 200,
         "wires": [
             [
                 "4f1524a1e922f485"
             ]
         ]
-    },
-    {
-        "id": "d850506da8fb975c",
-        "type": "link out",
-        "z": "13952ff3682a9fc4",
-        "name": "valve_1_gpio",
-        "mode": "link",
-        "links": [
-            "1101cf3640e2ece0"
-        ],
-        "x": 1095,
-        "y": 460,
-        "wires": []
-    },
-    {
-        "id": "c26791e7295a5c67",
-        "type": "link out",
-        "z": "13952ff3682a9fc4",
-        "name": "valve_1_gpio",
-        "mode": "link",
-        "links": [
-            "57aee4dc74f81aab"
-        ],
-        "x": 1095,
-        "y": 500,
-        "wires": []
     },
     {
         "id": "90ac10f75058bd6c",
@@ -5875,8 +5726,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 560,
-        "y": 560,
+        "x": 320,
+        "y": 400,
         "wires": []
     },
     {
@@ -5904,8 +5755,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 560,
-        "y": 520,
+        "x": 320,
+        "y": 360,
         "wires": []
     },
     {
@@ -5917,8 +5768,8 @@
         "links": [
             "e6ea961978efc0f1"
         ],
-        "x": 435,
-        "y": 520,
+        "x": 195,
+        "y": 360,
         "wires": [
             [
                 "0ddebecdce249942"
@@ -5934,40 +5785,11 @@
         "links": [
             "e4055112bf86b97c"
         ],
-        "x": 435,
-        "y": 560,
+        "x": 195,
+        "y": 400,
         "wires": [
             [
                 "90ac10f75058bd6c"
-            ]
-        ]
-    },
-    {
-        "id": "89c7b98f77611e37",
-        "type": "inject",
-        "z": "13952ff3682a9fc4",
-        "name": "",
-        "props": [
-            {
-                "p": "enabled",
-                "v": "false",
-                "vt": "bool"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 150,
-        "y": 100,
-        "wires": [
-            [
-                "5a39df5cc1fe2616",
-                "1535d33324d63d8f",
-                "12996cef4976cab0",
-                "68c5af39b6d9781e",
-                "b4c35b2e757c1d11"
             ]
         ]
     },
@@ -5989,8 +5811,91 @@
         "fontSize": 16,
         "color": "#000000",
         "x": 380,
-        "y": 300,
+        "y": 240,
         "wires": []
+    },
+    {
+        "id": "37b73a8acb305236",
+        "type": "link in",
+        "z": "13952ff3682a9fc4",
+        "name": "hardware_state_trigger",
+        "links": [
+            "5a2e31d0c3261144"
+        ],
+        "x": 255,
+        "y": 120,
+        "wires": [
+            [
+                "862ee734b969889d"
+            ]
+        ]
+    },
+    {
+        "id": "862ee734b969889d",
+        "type": "function",
+        "z": "13952ff3682a9fc4",
+        "name": "increment counter",
+        "func": "let counter = flow.get(\"water_meter_cnt\")+1;\nflow.set(\"water_meter_cnt\", counter);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 120,
+        "wires": [
+            [
+                "4f1524a1e922f485"
+            ]
+        ]
+    },
+    {
+        "id": "fc2dde5f98b3403e",
+        "type": "link out",
+        "z": "13952ff3682a9fc4",
+        "name": "valve_1_gpio",
+        "mode": "link",
+        "links": [
+            "ee7d7e06e788195f"
+        ],
+        "x": 475,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "12996cef4976cab0",
+        "type": "ui_switch",
+        "z": "13952ff3682a9fc4",
+        "name": "",
+        "label": "External Tank",
+        "tooltip": "",
+        "group": "689ec1180c141d67",
+        "order": 4,
+        "width": "3",
+        "height": 1,
+        "passthru": false,
+        "decouple": "false",
+        "topic": "aux_output",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 320,
+        "y": 280,
+        "wires": [
+            [
+                "fc2dde5f98b3403e"
+            ]
+        ]
     },
     {
         "id": "49f184367216d935",
