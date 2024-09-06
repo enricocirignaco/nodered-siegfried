@@ -171,7 +171,9 @@
             "684f89f895a628c6",
             "07cbc3f57b741996",
             "4820962ab881b1b6",
-            "fbe7107c5e83ca0f"
+            "fbe7107c5e83ca0f",
+            "2152989f38973e6d",
+            "d07fe6cbc0305dca"
         ],
         "x": 94,
         "y": 39,
@@ -6076,7 +6078,8 @@
                 "0a679e414a51a829",
                 "684f89f895a628c6",
                 "07cbc3f57b741996",
-                "4820962ab881b1b6"
+                "4820962ab881b1b6",
+                "d07fe6cbc0305dca"
             ]
         ]
     },
@@ -6168,6 +6171,7 @@
         "name": "Parser",
         "func": "\n\nmsg.payload = Math.round((msg.payload.IL/1000) * (msg.payload.V/1000));\nreturn msg;",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -6363,7 +6367,7 @@
         "fontSize": 16,
         "color": "#000000",
         "x": 560,
-        "y": 560,
+        "y": 540,
         "wires": []
     },
     {
@@ -6385,7 +6389,7 @@
         "fontSize": 16,
         "color": "#000000",
         "x": 560,
-        "y": 600,
+        "y": 580,
         "wires": []
     },
     {
@@ -6402,7 +6406,7 @@
         "finalize": "",
         "libs": [],
         "x": 390,
-        "y": 560,
+        "y": 540,
         "wires": [
             [
                 "57d367224d09ccd6"
@@ -6423,7 +6427,7 @@
         "finalize": "",
         "libs": [],
         "x": 390,
-        "y": 600,
+        "y": 580,
         "wires": [
             [
                 "dbefbde828d006d7"
@@ -6562,7 +6566,7 @@
         "fontSize": 16,
         "color": "#000000",
         "x": 580,
-        "y": 640,
+        "y": 660,
         "wires": []
     },
     {
@@ -6575,7 +6579,7 @@
             "a26469027be8a376"
         ],
         "x": 145,
-        "y": 640,
+        "y": 660,
         "wires": [
             [
                 "9af0b603d3c5615e"
@@ -6676,5 +6680,48 @@
         "x": 710,
         "y": 120,
         "wires": []
+    },
+    {
+        "id": "2152989f38973e6d",
+        "type": "ui_text",
+        "z": "68eb8e61689f5b6b",
+        "g": "eaf8bdbc0b32a5bb",
+        "group": "7c129b20979e21c8",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "load current",
+        "label": "Load Current",
+        "format": "{{msg.payload}}A",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 550,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "d07fe6cbc0305dca",
+        "type": "function",
+        "z": "68eb8e61689f5b6b",
+        "g": "eaf8bdbc0b32a5bb",
+        "name": "Parser",
+        "func": "msg.payload = msg.payload.IL / 1000;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 620,
+        "wires": [
+            [
+                "2152989f38973e6d"
+            ]
+        ]
     }
 ]
