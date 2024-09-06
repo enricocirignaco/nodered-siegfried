@@ -1161,7 +1161,8 @@
         "y": 440,
         "wires": [
             [
-                "929776411fb44892"
+                "929776411fb44892",
+                "e4058b35ae9d97a9"
             ]
         ]
     },
@@ -1588,7 +1589,8 @@
         "y": 520,
         "wires": [
             [
-                "e730899400c089da"
+                "e730899400c089da",
+                "622837213d71ad59"
             ]
         ]
     },
@@ -3582,6 +3584,68 @@
         ]
     },
     {
+        "id": "e4058b35ae9d97a9",
+        "type": "ui_led",
+        "z": "4f5b0833ab0a95bb",
+        "order": 6,
+        "group": "1f51103af332e4a2",
+        "width": 0,
+        "height": 0,
+        "label": "Leisure charger",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#919191",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#dea900",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": false,
+        "name": "led leisure charger",
+        "x": 550,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "622837213d71ad59",
+        "type": "ui_led",
+        "z": "4f5b0833ab0a95bb",
+        "order": 8,
+        "group": "1f51103af332e4a2",
+        "width": 0,
+        "height": 0,
+        "label": "Starter charger",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#919191",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#dea900",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": false,
+        "name": "led starter charger",
+        "x": 550,
+        "y": 500,
+        "wires": []
+    },
+    {
         "id": "de58fdee4a97426e",
         "type": "ui_led",
         "z": "8f469e385c0b1581",
@@ -3842,8 +3906,7 @@
         "y": 260,
         "wires": [
             [
-                "dabafd105a9b99a2",
-                "4b54c3108b80078b"
+                "dabafd105a9b99a2"
             ]
         ]
     },
@@ -4006,8 +4069,7 @@
         "wires": [
             [
                 "29b2917c6d628102",
-                "51b801b4c2d1aa62",
-                "4b54c3108b80078b"
+                "51b801b4c2d1aa62"
             ]
         ]
     },
@@ -4477,22 +4539,6 @@
         "color": "#000000",
         "x": 390,
         "y": 520,
-        "wires": []
-    },
-    {
-        "id": "4b54c3108b80078b",
-        "type": "debug",
-        "z": "c6c05e7764275064",
-        "name": "debug 2",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 980,
-        "y": 440,
         "wires": []
     },
     {
@@ -5053,9 +5099,7 @@
         "y": 260,
         "wires": [
             [
-                "819f986947063229",
-                "0daefb168cc93c70",
-                "49dde3c55f4a8b29"
+                "819f986947063229"
             ]
         ]
     },
@@ -5123,10 +5167,7 @@
         "z": "7d2ee9cb73f16e0a",
         "name": "link in 4",
         "links": [
-            "ba947f4deae7306a",
-            "608b1b86a5decca9",
-            "f89db17f96a0fdb4",
-            "02d204d2cab60514"
+            "ba947f4deae7306a"
         ],
         "x": 155,
         "y": 140,
@@ -5172,8 +5213,7 @@
         "y": 300,
         "wires": [
             [
-                "b571123d946be4c9",
-                "bc2b0f423be5d0f7"
+                "b571123d946be4c9"
             ]
         ]
     },
@@ -5388,7 +5428,7 @@
             "de22dce2df13f5f3"
         ],
         "x": 995,
-        "y": 220,
+        "y": 260,
         "wires": []
     },
     {
@@ -5401,37 +5441,6 @@
             "cc4732aab186fe6e"
         ],
         "x": 995,
-        "y": 340,
-        "wires": []
-    },
-    {
-        "id": "bc2b0f423be5d0f7",
-        "type": "ui_led",
-        "z": "7d2ee9cb73f16e0a",
-        "order": 8,
-        "group": "1f51103af332e4a2",
-        "width": 0,
-        "height": 0,
-        "label": "Starter charger",
-        "labelPlacement": "left",
-        "labelAlignment": "left",
-        "colorForValue": [
-            {
-                "color": "#919191",
-                "value": "false",
-                "valueType": "bool"
-            },
-            {
-                "color": "#dea900",
-                "value": "true",
-                "valueType": "bool"
-            }
-        ],
-        "allowColorForValueInMessage": false,
-        "shape": "circle",
-        "showGlow": false,
-        "name": "led starter charger",
-        "x": 1070,
         "y": 300,
         "wires": []
     },
@@ -5479,37 +5488,6 @@
         ]
     },
     {
-        "id": "0daefb168cc93c70",
-        "type": "ui_led",
-        "z": "7d2ee9cb73f16e0a",
-        "order": 6,
-        "group": "1f51103af332e4a2",
-        "width": 0,
-        "height": 0,
-        "label": "Leisure charger",
-        "labelPlacement": "left",
-        "labelAlignment": "left",
-        "colorForValue": [
-            {
-                "color": "#919191",
-                "value": "false",
-                "valueType": "bool"
-            },
-            {
-                "color": "#dea900",
-                "value": "true",
-                "valueType": "bool"
-            }
-        ],
-        "allowColorForValueInMessage": false,
-        "shape": "circle",
-        "showGlow": false,
-        "name": "led leisure charger",
-        "x": 1070,
-        "y": 260,
-        "wires": []
-    },
-    {
         "id": "a5d7fbbb0402a02c",
         "type": "ui_text",
         "z": "7d2ee9cb73f16e0a",
@@ -5528,22 +5506,6 @@
         "color": "#000000",
         "x": 360,
         "y": 520,
-        "wires": []
-    },
-    {
-        "id": "49dde3c55f4a8b29",
-        "type": "debug",
-        "z": "7d2ee9cb73f16e0a",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1060,
-        "y": 160,
         "wires": []
     },
     {
