@@ -558,16 +558,6 @@
         "className": ""
     },
     {
-        "id": "79897481ace94b8c",
-        "type": "ui_spacer",
-        "z": "68eb8e61689f5b6b",
-        "name": "spacer",
-        "group": "7c129b20979e21c8",
-        "order": 3,
-        "width": 1,
-        "height": 1
-    },
-    {
         "id": "d6bbdaf404807775",
         "type": "ui_group",
         "name": "Solar",
