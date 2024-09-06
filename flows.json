@@ -5899,6 +5899,31 @@
         ]
     },
     {
+        "id": "d2cb254eaae98363",
+        "type": "inject",
+        "z": "13952ff3682a9fc4",
+        "name": "",
+        "props": [
+            {
+                "p": "enabled",
+                "v": "true",
+                "vt": "bool"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 130,
+        "y": 80,
+        "wires": [
+            [
+                "1535d33324d63d8f"
+            ]
+        ]
+    },
+    {
         "id": "49f184367216d935",
         "type": "ui_gauge",
         "z": "68eb8e61689f5b6b",
