@@ -1145,7 +1145,8 @@
         "wires": [
             [
                 "ec58200f216d9a89",
-                "f99e6ed654942297"
+                "f99e6ed654942297",
+                "af67419a4cfe4355"
             ]
         ]
     },
@@ -1179,7 +1180,8 @@
         "wires": [
             [
                 "2e7a22334ba4ea5d",
-                "8ce1885ebf3009ea"
+                "8ce1885ebf3009ea",
+                "9be57836611f6c8a"
             ]
         ]
     },
@@ -1558,7 +1560,8 @@
             [
                 "ba947f4deae7306a",
                 "13cfc5ece438a9f2",
-                "77ee5917b38765fa"
+                "77ee5917b38765fa",
+                "75824d7d59c05063"
             ]
         ]
     },
@@ -3611,7 +3614,7 @@
         "showGlow": false,
         "name": "led leisure charger",
         "x": 550,
-        "y": 420,
+        "y": 380,
         "wires": []
     },
     {
@@ -3643,6 +3646,99 @@
         "name": "led starter charger",
         "x": 550,
         "y": 500,
+        "wires": []
+    },
+    {
+        "id": "75824d7d59c05063",
+        "type": "ui_led",
+        "z": "4f5b0833ab0a95bb",
+        "order": 7,
+        "group": "af392092454b5034",
+        "width": "5",
+        "height": "1",
+        "label": "Ignition",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#919191",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#dea900",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": false,
+        "name": "led ignition",
+        "x": 1290,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "9be57836611f6c8a",
+        "type": "ui_led",
+        "z": "4f5b0833ab0a95bb",
+        "order": 6,
+        "group": "af392092454b5034",
+        "width": "5",
+        "height": "1",
+        "label": "Compressor",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#919191",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#dea900",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": false,
+        "name": "led fridge",
+        "x": 520,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "af67419a4cfe4355",
+        "type": "ui_led",
+        "z": "4f5b0833ab0a95bb",
+        "order": 7,
+        "group": "af392092454b5034",
+        "width": "5",
+        "height": "1",
+        "label": "Inverter",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#919191",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#dea900",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": false,
+        "name": "led inverter",
+        "x": 530,
+        "y": 180,
         "wires": []
     },
     {
@@ -4345,8 +4441,7 @@
         "y": 260,
         "wires": [
             [
-                "4cc17cb982627297",
-                "82b169af60c9764e"
+                "4cc17cb982627297"
             ]
         ]
     },
@@ -4373,72 +4468,9 @@
         "y": 140,
         "wires": [
             [
-                "b7f3b176e4b124f4",
-                "da904e29cb9967fe"
+                "b7f3b176e4b124f4"
             ]
         ]
-    },
-    {
-        "id": "82b169af60c9764e",
-        "type": "ui_led",
-        "z": "c6c05e7764275064",
-        "order": 7,
-        "group": "af392092454b5034",
-        "width": "5",
-        "height": "1",
-        "label": "Inverter",
-        "labelPlacement": "left",
-        "labelAlignment": "left",
-        "colorForValue": [
-            {
-                "color": "#919191",
-                "value": "false",
-                "valueType": "bool"
-            },
-            {
-                "color": "#dea900",
-                "value": "true",
-                "valueType": "bool"
-            }
-        ],
-        "allowColorForValueInMessage": false,
-        "shape": "circle",
-        "showGlow": false,
-        "name": "led inverter",
-        "x": 1770,
-        "y": 300,
-        "wires": []
-    },
-    {
-        "id": "da904e29cb9967fe",
-        "type": "ui_led",
-        "z": "c6c05e7764275064",
-        "order": 6,
-        "group": "af392092454b5034",
-        "width": "5",
-        "height": "1",
-        "label": "Compressor",
-        "labelPlacement": "left",
-        "labelAlignment": "left",
-        "colorForValue": [
-            {
-                "color": "#919191",
-                "value": "false",
-                "valueType": "bool"
-            },
-            {
-                "color": "#dea900",
-                "value": "true",
-                "valueType": "bool"
-            }
-        ],
-        "allowColorForValueInMessage": false,
-        "shape": "circle",
-        "showGlow": false,
-        "name": "led fridge",
-        "x": 1760,
-        "y": 180,
-        "wires": []
     },
     {
         "id": "c17e3b9391531959",
@@ -4914,44 +4946,12 @@
             "ba947f4deae7306a"
         ],
         "x": 55,
-        "y": 220,
+        "y": 180,
         "wires": [
             [
-                "8f6a175b5f9ee867",
                 "e9a2b1ea2ea7af0f"
             ]
         ]
-    },
-    {
-        "id": "8f6a175b5f9ee867",
-        "type": "ui_led",
-        "z": "15311a68299dc024",
-        "order": 7,
-        "group": "af392092454b5034",
-        "width": "5",
-        "height": "1",
-        "label": "Ignition",
-        "labelPlacement": "left",
-        "labelAlignment": "left",
-        "colorForValue": [
-            {
-                "color": "#919191",
-                "value": "false",
-                "valueType": "bool"
-            },
-            {
-                "color": "#dea900",
-                "value": "true",
-                "valueType": "bool"
-            }
-        ],
-        "allowColorForValueInMessage": false,
-        "shape": "circle",
-        "showGlow": false,
-        "name": "led ignition",
-        "x": 390,
-        "y": 220,
-        "wires": []
     },
     {
         "id": "e9a2b1ea2ea7af0f",
