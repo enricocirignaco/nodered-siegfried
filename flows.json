@@ -5835,7 +5835,7 @@
         "type": "function",
         "z": "13952ff3682a9fc4",
         "name": "increment counter",
-        "func": "let counter = flow.get(\"water_meter_cnt\")+1;\nflow.set(\"water_meter_cnt\", counter);\nreturn msg;",
+        "func": "let counter = flow.get(\"water_meter_cnt\")+1 | 0;\nflow.set(\"water_meter_cnt\", counter);\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -5894,31 +5894,6 @@
         "wires": [
             [
                 "fc2dde5f98b3403e"
-            ]
-        ]
-    },
-    {
-        "id": "0cbc832629899d28",
-        "type": "inject",
-        "z": "13952ff3682a9fc4",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "0",
-        "payloadType": "num",
-        "x": 290,
-        "y": 80,
-        "wires": [
-            [
-                "862ee734b969889d"
             ]
         ]
     },
