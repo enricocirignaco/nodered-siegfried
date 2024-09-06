@@ -5869,11 +5869,11 @@
         "type": "ui_switch",
         "z": "13952ff3682a9fc4",
         "name": "",
-        "label": "External Tank",
+        "label": "Fill External Tank",
         "tooltip": "",
         "group": "689ec1180c141d67",
         "order": 4,
-        "width": "3",
+        "width": "6",
         "height": 1,
         "passthru": false,
         "decouple": "false",
@@ -5890,37 +5890,11 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 320,
+        "x": 330,
         "y": 280,
         "wires": [
             [
                 "fc2dde5f98b3403e"
-            ]
-        ]
-    },
-    {
-        "id": "da45b6dd2d6b486f",
-        "type": "inject",
-        "z": "13952ff3682a9fc4",
-        "name": "",
-        "props": [
-            {
-                "p": "enabled",
-                "v": "true",
-                "vt": "bool"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 70,
-        "y": 80,
-        "wires": [
-            [
-                "5a39df5cc1fe2616",
-                "12996cef4976cab0"
             ]
         ]
     },
